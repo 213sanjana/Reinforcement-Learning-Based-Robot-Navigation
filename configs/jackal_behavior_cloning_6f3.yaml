@@ -1,0 +1,35 @@
+# Phase 6F.3 closed-loop evaluation of the frozen Phase 6F.2 policy.
+# This file does not train, and it does not read the held-out test split.
+#
+# Preview (no robot motion):
+#   python -m navigation.jackal_bc_evaluation --config configs/jackal_behavior_cloning_6f3.yaml
+#
+# One open-area smoke trial, then stop:
+#   python -m navigation.jackal_bc_evaluation --config configs/jackal_behavior_cloning_6f3.yaml --mode smoke
+#
+# Smoke, then the remaining BC scenarios, then A* on the same scenarios:
+#   python -m navigation.jackal_bc_evaluation --config configs/jackal_behavior_cloning_6f3.yaml --mode all
+#
+# Gazebo must already be running via:
+#   ros2 launch jackal_rl_bringup jackal_sim.launch.py
+
+phase: "6f.3"
+read_test: false
+checkpoint: artifacts/behavior_cloning/jackal_6f2/best.pt
+preprocessing: artifacts/behavior_cloning/jackal_6f2/preprocessing.json
+architecture: artifacts/behavior_cloning/jackal_6f2/architecture.json
+statistics: artifacts/behavior_cloning/jackal_6f1/observation_stats.json
+training_summary: artifacts/behavior_cloning/jackal_6f2/summary.json
+expected_checkpoint_sha256: 1cc42601ae918057bc01fd18f3cfa3975bb9a390e9c2d08715a1b05f0ff515c9
+expected_observation_sha256: fe985e7c1b4d74ab359c7992d44e8180b12af18185bab650f677417c83837659
+expected_statistics_sha256:
+  json: a00a9ad38b56963e072fdae92f01485b33b9d5ea8115aed3cd5eb971e5d99387
+  npz: 6f975171f139c5e65785d19954325f12555d7eb16d044c1992c10cc107dde266
+expected_normalizer_count: 78834
+world: jackal_rl_ws/worlds/jackal_obstacle_test_collision.sdf
+inflation_radius: 0.45
+device: cpu
+seed: 642
+output_directory: artifacts/behavior_cloning/jackal_6f3
+timeout_episode_steps: 5
+collision_monitoring: true

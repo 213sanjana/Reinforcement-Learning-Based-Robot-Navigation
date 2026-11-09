@@ -1,0 +1,328 @@
+<?xml version='1.0' encoding='utf-8'?>
+<!-- Integration world for the Jackal stack.
+     Geometry and poses come from Open Robotics Fuel world industrial-warehouse, version 4.
+     Source: https://fuel.gazebosim.org/1.0/OpenRobotics/worlds/industrial-warehouse
+     License of that world metadata: Creative Commons Attribution 4.0 International.
+     Included models are the Open Robotics Fuel copies of the AWS RoboMaker small-warehouse assets.
+     Fuel metadata license: Creative Commons Attribution 4.0 International.
+     Upstream repository: https://github.com/aws-robotics/aws-robomaker-small-warehouse-world (Apache-2.0).
+     The original downloaded world is preserved at original/industrial-warehouse.sdf.
+     Remote fuel.ignitionrobotics.org includes are replaced with local file URIs.
+     Fortress system plugins, scene ambient light, and visual-only checkpoint markers were added.
+     Obstacle meshes and their poses are unchanged. -->
+<sdf version="1.9">
+  <world name="industrial-warehouse">
+    
+    <gravity>0 0 -9.8</gravity>
+
+    <scene>
+      <ambient>0.45 0.45 0.45 1</ambient>
+      <background>0.15 0.16 0.18 1</background>
+    </scene>
+    <plugin filename="libignition-gazebo-physics-system.so" name="ignition::gazebo::systems::Physics"/>
+    <plugin filename="libignition-gazebo-user-commands-system.so" name="ignition::gazebo::systems::UserCommands"/>
+    <plugin filename="libignition-gazebo-scene-broadcaster-system.so" name="ignition::gazebo::systems::SceneBroadcaster"/>
+    <plugin filename="libignition-gazebo-sensors-system.so" name="ignition::gazebo::systems::Sensors">
+      <render_engine>ogre2</render_engine>
+    </plugin>
+    <plugin filename="libignition-gazebo-imu-system.so" name="ignition::gazebo::systems::Imu"/>
+    <plugin filename="libignition-gazebo-navsat-system.so" name="ignition::gazebo::systems::NavSat"/>
+    <plugin filename="libignition-gazebo-contact-system.so" name="ignition::gazebo::systems::Contact"/>
+
+    <physics default="0" name="default_physics" type="ode">
+      <max_step_size>0.01</max_step_size>
+      <real_time_factor>1</real_time_factor>
+      <real_time_update_rate>100</real_time_update_rate>
+    </physics>
+
+    <model name="aws_robomaker_warehouse_ShelfF_01_001">
+      <include>
+        <uri>model://aws_robomaker_warehouse_ShelfF_01</uri>
+      </include>
+      <pose>-5.795143 -0.956635 0 0 0 0</pose>
+    </model>
+
+    <model name="aws_robomaker_warehouse_WallB_01_001">
+      <include>
+        <uri>model://aws_robomaker_warehouse_WallB_01</uri>
+      </include>
+    </model>
+    <model name="aws_robomaker_warehouse_ShelfE_01_001">
+      <include>
+        <uri>model://aws_robomaker_warehouse_ShelfE_01</uri>
+      </include>
+      <pose>4.73156 0.57943 0 0 0 0</pose>
+    </model>
+
+    <model name="aws_robomaker_warehouse_ShelfE_01_002">
+      <include>
+        <uri>model://aws_robomaker_warehouse_ShelfE_01</uri>
+      </include>
+      <pose>4.73156 -4.827049 0 0 0 0</pose>
+    </model>
+
+    <model name="aws_robomaker_warehouse_ShelfE_01_003">
+      <include>
+        <uri>model://aws_robomaker_warehouse_ShelfE_01</uri>
+      </include>
+      <pose>4.73156 -8.6651 0 0 0 0</pose>
+    </model>
+
+    <model name="aws_robomaker_warehouse_ShelfD_01_001">
+      <include>
+        <uri>model://aws_robomaker_warehouse_ShelfD_01</uri>
+      </include>
+      <pose>4.73156 -1.242668 0 0 0 0</pose>
+    </model>
+
+    <model name="aws_robomaker_warehouse_ShelfD_01_002">
+      <include>
+        <uri>model://aws_robomaker_warehouse_ShelfD_01</uri>
+      </include>
+      <pose>4.73156 -3.038551 0 0 0 0</pose>
+    </model>
+
+    <model name="aws_robomaker_warehouse_ShelfD_01_003">
+      <include>
+        <uri>model://aws_robomaker_warehouse_ShelfD_01</uri>
+      </include>
+      <pose>4.73156 -6.750542 0 0 0 0</pose>
+    </model>
+
+    <model name="aws_robomaker_warehouse_GroundB_01_001">
+      <include>
+        <uri>model://aws_robomaker_warehouse_GroundB_01</uri>
+      </include>
+      <pose>0.0 0.0 -0.090092 0 0 0</pose>
+    </model>
+
+    <model name="aws_robomaker_warehouse_Lamp_01_005">
+      <include>
+        <uri>model://aws_robomaker_warehouse_Lamp_01</uri>
+      </include>
+      <pose>0 0 -4 0 0 0</pose>
+    </model>
+
+
+    <model name="aws_robomaker_warehouse_Bucket_01_020">
+      <include>
+        <uri>model://aws_robomaker_warehouse_Bucket_01</uri>
+      </include>
+      <pose>0.433449 9.631706 0 0 0 -1.563161</pose>
+    </model>
+
+    <model name="aws_robomaker_warehouse_Bucket_01_021">
+      <include>
+        <uri>model://aws_robomaker_warehouse_Bucket_01</uri>
+      </include>
+      <pose>-1.8321 -6.3752 0 0 0 -1.563161</pose>
+    </model>
+
+    <model name="aws_robomaker_warehouse_Bucket_01_022">
+      <include>
+        <uri>model://aws_robomaker_warehouse_Bucket_01</uri>
+      </include>
+      <pose>0.433449 8.59 0 0 0 -1.563161</pose>
+    </model>
+
+    <model name='aws_robomaker_warehouse_ClutteringA_01_016'>
+      <include>
+        <uri>model://aws_robomaker_warehouse_ClutteringA_01</uri>
+      </include>
+      <pose>5.708138 8.616844 -0.017477 0 0 0</pose>
+    </model>
+
+    <model name='aws_robomaker_warehouse_ClutteringA_01_017'>
+      <include>
+        <uri>model://aws_robomaker_warehouse_ClutteringA_01</uri>
+      </include>
+      <pose>3.408638 8.616844 -0.017477 0 0 0</pose>
+    </model>
+
+    <model name='aws_robomaker_warehouse_ClutteringA_01_018'>
+      <include>
+        <uri>model://aws_robomaker_warehouse_ClutteringA_01</uri>
+      </include>
+      <pose>-1.491287 5.222435 -0.017477 0 0 -1.583185</pose>
+    </model>
+
+
+    <model name="aws_robomaker_warehouse_ClutteringC_01_027">
+      <include>
+        <uri>model://aws_robomaker_warehouse_ClutteringC_01</uri>
+      </include>
+      <pose>3.324959 3.822449 -0.012064 0 0 1.563871</pose>
+    </model>
+
+    <model name="aws_robomaker_warehouse_ClutteringC_01_028">
+      <include>
+        <uri>model://aws_robomaker_warehouse_ClutteringC_01</uri>
+      </include>
+      <pose>5.54171 3.816475 -0.015663 0 0 -1.583191</pose>
+    </model>
+
+    <model name="aws_robomaker_warehouse_ClutteringC_01_029">
+      <include>
+        <uri>model://aws_robomaker_warehouse_ClutteringC_01</uri>
+      </include>
+      <pose>5.384239 6.137154 0 0 0 3.150000</pose>
+    </model>
+
+    <model name="aws_robomaker_warehouse_ClutteringC_01_030">
+      <include>
+        <uri>model://aws_robomaker_warehouse_ClutteringC_01</uri>
+      </include>
+      <pose>3.236 6.137154 0 0 0 3.150000</pose>
+    </model>
+
+    <model name="aws_robomaker_warehouse_ClutteringC_01_031">
+      <include>
+        <uri>model://aws_robomaker_warehouse_ClutteringC_01</uri>
+      </include>
+      <pose>-1.573677 2.301994 -0.015663 0 0 -3.133191</pose>
+    </model>
+
+    <model name="aws_robomaker_warehouse_ClutteringC_01_032">
+      <include>
+        <uri>model://aws_robomaker_warehouse_ClutteringC_01</uri>
+      </include>
+      <pose>-1.2196 9.407 -0.015663 0 0 1.563871</pose>
+    </model>
+
+    <model name='aws_robomaker_warehouse_ClutteringD_01_005'>
+      <include>
+        <uri>model://aws_robomaker_warehouse_ClutteringD_01</uri>
+      </include>
+      <pose>-1.634682 -7.811813 -0.319559 0 0 0</pose>
+    </model>
+
+    <model name='aws_robomaker_warehouse_TrashCanC_01_002'>
+      <include>
+        <uri>model://aws_robomaker_warehouse_TrashCanC_01</uri>
+      </include>
+      <pose>-1.592441 7.715420 0 0 0 0</pose>
+    </model>
+
+    <model name='aws_robomaker_warehouse_PalletJackB_01_001'>
+      <include>
+        <uri>model://aws_robomaker_warehouse_PalletJackB_01</uri>
+      </include>
+      <pose>-0.276098 -9.481944 0.023266 0 0 0</pose>
+      <static>true</static>
+    </model>
+
+
+    <light name="Warehouse_CeilingLight_003" type="point">
+      <pose>0 0 8.5 0 0 0</pose>
+      <diffuse>0.5 0.5 0.5 1</diffuse>
+      <specular>0.2 0.2 0.2 1</specular>
+      <attenuation>
+        <range>80</range>
+        <constant>0.3</constant>
+        <linear>0.01</linear>
+        <quadratic>0.001</quadratic>
+      </attenuation>
+      <cast_shadows>1</cast_shadows>
+      <direction>0.1 0.1 -1</direction>
+    </light>
+
+
+    <model name="goal_marker">
+      <static>true</static>
+      <pose>0.0 -3.0 0.04 0 0 0</pose>
+      <link name="marker_link">
+        <visual name="visual">
+          <geometry><cylinder><radius>0.15</radius><length>0.04</length></cylinder></geometry>
+          <material>
+            <ambient>0.1 0.75 0.2 1</ambient>
+            <diffuse>0.1 0.8 0.2 1</diffuse>
+          </material>
+        </visual>
+      </link>
+    </model>
+
+    <model name="checkpoint_shelf_row">
+      <static>true</static>
+      <pose>1.5 -1.2 0.04 0 0 0</pose>
+      <link name="marker_link">
+        <visual name="visual">
+          <geometry><cylinder><radius>0.15</radius><length>0.04</length></cylinder></geometry>
+          <material>
+            <ambient>0.1 0.75 0.2 1</ambient>
+            <diffuse>0.1 0.8 0.2 1</diffuse>
+          </material>
+        </visual>
+      </link>
+    </model>
+
+    <model name="checkpoint_shelf_face">
+      <static>true</static>
+      <pose>1.5 0.6 0.04 0 0 0</pose>
+      <link name="marker_link">
+        <visual name="visual">
+          <geometry><cylinder><radius>0.15</radius><length>0.04</length></cylinder></geometry>
+          <material>
+            <ambient>0.1 0.75 0.2 1</ambient>
+            <diffuse>0.1 0.8 0.2 1</diffuse>
+          </material>
+        </visual>
+      </link>
+    </model>
+
+    <model name="checkpoint_shelf_box_west">
+      <static>true</static>
+      <pose>3.3 1.97 0.04 0 0 0</pose>
+      <link name="marker_link">
+        <visual name="visual">
+          <geometry><cylinder><radius>0.15</radius><length>0.04</length></cylinder></geometry>
+          <material>
+            <ambient>0.1 0.75 0.2 1</ambient>
+            <diffuse>0.1 0.8 0.2 1</diffuse>
+          </material>
+        </visual>
+      </link>
+    </model>
+
+    <model name="checkpoint_shelf_box_middle">
+      <static>true</static>
+      <pose>4.5 1.97 0.04 0 0 0</pose>
+      <link name="marker_link">
+        <visual name="visual">
+          <geometry><cylinder><radius>0.15</radius><length>0.04</length></cylinder></geometry>
+          <material>
+            <ambient>0.1 0.75 0.2 1</ambient>
+            <diffuse>0.1 0.8 0.2 1</diffuse>
+          </material>
+        </visual>
+      </link>
+    </model>
+
+    <model name="checkpoint_shelf_box_east">
+      <static>true</static>
+      <pose>5.7 1.97 0.04 0 0 0</pose>
+      <link name="marker_link">
+        <visual name="visual">
+          <geometry><cylinder><radius>0.15</radius><length>0.04</length></cylinder></geometry>
+          <material>
+            <ambient>0.1 0.75 0.2 1</ambient>
+            <diffuse>0.1 0.8 0.2 1</diffuse>
+          </material>
+        </visual>
+      </link>
+    </model>
+
+    <model name="checkpoint_green_dustbin">
+      <static>true</static>
+      <pose>1.2 6.6 0.04 0 0 0</pose>
+      <link name="marker_link">
+        <visual name="visual">
+          <geometry><cylinder><radius>0.15</radius><length>0.04</length></cylinder></geometry>
+          <material>
+            <ambient>0.1 0.75 0.2 1</ambient>
+            <diffuse>0.1 0.8 0.2 1</diffuse>
+          </material>
+        </visual>
+      </link>
+    </model>
+  </world>
+</sdf>

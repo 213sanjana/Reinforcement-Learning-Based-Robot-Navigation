@@ -1,0 +1,89 @@
+# Phase 6G.3 diagnostic PPO training from the verified Phase 6G.1 checkpoint.
+# This does not start Phase 6G.4 or Phase 6H.
+#
+# Gazebo must already be running:
+#   source /opt/ros/humble/setup.bash
+#   source jackal_rl_ws/install/setup.bash
+#   ros2 launch jackal_rl_bringup jackal_sim.launch.py
+#
+# Then, from the repository root:
+#   source /opt/ros/humble/setup.bash
+#   source jackal_rl_ws/install/setup.bash
+#   source .venv/bin/activate
+#   python -m navigation.jackal_ppo_diagnostic train --config configs/jackal_ppo_diagnostic_6g3_bc.yaml
+
+phase: "6g.3"
+experiment: bc_initialized
+initialization: bc
+checkpoint: artifacts/ppo/jackal_6g1/run_20261022_230534/initialized_ppo.zip
+expected_checkpoint_sha256: dff19be924f920490915d8f625d44f32da79452caaf3f7698160d2b8fc287750
+bc_checkpoint: artifacts/behavior_cloning/jackal_6f2/best.pt
+expected_bc_sha256: 1cc42601ae918057bc01fd18f3cfa3975bb9a390e9c2d08715a1b05f0ff515c9
+smoke_checkpoint: artifacts/ppo/jackal_6g2/run_20261022_233150/ppo_smoke.zip
+expected_smoke_sha256: 38038dc1566398c9365c0eceb86a69a2c54ea307b884631570269746589a195c
+architecture: artifacts/behavior_cloning/jackal_6f2/architecture.json
+output:
+  directory: artifacts/ppo/jackal_6g3/bc_initialized
+runtime:
+  seed: 642
+  device: cpu
+  total_timesteps: 49920
+  wall_clock_timeout_s: 86400
+  verbose: 1
+budget:
+  nominal_timesteps: 50000
+  total_timesteps: 49920
+  reason: "50000 is not a multiple of n_steps=128. 390*128=49920 is the largest multiple that does not exceed 50000."
+ppo:
+  n_epochs: 4
+  n_steps: 128
+  batch_size: 64
+  n_envs: 1
+  learning_rate: 3.0e-5
+  gamma: 0.99
+  gae_lambda: 0.95
+  clip_range: 0.1
+  ent_coef: 0.0
+  vf_coef: 0.5
+  max_grad_norm: 0.5
+  use_sde: false
+  normalize_advantage: true
+  log_std_init: 0.0
+  n_epochs_note: "Phase 6G.1 stores n_epochs=4. Phase 6G.2 overrode training to n_epochs=2 after checking that stored value; the saved smoke zip stores n_epochs=2 and _n_updates=16. Phase 6G.3 uses 4 for both approaches and does not override it."
+environment:
+  sensor_timeout_s: 8.0
+  collision_monitoring: true
+  expected_max_episode_steps: 300
+training_scenario:
+  scenario_id: open_south
+  start: [0.0, -1.5, 0.0]
+  goal: [2.5, -1.5]
+checkpointing:
+  interval_timesteps: 10240
+evaluation:
+  interval_timesteps: 10240
+  deterministic: true
+  episodes_per_scenario: 1
+  metric: success_rate
+  selection_rule: "Select the checkpoint with the highest fixed-validation success rate. Break ties with the higher mean episode return, then the earlier checkpoint. Use only complete validation runs. Keep the final checkpoint as a separate file."
+  scenarios:
+    - open_south
+    - obstacle_around
+    - obstacle_west_east
+    - obstacle_south_north
+  excluded_scenarios:
+    - id: timeout_open_south
+      reason: "The Phase 6F.3 timeout_open_south scenario forces a 5-step horizon. It checks timeout accounting and does not measure navigation."
+comparability:
+  - "Both approaches use one JackalGazeboEnv, the 40-value observation, and clipped diagonal-Gaussian actions."
+  - "Total environment timesteps are 49920 because 50000 is not divisible by n_steps=128."
+  - "n_epochs is 4, matching the Phase 6G.1 checkpoint. The Phase 6G.2 smoke test overrode this to 2 and its saved zip stores 2."
+  - "Scratch initialization installs the frozen BC observation normalizer buffers and does not copy actor or critic weights."
+  - "Training uses the open_south scenario only. There is no curriculum."
+  - "Validation uses one episode of open_south, obstacle_around, obstacle_west_east, and obstacle_south_north."
+  - "timeout_open_south is excluded because its 5-step horizon forces a timeout."
+  - "Evaluation is deterministic. Training samples the diagonal Gaussian and Stable-Baselines3 clips to [-1, 1]."
+  - "Evaluation resets the single robot and records the open training episode as partial, not as a timeout."
+  - "The matched seed is 642. Gazebo physics and sensor timing are not controlled by that seed."
+  - "Checkpoint selection uses validation success rate, then mean return, then the earlier checkpoint."
+  - "Resume does not restore the rollout buffer or the random-number generator."

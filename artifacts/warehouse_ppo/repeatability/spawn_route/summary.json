@@ -1,0 +1,184 @@
+{
+  "episodes": 5,
+  "successes": 1,
+  "collisions": 0,
+  "timeouts": 0,
+  "success_rate": 0.2,
+  "collision_rate": 0.0,
+  "timeout_rate": 0.0,
+  "mean_path_length_m": 21.433021544475046,
+  "mean_duration_s": 155.6399999999997,
+  "mean_time_to_goal_s": null,
+  "mean_linear_speed_mps": null,
+  "mean_angular_speed_radps": null,
+  "mean_min_clearance_m": 0.6606510519981384,
+  "mean_rotations": null,
+  "mean_terminal_goal_distance_m": 4.429590921638664,
+  "mean_episode_length": 778.2,
+  "mean_return": null,
+  "spawn": [
+    0.0,
+    0.0,
+    0.0
+  ],
+  "checkpoints": [
+    "toward_green_circle",
+    "green_circle",
+    "toward_shelf_row",
+    "shelf_row",
+    "shelf_face",
+    "bay_entry",
+    "shelf_box_west",
+    "shelf_box_middle",
+    "shelf_box_east",
+    "bay_exit",
+    "box_row_pass",
+    "toward_dustbin",
+    "dustbin_approach",
+    "green_dustbin"
+  ],
+  "trials": [
+    {
+      "trial": 1,
+      "success": true,
+      "collision": false,
+      "timeout": false,
+      "goal_distance": 0.28001414305846584,
+      "termination_reason": "goal_reached",
+      "checkpoints_reached": [
+        "toward_green_circle",
+        "green_circle",
+        "toward_shelf_row",
+        "shelf_row",
+        "shelf_face",
+        "bay_entry",
+        "shelf_box_west",
+        "shelf_box_middle",
+        "shelf_box_east",
+        "bay_exit",
+        "box_row_pass",
+        "toward_dustbin",
+        "dustbin_approach",
+        "green_dustbin"
+      ],
+      "pose_xy": [
+        1.3193429848933516,
+        6.346691547181085
+      ]
+    },
+    {
+      "trial": 2,
+      "success": false,
+      "collision": false,
+      "timeout": false,
+      "goal_distance": 5.725816558579383,
+      "termination_reason": "safety_rejected",
+      "checkpoints_reached": [
+        "toward_green_circle",
+        "green_circle",
+        "toward_shelf_row",
+        "shelf_row",
+        "shelf_face",
+        "bay_entry",
+        "shelf_box_west",
+        "shelf_box_middle",
+        "shelf_box_east",
+        "bay_exit",
+        "box_row_pass",
+        "toward_dustbin",
+        "dustbin_approach"
+      ],
+      "pose_xy": [
+        -4.516472356817908,
+        6.926984795118301
+      ]
+    },
+    {
+      "trial": 3,
+      "success": false,
+      "collision": false,
+      "timeout": false,
+      "goal_distance": 9.21680633597066,
+      "termination_reason": "goal_reached",
+      "checkpoints_reached": [
+        "toward_green_circle",
+        "green_circle",
+        "toward_shelf_row",
+        "shelf_row",
+        "shelf_face",
+        "bay_entry",
+        "shelf_box_west",
+        "shelf_box_middle",
+        "shelf_box_east",
+        "bay_exit",
+        "box_row_pass",
+        "toward_dustbin",
+        "dustbin_approach",
+        "green_dustbin"
+      ],
+      "pose_xy": [
+        -5.770302616246093,
+        0.5697097521975156
+      ]
+    },
+    {
+      "trial": 4,
+      "success": false,
+      "collision": false,
+      "timeout": false,
+      "goal_distance": 6.43934523550985,
+      "termination_reason": "goal_reached",
+      "checkpoints_reached": [
+        "toward_green_circle",
+        "green_circle",
+        "toward_shelf_row",
+        "shelf_row",
+        "shelf_face",
+        "bay_entry",
+        "shelf_box_west",
+        "shelf_box_middle",
+        "shelf_box_east",
+        "bay_exit",
+        "box_row_pass",
+        "toward_dustbin",
+        "dustbin_approach",
+        "green_dustbin"
+      ],
+      "pose_xy": [
+        0.6950306933957152,
+        0.18048498237826385
+      ]
+    },
+    {
+      "trial": 5,
+      "success": false,
+      "collision": false,
+      "timeout": false,
+      "goal_distance": 0.4859723350749616,
+      "termination_reason": "goal_reached",
+      "checkpoints_reached": [
+        "toward_green_circle",
+        "green_circle",
+        "toward_shelf_row",
+        "shelf_row",
+        "shelf_face",
+        "bay_entry",
+        "shelf_box_west",
+        "shelf_box_middle",
+        "shelf_box_east",
+        "bay_exit",
+        "box_row_pass",
+        "toward_dustbin",
+        "dustbin_approach",
+        "green_dustbin"
+      ],
+      "pose_xy": [
+        0.7191713403080183,
+        6.670518866107044
+      ]
+    }
+  ],
+  "checkpoint": "artifacts/warehouse_ppo/runs/run_20261103T054820Z_bf036311",
+  "completed_trials": 5,
+  "requested_trials": 5
+}

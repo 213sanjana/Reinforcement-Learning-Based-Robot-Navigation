@@ -1,0 +1,77 @@
+schema: jackal_demo_scenarios_v1
+evaluated: false
+note: >
+  Planned routes for a future authorized Gazebo session. No episode in this
+  file has been run. A geometric clearance check is not a simulation result.
+goal_tolerance_m: 0.30
+namespace: j100_0000
+spawn_z_m: 0.3
+worlds:
+  - id: world1_open
+    file: jackal_rl_ws/worlds/demo/jackal_demo_open.sdf
+    world_name: jackal_demo_open
+    split: fixed
+    description: Open ground and one goal.
+    start: [0.0, 0.0, 0.0]
+    goal: [4.0, 0.0, 0.0]
+  - id: world2_corridor
+    file: jackal_rl_ws/worlds/demo/jackal_demo_corridor.sdf
+    world_name: jackal_demo_corridor
+    split: fixed
+    description: L-shaped corridor with about 1.8 m inner width.
+    start: [0.0, 0.0, 0.0]
+    goal: [4.4, 4.2, 0.0]
+  - id: world3_obstacles
+    file: jackal_rl_ws/worlds/demo/jackal_demo_obstacles.sdf
+    world_name: jackal_demo_obstacles
+    split: fixed
+    description: Static boxes between the start and the goal.
+    start: [0.0, 0.0, 0.0]
+    goal: [5.0, 0.0, 0.0]
+  - id: world4_narrow
+    file: jackal_rl_ws/worlds/demo/jackal_demo_narrow.sdf
+    world_name: jackal_demo_narrow
+    split: fixed
+    description: Straight passage about 1.7 m wide.
+    start: [0.0, 0.0, 0.0]
+    goal: [5.5, 0.0, 0.0]
+  - id: world5_routes
+    file: jackal_rl_ws/worlds/demo/jackal_demo_routes.sdf
+    world_name: jackal_demo_routes
+    split: fixed
+    description: A center barrier with room to pass on either side.
+    start: [0.0, 0.0, 0.0]
+    goal: [5.0, 0.2, 0.0]
+  - id: world6_unseen
+    file: jackal_rl_ws/worlds/demo/jackal_demo_unseen.sdf
+    world_name: jackal_demo_unseen
+    split: unseen
+    description: Asymmetric boxes withheld from the fixed route list.
+    start: [0.0, 0.0, 0.0]
+    goal: [5.2, -1.2, 0.0]
+unseen_routes:
+  - id: unseen_1
+    world_id: world6_unseen
+    evaluated: false
+    start: [0.0, 0.0, 0.0]
+    goal: [5.2, -1.2, 0.0]
+  - id: unseen_2
+    world_id: world6_unseen
+    evaluated: false
+    start: [0.0, 0.0, 0.0]
+    goal: [5.2, 0.0, 0.0]
+  - id: unseen_3
+    world_id: world6_unseen
+    evaluated: false
+    start: [0.0, 0.0, 0.4]
+    goal: [2.2, -1.6, 0.0]
+  - id: unseen_4
+    world_id: world6_unseen
+    evaluated: false
+    start: [0.0, 0.0, 0.0]
+    goal: [3.4, 1.8, 0.0]
+  - id: unseen_5
+    world_id: world6_unseen
+    evaluated: false
+    start: [0.0, 0.0, 1.2]
+    goal: [0.4, 1.8, 0.0]

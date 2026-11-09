@@ -1,0 +1,38 @@
+# Phase 5A: freeze tasks and run smoke only. Paths are relative to repository root.
+seed: 5172026
+densities: [0.1, 0.3, 0.5]
+episodes_per_density: 100
+min_path_length: 6
+max_candidates_per_density: 100000
+curriculum_split_salt: navigation_curriculum_v1
+environment:
+  height: 10
+  width: 10
+  max_steps: 150
+  bfs_shaping: false
+contract:
+  channels: [obstacles, agent, goal]
+  dtype: float32
+  actions: [[-1, 0], [1, 0], [0, -1], [0, 1]]
+  reward: {step: -1.0, collision: -10.0, progress: 2.0, goal: 100.0}
+  bfs_shaping: false
+  success: agent_equals_goal
+  timeout: horizon_without_goal
+  interventions: false
+identity_sources:
+  - {pattern: artifacts/imitation/expert_density10_v1/train.npz, role: train, required: true}
+  - {pattern: artifacts/imitation/expert_density10_v1/validation.npz, role: validation, required: true}
+  - {pattern: artifacts/imitation/expert_density10_v1/test.npz, role: prior_test, required: true}
+  - {pattern: artifacts/curriculum/maps_v1/level_*_train.npz, role: train, required: true, min_matches: 5}
+  - {pattern: artifacts/curriculum/maps_v1/level_*_validation.npz, role: validation, required: true, min_matches: 5}
+  - {pattern: 'artifacts/imitation/bc_benchmark/**/scenarios.npz', role: prior_benchmark, required: true}
+seed_sources:
+  - environment: {height: 10, width: 10, obstacle_density: 0.05, max_steps: 150, bfs_shaping: false}
+    ranges: [[2027, 4464], [50211, 50241], [90211, 90311]]
+policies:
+  astar: {kind: astar}
+  dqn: {kind: dqn, checkpoint: artifacts/experiments/cnn_density05_200k/best.pt}
+  bc: {kind: bc, checkpoint: artifacts/imitation/behavior_cloning/best.pt}
+  ppo_scratch: {kind: ppo, checkpoint: artifacts/ppo/scratch_lr3e5_extended_seed42/best.zip}
+  ppo_bc: {kind: ppo, checkpoint: artifacts/ppo/pretrained_lr3e5_extended_seed42/best.zip}
+  ppo_curriculum: {kind: ppo, checkpoint: artifacts/curriculum/curriculum_v1_seed42/final.zip}

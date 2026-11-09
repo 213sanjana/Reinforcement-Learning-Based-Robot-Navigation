@@ -1,0 +1,17 @@
+repositories:
+  clearpath_common:
+    type: git
+    url: https://github.com/clearpathrobotics/clearpath_common.git
+    version: e51426ab253ac179e1b34d9d075c445f84982283
+  clearpath_config:
+    type: git
+    url: https://github.com/clearpathrobotics/clearpath_config.git
+    version: bb42edc254324b34a4183fc4d5ebbe8e648b2217
+  clearpath_msgs:
+    type: git
+    url: https://github.com/clearpathrobotics/clearpath_msgs.git
+    version: 37d701812e9980b4722664d4ada2f484bd36af93
+  clearpath_simulator:
+    type: git
+    url: https://github.com/clearpathrobotics/clearpath_simulator.git
+    version: e4e8c384d81bc22aa34ccba04a8de6a3d6269544

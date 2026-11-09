@@ -1,0 +1,30 @@
+<?xml version="1.0" ?>
+<sdf version="1.8">
+  <model name="house_2">
+    <static>true</static>
+    <link name="link">
+      <collision name="collision">
+        <geometry>
+          <mesh>
+            <uri>model://house_2/meshes/house_2.dae</uri>
+          </mesh>
+        </geometry>
+      </collision>
+      <visual name="visual">
+        <geometry>
+          <mesh>
+            <uri>model://house_2/meshes/house_2.dae</uri>
+          </mesh>
+        </geometry>
+      </visual>
+      <sensor name="house_contact" type="contact">
+        <contact>
+          <collision>collision</collision>
+          <topic>/jackal_rl/obstacle_contacts</topic>
+        </contact>
+        <always_on>true</always_on>
+        <update_rate>100</update_rate>
+      </sensor>
+    </link>
+  </model>
+</sdf>

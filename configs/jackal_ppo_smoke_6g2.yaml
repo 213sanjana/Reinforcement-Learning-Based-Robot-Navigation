@@ -1,0 +1,57 @@
+# Phase 6G.2 bounded PPO smoke test.
+# This loads the frozen Phase 6G.1 BC-initialized checkpoint and collects
+# 1,024 Jackal environment steps. It does not start Phase 6G.3.
+#
+# Gazebo must already be running:
+#   source /opt/ros/humble/setup.bash
+#   source jackal_rl_ws/install/setup.bash
+#   ros2 launch jackal_rl_bringup jackal_sim.launch.py
+#
+# Then, from the repository root:
+#   source /opt/ros/humble/setup.bash
+#   source jackal_rl_ws/install/setup.bash
+#   source .venv/bin/activate
+#   python -m navigation.jackal_ppo_train --config configs/jackal_ppo_smoke_6g2.yaml
+
+phase: "6g.2"
+# Scratch initialization is recognized and refused by this phase.
+initialization: bc
+checkpoint: artifacts/ppo/jackal_6g1/run_20261022_230534/initialized_ppo.zip
+expected_checkpoint_sha256: dff19be924f920490915d8f625d44f32da79452caaf3f7698160d2b8fc287750
+bc_checkpoint: artifacts/behavior_cloning/jackal_6f2/best.pt
+expected_bc_sha256: 1cc42601ae918057bc01fd18f3cfa3975bb9a390e9c2d08715a1b05f0ff515c9
+output:
+  directory: artifacts/ppo/jackal_6g2
+runtime:
+  seed: 642
+  device: cpu
+  total_timesteps: 1024
+  wall_clock_timeout_s: 3600
+  verbose: 1
+ppo:
+  # The Phase 6G.1 checkpoint stores n_epochs=4. The smoke test overrides
+  # only that value. Every other field below must match the checkpoint.
+  checkpoint_n_epochs: 4
+  n_epochs: 2
+  n_steps: 128
+  batch_size: 64
+  n_envs: 1
+  learning_rate: 3.0e-5
+  gamma: 0.99
+  gae_lambda: 0.95
+  clip_range: 0.1
+  ent_coef: 0.0
+  vf_coef: 0.5
+  max_grad_norm: 0.5
+  use_sde: false
+  normalize_advantage: true
+  log_std_init: 0.0
+environment:
+  scenario_id: open_south
+  start: [0.0, -1.5, 0.0]
+  goal: [2.5, -1.5]
+  expected_max_episode_steps: 300
+  sensor_timeout_s: 8.0
+  collision_monitoring: true
+checkpointing:
+  intermediate_timesteps: 512

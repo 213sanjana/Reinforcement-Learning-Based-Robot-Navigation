@@ -1,0 +1,48 @@
+starting_checkpoint: artifacts/ppo/pretrained_lr3e5_extended_seed42/best.zip
+verified_initialization: artifacts/ppo/pretrained_initialization.zip
+maps:
+  directory: artifacts/curriculum/maps_v1
+  seed: 7302026
+  split_salt: navigation_curriculum_v1
+  train_maps_per_level: 2000
+  validation_maps_per_level: 200
+  min_path_length: 6
+  max_candidates_per_pool: 250000
+  exclude_manifests:
+    - artifacts/imitation/expert_density10_v1/train.npz
+    - artifacts/imitation/expert_density10_v1/validation.npz
+    - artifacts/imitation/expert_density10_v1/test.npz
+  exclude_globs:
+    - artifacts/imitation/bc_benchmark/**/scenarios.npz
+training:
+  total_timesteps: 250880
+  seed: 42
+  device: auto
+  output_root: artifacts/curriculum
+  checkpoint_interval: 10240
+ppo:
+  learning_rate: 0.00003
+  gamma: 0.99
+  n_steps: 1024
+  batch_size: 64
+  n_epochs: 10
+  gae_lambda: 0.95
+  clip_range: 0.2
+  ent_coef: 0.0
+  vf_coef: 0.5
+  max_grad_norm: 0.5
+  target_kl: 0.02
+curriculum:
+  densities: [0.1, 0.2, 0.3, 0.4, 0.5]
+  success_threshold: 0.8
+  required_passes: 3
+  min_level_steps: 10240
+  level_budget: 50176
+  forgetting_drop: 0.15
+  easier_weight: 0.2
+  harder_weight: 0.1
+  fixed_level: 4
+validation:
+  episodes: 200
+  min_episodes: 200
+  interval: 10240

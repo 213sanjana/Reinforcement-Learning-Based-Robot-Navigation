@@ -1,0 +1,21 @@
+runtime:
+  seed: 2027
+  device: auto
+ppo:
+  learning_rate: 0.00003
+  n_steps: 128
+  batch_size: 64
+  n_epochs: 4
+  gamma: 0.99
+  gae_lambda: 0.95
+  clip_range: 0.1
+  ent_coef: 0.0
+  vf_coef: 0.5
+  max_grad_norm: 0.5
+validation:
+  observation_dataset: artifacts/imitation/expert_density10_v1/train.npz
+  dataset_samples: 128
+  environment_samples: 64
+  environment_seed: 40000000
+  atol: 0.000001
+  rtol: 0.00001

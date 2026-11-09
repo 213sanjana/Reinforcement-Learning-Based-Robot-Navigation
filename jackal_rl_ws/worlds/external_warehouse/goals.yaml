@@ -1,0 +1,19 @@
+# Clearance estimates from collision-mesh vertices after applying each
+# COLLADA file's declared centimeter scale (unit meter="0.01").
+# These positions are not yet confirmed by a live Gazebo spawn.
+frame: odom
+spawn_xyz_m: [0.0, 0.0, 0.3]
+primary_goal_xy_m: [0.0, -3.0]
+starts_xy_m:
+  - [0.0, 0.0]
+  - [1.5, 0.0]
+  - [0.0, -3.0]
+  - [2.0, -2.0]
+goals_xy_m:
+  - [0.0, -3.0]
+  - [1.5, 0.0]
+  - [2.0, -2.0]
+  - [-2.0, 0.0]
+notes:
+  - The visual goal marker is at (0, -3) and has no collision geometry.
+  - Do not use (-2, 4). A clutter mesh vertex is about 0.16 m from that point.

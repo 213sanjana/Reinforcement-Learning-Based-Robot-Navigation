@@ -1,0 +1,62 @@
+# Phase 6E.2 reproducible expert dataset collection.
+# Preview does not start ROS or move the robot.
+#
+#   python -m navigation.expert_dataset_collection preview --config configs/expert_dataset_6e2.yaml
+#   python -m navigation.expert_dataset_collection preflight --config configs/expert_dataset_6e2.yaml
+#   python -m navigation.expert_dataset_collection pilot --config configs/expert_dataset_6e2.yaml
+#   python -m navigation.expert_dataset_collection collect --config configs/expert_dataset_6e2.yaml --stage train
+#   python -m navigation.expert_dataset_collection collect --config configs/expert_dataset_6e2.yaml --stage validation
+#   python -m navigation.expert_dataset_collection collect --config configs/expert_dataset_6e2.yaml --stage test
+
+schema_version: "6e.2.0"
+seed: 642
+world: jackal_rl_ws/worlds/jackal_obstacle_test_collision.sdf
+bounds: [-2.0, 5.0, -3.0, 3.0]
+resolution: 0.1
+inflation_radius: 0.45
+storage: npz
+command_interval_s: 0.1
+output_root: artifacts/expert_dataset/v6e.2.0
+max_draws_per_scenario: 400
+
+stages:
+  pilot:
+    attempts: 20
+    success_target: null
+  train:
+    attempts: 800
+    success_target: 500
+  validation:
+    attempts: 160
+    success_target: 100
+  test:
+    attempts: 160
+    success_target: 100
+
+quotas:
+  pilot:
+    open_short_straight: 5
+    open_medium_straight: 5
+    obstacle_medium_turning: 5
+    obstacle_long_turning: 5
+  train:
+    open_short_straight: 220
+    open_medium_straight: 220
+    open_long_straight: 200
+    obstacle_short_turning: 40
+    obstacle_medium_turning: 60
+    obstacle_long_turning: 60
+  validation:
+    open_short_straight: 48
+    open_medium_straight: 48
+    open_long_straight: 32
+    obstacle_short_turning: 8
+    obstacle_medium_turning: 12
+    obstacle_long_turning: 12
+  test:
+    open_short_straight: 48
+    open_medium_straight: 48
+    open_long_straight: 32
+    obstacle_short_turning: 8
+    obstacle_medium_turning: 12
+    obstacle_long_turning: 12

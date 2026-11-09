@@ -1,0 +1,37 @@
+map:
+  height: 10
+  width: 10
+  goal: [8, 8]
+  # 0 = free, 1 = obstacle; fixed for every training and evaluation episode.
+  rows:
+    - '0000000000'
+    - '0111011100'
+    - '0001000000'
+    - '0101011100'
+    - '0100000100'
+    - '0111100100'
+    - '0000000000'
+    - '0011110110'
+    - '0000000000'
+    - '0000000000'
+environment:
+  max_steps: 150
+  cell_size: 48
+agent:
+  learning_rate: 0.2
+  gamma: 0.95
+  epsilon_start: 1.0
+  epsilon_min: 0.05
+  epsilon_decay: 0.9995
+  bootstrap_on_truncation: true
+training:
+  episodes: 10000
+  seed: 2026
+  checkpoint: artifacts/qlearning_fixed_map.npz
+  metrics: artifacts/qlearning_metrics.csv
+  training_plot: artifacts/qlearning_training.png
+evaluation:
+  seed: 90210
+  episodes: 100
+  results: artifacts/qlearning_evaluation.json
+  route_plot: artifacts/qlearning_route.png

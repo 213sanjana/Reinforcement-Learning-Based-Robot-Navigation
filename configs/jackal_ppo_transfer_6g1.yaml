@@ -1,0 +1,44 @@
+# Phase 6G.1 transfer of the frozen Phase 6F.2 behavior-cloning actor
+# into a PPO policy. This command does not train, fine-tune, or step the Jackal.
+#
+# Run from the repository root:
+#   python -m navigation.jackal_bc_ppo_transfer --config configs/jackal_ppo_transfer_6g1.yaml
+
+phase: "6g.1"
+source:
+  checkpoint: artifacts/behavior_cloning/jackal_6f2/best.pt
+  architecture: artifacts/behavior_cloning/jackal_6f2/architecture.json
+  preprocessing: artifacts/behavior_cloning/jackal_6f2/preprocessing.json
+  evaluation_context: artifacts/behavior_cloning/jackal_6f3/run_20261022_215444/summary.json
+  require_trained: true
+protected:
+  - artifacts/behavior_cloning/jackal_6f2/best.pt
+  - artifacts/behavior_cloning/jackal_6f2/final.pt
+  - artifacts/behavior_cloning/jackal_6f2/preprocessing.json
+  - artifacts/behavior_cloning/jackal_6f1/observation_stats.json
+  - artifacts/behavior_cloning/jackal_6f1/observation_stats.npz
+output:
+  directory: artifacts/ppo/jackal_6g1
+runtime:
+  seed: 642
+  device: cpu
+  deterministic: true
+ppo:
+  learning_rate: 3.0e-5
+  n_steps: 128
+  batch_size: 64
+  n_epochs: 4
+  gamma: 0.99
+  gae_lambda: 0.95
+  clip_range: 0.1
+  ent_coef: 0.0
+  vf_coef: 0.5
+  max_grad_norm: 0.5
+  use_sde: false
+  normalize_advantage: true
+  log_std_init: 0.0
+validation:
+  observations: 32
+  seed: 642
+  atol: 0.0
+  rtol: 0.0

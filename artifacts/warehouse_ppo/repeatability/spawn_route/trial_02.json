@@ -1,0 +1,58 @@
+{
+  "trial": 2,
+  "seed": 2,
+  "spawn": [
+    0.0,
+    0.0,
+    0.0
+  ],
+  "success": false,
+  "collision": false,
+  "timeout": false,
+  "goal_distance": 5.725816558579383,
+  "termination_reason": "safety_rejected",
+  "checkpoints_reached": [
+    "toward_green_circle",
+    "green_circle",
+    "toward_shelf_row",
+    "shelf_row",
+    "shelf_face",
+    "bay_entry",
+    "shelf_box_west",
+    "shelf_box_middle",
+    "shelf_box_east",
+    "bay_exit",
+    "box_row_pass",
+    "toward_dustbin",
+    "dustbin_approach"
+  ],
+  "path_length_m": 21.934810742976875,
+  "duration_s": 158.79999999999953,
+  "min_clearance_m": 0.4858156442642212,
+  "episode_length": 794,
+  "pose_xy": [
+    -4.516472356817908,
+    6.926984795118301
+  ],
+  "route_start": "toward_green_circle",
+  "destination": [
+    1.2,
+    6.6
+  ],
+  "checkpoints_expected": [
+    "toward_green_circle",
+    "green_circle",
+    "toward_shelf_row",
+    "shelf_row",
+    "shelf_face",
+    "bay_entry",
+    "shelf_box_west",
+    "shelf_box_middle",
+    "shelf_box_east",
+    "bay_exit",
+    "box_row_pass",
+    "toward_dustbin",
+    "dustbin_approach",
+    "green_dustbin"
+  ]
+}

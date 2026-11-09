@@ -1,0 +1,39 @@
+# BC-anchored curriculum beside the historical Phase 6H config.
+# This file does not authorize a live ROS 2, Gazebo, training, or inference run.
+#
+# Anchor coefficient 0.1 reuses the numeric coefficient proposed for a KL anchor
+# in artifacts/ppo/jackal_6h/diagnostics/offline_20261027_053148UTC_6h6_6h7_replay_design/experiment_design.md.
+# Here it weights mean((current_tanh_mean - reference_tanh_mean)^2). It is not a tuned result.
+#
+# Efficiency threshold 0.5 is above the optimistic ceiling of the recorded Phase 6H
+# Stage A development successes. Those checks were 12/12 successes on 0.75 m routes
+# with mean odometry paths 3.400259529476473 m, 3.385462444281064 m, and
+# 2.3096810558217786 m (artifacts/ppo/jackal_6h/curriculum/run_20261026_experiment/metrics.json).
+# Even if the entire 0.75 m start-goal gap counted as progress, efficiency on the
+# shortest of those means would be 0.75/2.3096810558217786 = 0.3247201591360639.
+# A threshold of 0.5 rejects that recorded inefficient-success band. It is not a
+# claim that 0.5 is optimal on obstacle routes, and it is not the turn-collapse
+# regression ratio.
+
+phase: 6h_bc_anchored
+base_config: configs/jackal_ppo_diagnostic_6g3_bc.yaml
+seed: 642
+total_timesteps: 10240
+interval: 2048
+wall_clock_timeout_s: 10800
+pilot_timesteps: 256
+pilot_timeout_s: 1200
+development_episodes: 12
+min_level_steps: 2048
+required_passes: 2
+output_root: artifacts/ppo/jackal_6h_bc_anchored/curriculum
+budget_reason: 'Bounded first curriculum experiment; historical 0.25-0.32 seconds/step plus evaluation, estimated 45-70 minutes; hard three-hour cap.'
+actor_anchoring:
+  enabled: true
+  coefficient: 0.1
+  checkpoint: artifacts/ppo/jackal_6g1/run_20261022_230534/initialized_ppo.zip
+  expected_sha256: dff19be924f920490915d8f625d44f32da79452caaf3f7698160d2b8fc287750
+efficiency_gate:
+  enabled: true
+  threshold: 0.5
+  definition: net_goal_progress_over_path_length

@@ -1,0 +1,24 @@
+# Advancement reads a finished stage's evaluation file. It does not switch worlds.
+min_episodes: 20
+min_success_rate: 0.8
+max_collision_rate: 0.1
+max_safety_failures: 0
+stages:
+  - id: open
+    world_file: jackal_rl_ws/worlds/demo/jackal_demo_open.sdf
+    purpose: Short start-goal routes on the existing open world.
+  - id: original_warehouse
+    world_file: jackal_rl_ws/worlds/demo/jackal_navigation_world.sdf
+    purpose: Corridors and sparse obstacles in the original warehouse world.
+  - id: external_warehouse
+    world_file: jackal_rl_ws/worlds/external_warehouse/jackal_industrial_warehouse.sdf
+    purpose: Shelves, walls, and clutter in the external industrial warehouse.
+  - id: generalization
+    world_file: jackal_rl_ws/worlds/external_warehouse/jackal_industrial_warehouse.sdf
+    purpose: Held-out start-goal pairs. This stage is evaluation, not a silent switch during training.
+  - id: house
+    world_file: jackal_rl_ws/worlds/house/jackal_house.sdf
+    purpose: Rooms and doorways. Selecting this stage is explicit and does not happen during training.
+  - id: ground
+    world_file: jackal_rl_ws/worlds/ground/jackal_ground.sdf
+    purpose: Open ground with sparse blocks. Selecting this stage is explicit and does not happen during training.

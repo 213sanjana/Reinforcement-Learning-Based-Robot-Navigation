@@ -1,0 +1,43 @@
+environment:
+  height: 10
+  width: 10
+  obstacle_density: 0.0
+  max_steps: 150
+agent:
+  architecture: cnn
+  learning_rate: 0.0001
+  gamma: 0.99
+  batch_size: 64
+  replay_capacity: 50000
+  warmup_steps: 2000
+  train_frequency: 4
+  target_update_frequency: 1000
+  epsilon_start: 1.0
+  epsilon_end: 0.05
+  epsilon_decay_steps: 150000
+  hidden_size: 256
+  double_dqn: true
+  bootstrap_on_truncation: true
+  gradient_clip: 10.0
+training:
+  total_steps: 30000
+  seed: 2027
+  device: auto
+  fixed_map: false
+  log_interval: 5000
+  checkpoint: artifacts/experiments/cnn_empty_grid_30k/final.pt
+  metrics: artifacts/experiments/cnn_empty_grid_30k/metrics.csv
+  figure: artifacts/experiments/cnn_empty_grid_30k/training.png
+validation:
+  enabled: true
+  interval: 5000
+  seed: 50211
+  episodes: 30
+  best_checkpoint: artifacts/experiments/cnn_empty_grid_30k/best.pt
+  history: artifacts/experiments/cnn_empty_grid_30k/validation.csv
+evaluation:
+  seed: 90211
+  episodes: 100
+  device: auto
+  results: artifacts/experiments/cnn_empty_grid_30k/evaluation.json
+  route_plot: artifacts/experiments/cnn_empty_grid_30k/route.png

@@ -1,0 +1,288 @@
+execution: offline
+stage_id: external_warehouse
+split: train
+environment_config: configs/warehouse_environment.yaml
+curriculum_config: configs/warehouse_curriculum.yaml
+ppo:
+  learning_rate: 0.0003
+  n_steps: 1024
+  batch_size: 64
+  n_epochs: 10
+  gamma: 0.99
+  gae_lambda: 0.95
+  clip_range: 0.2
+  ent_coef: 0.01
+  vf_coef: 0.5
+  max_grad_norm: 0.5
+  policy: MlpPolicy
+  normalize_observations: false
+  device: cpu
+  seed: 42
+  total_timesteps: 40960
+  checkpoint_interval: 2048
+  execution: offline
+  n_envs: 1
+  min_episodes_for_best: 5
+reward:
+  progress_scale: 5.0
+  goal_reward: 100.0
+  collision_penalty: 100.0
+  step_penalty: 0.01
+  warning_distance_m: 0.7
+  critical_distance_m: 0.3
+  warning_penalty: 0.2
+  critical_penalty: 1.0
+  critical_slope: 0.0
+  angular_penalty_scale: 0.02
+  action_delta_scale: 0.0
+  lidar_max_range_m: 12.0
+environment:
+  namespace: j100_0000
+  lidar_topic: /j100_0000/sensors/lidar3d_0/scan
+  odom_topic: /j100_0000/platform/odom
+  command_topic: /j100_0000/platform/cmd_vel_unstamped
+  contact_topic: /jackal_rl/obstacle_contacts
+  odom_frame: odom
+  base_frame: base_link
+  lidar_frame: lidar3d_0_laser
+  goal_tolerance_m: 0.3
+  max_episode_steps: 600
+  sensor_timeout_s: 5.0
+  control_frequency_hz: 5.0
+  min_separation_m: 0.5
+  robot_radius_m: 0.25
+  stationary_linear_limit_mps: 0.02
+  stationary_angular_limit_radps: 0.05
+  require_listed_pair: true
+  active_stage: external_warehouse
+  stages:
+    open:
+      world_file: jackal_rl_ws/worlds/demo/jackal_demo_open.sdf
+      world_name: jackal_demo_open
+      require_listed_pair: true
+      scenarios:
+      - id: open_train_short
+        split: train
+        start:
+        - 0.0
+        - 0.0
+        - 0.0
+        goal:
+        - 0.75
+        - 0.0
+      - id: open_val_mid
+        split: validation
+        start:
+        - 0.0
+        - 0.0
+        - 0.0
+        goal:
+        - 2.0
+        - 0.0
+      - id: open_test_demo
+        split: test
+        start:
+        - 0.0
+        - 0.0
+        - 0.0
+        goal:
+        - 4.0
+        - 0.0
+    original_warehouse:
+      world_file: jackal_rl_ws/worlds/demo/jackal_navigation_world.sdf
+      world_name: jackal_navigation_world
+      require_listed_pair: true
+      scenarios:
+      - id: warehouse_train_center
+        split: train
+        start:
+        - 0.0
+        - 0.0
+        - 0.0
+        goal:
+        - 2.0
+        - 0.0
+      - id: warehouse_val_goal_marker
+        split: validation
+        start:
+        - 0.0
+        - 0.0
+        - 0.0
+        goal:
+        - 4.0
+        - 0.0
+      - id: warehouse_test_offset
+        split: test
+        start:
+        - 1.0
+        - 0.0
+        - 0.0
+        goal:
+        - 4.0
+        - 0.0
+    external_warehouse:
+      world_file: jackal_rl_ws/worlds/external_warehouse/jackal_industrial_warehouse.sdf
+      world_name: industrial-warehouse
+      gazebo_partition: jackal_rl_external
+      require_listed_pair: true
+      scenarios:
+      - id: ext_train_east
+        split: train
+        start:
+        - 0.0
+        - 0.0
+        - 0.0
+        goal:
+        - 1.5
+        - 0.0
+      - id: ext_train_aisle
+        split: train
+        start:
+        - 1.5
+        - 0.0
+        - 0.0
+        goal:
+        - 2.0
+        - -2.0
+      - id: ext_train_south
+        split: train
+        start:
+        - 0.0
+        - 0.0
+        - 0.0
+        goal:
+        - 0.0
+        - -3.0
+      - id: ext_val_marker
+        split: validation
+        start:
+        - 2.0
+        - -2.0
+        - 0.0
+        goal:
+        - 0.0
+        - -3.0
+      - id: ext_val_west
+        split: validation
+        start:
+        - 0.0
+        - -3.0
+        - 0.0
+        goal:
+        - -2.0
+        - 0.0
+      - id: ext_test_cross
+        split: test
+        start:
+        - 1.5
+        - 0.0
+        - 0.0
+        goal:
+        - 0.0
+        - -3.0
+      - id: ext_test_long
+        split: test
+        start:
+        - 2.0
+        - -2.0
+        - 0.0
+        goal:
+        - -2.0
+        - 0.0
+      - id: ext_test_return
+        split: test
+        start:
+        - 0.0
+        - -3.0
+        - 0.0
+        goal:
+        - 1.5
+        - 0.0
+    generalization:
+      world_file: jackal_rl_ws/worlds/external_warehouse/jackal_industrial_warehouse.sdf
+      world_name: industrial-warehouse
+      gazebo_partition: jackal_rl_external
+      require_listed_pair: true
+      scenarios:
+      - id: gen_test_cross
+        split: test
+        start:
+        - 1.5
+        - 0.0
+        - 0.0
+        goal:
+        - 0.0
+        - -3.0
+      - id: gen_test_long
+        split: test
+        start:
+        - 2.0
+        - -2.0
+        - 0.0
+        goal:
+        - -2.0
+        - 0.0
+      - id: gen_test_return
+        split: test
+        start:
+        - 0.0
+        - -3.0
+        - 0.0
+        goal:
+        - 1.5
+        - 0.0
+curriculum:
+  min_episodes: 20
+  min_success_rate: 0.8
+  max_collision_rate: 0.1
+  max_safety_failures: 0
+  stages:
+  - id: open
+    world_file: jackal_rl_ws/worlds/demo/jackal_demo_open.sdf
+    purpose: Short start-goal routes on the existing open world.
+  - id: original_warehouse
+    world_file: jackal_rl_ws/worlds/demo/jackal_navigation_world.sdf
+    purpose: Corridors and sparse obstacles in the original warehouse world.
+  - id: external_warehouse
+    world_file: jackal_rl_ws/worlds/external_warehouse/jackal_industrial_warehouse.sdf
+    purpose: Shelves, walls, and clutter in the external industrial warehouse.
+  - id: generalization
+    world_file: jackal_rl_ws/worlds/external_warehouse/jackal_industrial_warehouse.sdf
+    purpose: Held-out start-goal pairs. This stage is evaluation, not a silent switch
+      during training.
+scenarios:
+- id: ext_train_east
+  split: train
+  start:
+  - 0.0
+  - 0.0
+  - 0.0
+  goal:
+  - 1.5
+  - 0.0
+obstacles: []
+world_file: jackal_rl_ws/worlds/external_warehouse/jackal_industrial_warehouse.sdf
+world_name: industrial-warehouse
+gazebo_partition: jackal_rl_external
+bounds_xy: null
+require_listed_pair: true
+namespace: j100_0000
+lidar_topic: /j100_0000/sensors/lidar3d_0/scan
+odom_topic: /j100_0000/platform/odom
+contact_topic: /jackal_rl/obstacle_contacts
+odom_frame: odom
+goal_tolerance_m: 0.3
+max_episode_steps: 600
+sensor_timeout_s: 5.0
+control_frequency_hz: 5.0
+min_separation_m: 0.5
+robot_radius_m: 0.25
+stationary_linear_limit_mps: 0.02
+stationary_angular_limit_radps: 0.05
+observation_interface: jackal_40d_v1
+action_interface: normalized_twist_v1
+limits:
+  goal_tolerance_m: 0.3
+  max_episode_steps: 600
+  sensor_timeout_s: 5.0
+  control_frequency_hz: 5.0

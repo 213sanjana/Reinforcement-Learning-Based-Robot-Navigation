@@ -1,0 +1,13 @@
+# Initial warehouse reward magnitudes. These are hyperparameters, not tuned results.
+progress_scale: 5.0
+goal_reward: 100.0
+collision_penalty: 100.0
+step_penalty: 0.01
+warning_distance_m: 0.70
+critical_distance_m: 0.30
+warning_penalty: 0.2
+critical_penalty: 1.0
+critical_slope: 0.0
+angular_penalty_scale: 0.02
+action_delta_scale: 0.0
+lidar_max_range_m: 12.0

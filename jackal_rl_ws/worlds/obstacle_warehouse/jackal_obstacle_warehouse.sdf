@@ -1,0 +1,528 @@
+<?xml version="1.0" ?>
+<sdf version="1.8">
+  <!-- Obstacle course. Not the checkpoint world industrial-warehouse. -->
+  <world name="jackal_obstacle_warehouse">
+    <gravity>0 0 -9.81</gravity>
+    <plugin filename="libignition-gazebo-physics-system.so" name="ignition::gazebo::systems::Physics" />
+    <plugin filename="libignition-gazebo-user-commands-system.so" name="ignition::gazebo::systems::UserCommands" />
+    <plugin filename="libignition-gazebo-scene-broadcaster-system.so" name="ignition::gazebo::systems::SceneBroadcaster" />
+    <plugin filename="libignition-gazebo-sensors-system.so" name="ignition::gazebo::systems::Sensors">
+      <render_engine>ogre2</render_engine>
+    </plugin>
+    <plugin filename="libignition-gazebo-imu-system.so" name="ignition::gazebo::systems::Imu" />
+    <plugin filename="libignition-gazebo-navsat-system.so" name="ignition::gazebo::systems::NavSat" />
+    <plugin filename="libignition-gazebo-contact-system.so" name="ignition::gazebo::systems::Contact" />
+    <light type="directional" name="sun">
+      <cast_shadows>true</cast_shadows>
+      <pose>6 0 12 0 0 0</pose>
+      <diffuse>0.85 0.84 0.8 1</diffuse>
+      <specular>0.15 0.15 0.15 1</specular>
+      <direction>0.2 0.1 -1</direction>
+    </light>
+    <model name="ground_plane">
+      <static>true</static>
+      <link name="ground_link">
+        <collision name="collision">
+          <geometry>
+            <plane>
+              <normal>0 0 1</normal>
+              <size>80 80</size>
+            </plane>
+          </geometry>
+        </collision>
+        <visual name="visual">
+          <geometry>
+            <plane>
+              <normal>0 0 1</normal>
+              <size>80 80</size>
+            </plane>
+          </geometry>
+          <material>
+            <ambient>0.42 0.42 0.40 1</ambient>
+            <diffuse>0.42 0.42 0.40 1</diffuse>
+          </material>
+        </visual>
+      </link>
+    </model>
+    <model name="wall_west">
+      <static>true</static>
+      <pose>-1 0 1.1 0 0 0</pose>
+      <link name="link">
+        <collision name="collision">
+          <geometry>
+            <box>
+              <size>0.2 10.2 2.2</size>
+            </box>
+          </geometry>
+        </collision>
+        <visual name="visual">
+          <geometry>
+            <box>
+              <size>0.2 10.2 2.2</size>
+            </box>
+          </geometry>
+          <material>
+            <ambient>0.62 0.62 0.58 1</ambient>
+            <diffuse>0.72 0.72 0.68 1</diffuse>
+          </material>
+        </visual>
+        <sensor name="contact" type="contact">
+          <contact>
+            <collision>collision</collision>
+            <topic>/jackal_rl/obstacle_contacts</topic>
+          </contact>
+          <always_on>true</always_on>
+          <update_rate>50</update_rate>
+        </sensor>
+      </link>
+    </model>
+    <model name="wall_east">
+      <static>true</static>
+      <pose>15 0 1.1 0 0 0</pose>
+      <link name="link">
+        <collision name="collision">
+          <geometry>
+            <box>
+              <size>0.2 10.2 2.2</size>
+            </box>
+          </geometry>
+        </collision>
+        <visual name="visual">
+          <geometry>
+            <box>
+              <size>0.2 10.2 2.2</size>
+            </box>
+          </geometry>
+          <material>
+            <ambient>0.62 0.62 0.58 1</ambient>
+            <diffuse>0.72 0.72 0.68 1</diffuse>
+          </material>
+        </visual>
+        <sensor name="contact" type="contact">
+          <contact>
+            <collision>collision</collision>
+            <topic>/jackal_rl/obstacle_contacts</topic>
+          </contact>
+          <always_on>true</always_on>
+          <update_rate>50</update_rate>
+        </sensor>
+      </link>
+    </model>
+    <model name="wall_south">
+      <static>true</static>
+      <pose>7 -5 1.1 0 0 0</pose>
+      <link name="link">
+        <collision name="collision">
+          <geometry>
+            <box>
+              <size>16.2 0.2 2.2</size>
+            </box>
+          </geometry>
+        </collision>
+        <visual name="visual">
+          <geometry>
+            <box>
+              <size>16.2 0.2 2.2</size>
+            </box>
+          </geometry>
+          <material>
+            <ambient>0.62 0.62 0.58 1</ambient>
+            <diffuse>0.72 0.72 0.68 1</diffuse>
+          </material>
+        </visual>
+        <sensor name="contact" type="contact">
+          <contact>
+            <collision>collision</collision>
+            <topic>/jackal_rl/obstacle_contacts</topic>
+          </contact>
+          <always_on>true</always_on>
+          <update_rate>50</update_rate>
+        </sensor>
+      </link>
+    </model>
+    <model name="wall_north">
+      <static>true</static>
+      <pose>7 5 1.1 0 0 0</pose>
+      <link name="link">
+        <collision name="collision">
+          <geometry>
+            <box>
+              <size>16.2 0.2 2.2</size>
+            </box>
+          </geometry>
+        </collision>
+        <visual name="visual">
+          <geometry>
+            <box>
+              <size>16.2 0.2 2.2</size>
+            </box>
+          </geometry>
+          <material>
+            <ambient>0.62 0.62 0.58 1</ambient>
+            <diffuse>0.72 0.72 0.68 1</diffuse>
+          </material>
+        </visual>
+        <sensor name="contact" type="contact">
+          <contact>
+            <collision>collision</collision>
+            <topic>/jackal_rl/obstacle_contacts</topic>
+          </contact>
+          <always_on>true</always_on>
+          <update_rate>50</update_rate>
+        </sensor>
+      </link>
+    </model>
+    <model name="pillar">
+      <static>true</static>
+      <pose>1.6 1.8 0.9 0 0 0</pose>
+      <link name="link">
+        <collision name="collision">
+          <geometry>
+            <box>
+              <size>0.5 0.5 1.8</size>
+            </box>
+          </geometry>
+        </collision>
+        <visual name="visual">
+          <geometry>
+            <box>
+              <size>0.5 0.5 1.8</size>
+            </box>
+          </geometry>
+          <material>
+            <ambient>0.35 0.35 0.33 1</ambient>
+            <diffuse>0.45 0.45 0.42 1</diffuse>
+          </material>
+        </visual>
+        <sensor name="contact" type="contact">
+          <contact>
+            <collision>collision</collision>
+            <topic>/jackal_rl/obstacle_contacts</topic>
+          </contact>
+          <always_on>true</always_on>
+          <update_rate>50</update_rate>
+        </sensor>
+      </link>
+    </model>
+    <model name="gate_south">
+      <static>true</static>
+      <pose>3.2 -3.05 1.1 0 0 0</pose>
+      <link name="link">
+        <collision name="collision">
+          <geometry>
+            <box>
+              <size>0.2 3.9 2.2</size>
+            </box>
+          </geometry>
+        </collision>
+        <visual name="visual">
+          <geometry>
+            <box>
+              <size>0.2 3.9 2.2</size>
+            </box>
+          </geometry>
+          <material>
+            <ambient>0.62 0.62 0.58 1</ambient>
+            <diffuse>0.72 0.72 0.68 1</diffuse>
+          </material>
+        </visual>
+        <sensor name="contact" type="contact">
+          <contact>
+            <collision>collision</collision>
+            <topic>/jackal_rl/obstacle_contacts</topic>
+          </contact>
+          <always_on>true</always_on>
+          <update_rate>50</update_rate>
+        </sensor>
+      </link>
+    </model>
+    <model name="gate_north">
+      <static>true</static>
+      <pose>3.2 3.05 1.1 0 0 0</pose>
+      <link name="link">
+        <collision name="collision">
+          <geometry>
+            <box>
+              <size>0.2 3.9 2.2</size>
+            </box>
+          </geometry>
+        </collision>
+        <visual name="visual">
+          <geometry>
+            <box>
+              <size>0.2 3.9 2.2</size>
+            </box>
+          </geometry>
+          <material>
+            <ambient>0.62 0.62 0.58 1</ambient>
+            <diffuse>0.72 0.72 0.68 1</diffuse>
+          </material>
+        </visual>
+        <sensor name="contact" type="contact">
+          <contact>
+            <collision>collision</collision>
+            <topic>/jackal_rl/obstacle_contacts</topic>
+          </contact>
+          <always_on>true</always_on>
+          <update_rate>50</update_rate>
+        </sensor>
+      </link>
+    </model>
+    <model name="rack_near_north">
+      <static>true</static>
+      <pose>6.2 2.3 0.9 0 0 0</pose>
+      <link name="link">
+        <collision name="collision">
+          <geometry>
+            <box>
+              <size>2.2 0.8 1.8</size>
+            </box>
+          </geometry>
+        </collision>
+        <visual name="visual">
+          <geometry>
+            <box>
+              <size>2.2 0.8 1.8</size>
+            </box>
+          </geometry>
+          <material>
+            <ambient>0.42 0.30 0.16 1</ambient>
+            <diffuse>0.55 0.38 0.18 1</diffuse>
+          </material>
+        </visual>
+        <sensor name="contact" type="contact">
+          <contact>
+            <collision>collision</collision>
+            <topic>/jackal_rl/obstacle_contacts</topic>
+          </contact>
+          <always_on>true</always_on>
+          <update_rate>50</update_rate>
+        </sensor>
+      </link>
+    </model>
+    <model name="rack_far_north">
+      <static>true</static>
+      <pose>8.8 2.3 0.9 0 0 0</pose>
+      <link name="link">
+        <collision name="collision">
+          <geometry>
+            <box>
+              <size>2.2 0.8 1.8</size>
+            </box>
+          </geometry>
+        </collision>
+        <visual name="visual">
+          <geometry>
+            <box>
+              <size>2.2 0.8 1.8</size>
+            </box>
+          </geometry>
+          <material>
+            <ambient>0.42 0.30 0.16 1</ambient>
+            <diffuse>0.55 0.38 0.18 1</diffuse>
+          </material>
+        </visual>
+        <sensor name="contact" type="contact">
+          <contact>
+            <collision>collision</collision>
+            <topic>/jackal_rl/obstacle_contacts</topic>
+          </contact>
+          <always_on>true</always_on>
+          <update_rate>50</update_rate>
+        </sensor>
+      </link>
+    </model>
+    <model name="rack_near_south">
+      <static>true</static>
+      <pose>6.2 -2.3 0.9 0 0 0</pose>
+      <link name="link">
+        <collision name="collision">
+          <geometry>
+            <box>
+              <size>2.2 0.8 1.8</size>
+            </box>
+          </geometry>
+        </collision>
+        <visual name="visual">
+          <geometry>
+            <box>
+              <size>2.2 0.8 1.8</size>
+            </box>
+          </geometry>
+          <material>
+            <ambient>0.42 0.30 0.16 1</ambient>
+            <diffuse>0.55 0.38 0.18 1</diffuse>
+          </material>
+        </visual>
+        <sensor name="contact" type="contact">
+          <contact>
+            <collision>collision</collision>
+            <topic>/jackal_rl/obstacle_contacts</topic>
+          </contact>
+          <always_on>true</always_on>
+          <update_rate>50</update_rate>
+        </sensor>
+      </link>
+    </model>
+    <model name="rack_far_south">
+      <static>true</static>
+      <pose>8.8 -2.3 0.9 0 0 0</pose>
+      <link name="link">
+        <collision name="collision">
+          <geometry>
+            <box>
+              <size>2.2 0.8 1.8</size>
+            </box>
+          </geometry>
+        </collision>
+        <visual name="visual">
+          <geometry>
+            <box>
+              <size>2.2 0.8 1.8</size>
+            </box>
+          </geometry>
+          <material>
+            <ambient>0.42 0.30 0.16 1</ambient>
+            <diffuse>0.55 0.38 0.18 1</diffuse>
+          </material>
+        </visual>
+        <sensor name="contact" type="contact">
+          <contact>
+            <collision>collision</collision>
+            <topic>/jackal_rl/obstacle_contacts</topic>
+          </contact>
+          <always_on>true</always_on>
+          <update_rate>50</update_rate>
+        </sensor>
+      </link>
+    </model>
+    <model name="aisle_crate">
+      <static>true</static>
+      <pose>7.4 0.45 0.35 0 0 0</pose>
+      <link name="link">
+        <collision name="collision">
+          <geometry>
+            <box>
+              <size>0.8 0.7 0.7</size>
+            </box>
+          </geometry>
+        </collision>
+        <visual name="visual">
+          <geometry>
+            <box>
+              <size>0.8 0.7 0.7</size>
+            </box>
+          </geometry>
+          <material>
+            <ambient>0.50 0.36 0.14 1</ambient>
+            <diffuse>0.72 0.50 0.16 1</diffuse>
+          </material>
+        </visual>
+        <sensor name="contact" type="contact">
+          <contact>
+            <collision>collision</collision>
+            <topic>/jackal_rl/obstacle_contacts</topic>
+          </contact>
+          <always_on>true</always_on>
+          <update_rate>50</update_rate>
+        </sensor>
+      </link>
+    </model>
+    <model name="choke_north">
+      <static>true</static>
+      <pose>11.2 2.6 1.1 0 0 0</pose>
+      <link name="link">
+        <collision name="collision">
+          <geometry>
+            <box>
+              <size>0.2 4.8 2.2</size>
+            </box>
+          </geometry>
+        </collision>
+        <visual name="visual">
+          <geometry>
+            <box>
+              <size>0.2 4.8 2.2</size>
+            </box>
+          </geometry>
+          <material>
+            <ambient>0.62 0.62 0.58 1</ambient>
+            <diffuse>0.72 0.72 0.68 1</diffuse>
+          </material>
+        </visual>
+        <sensor name="contact" type="contact">
+          <contact>
+            <collision>collision</collision>
+            <topic>/jackal_rl/obstacle_contacts</topic>
+          </contact>
+          <always_on>true</always_on>
+          <update_rate>50</update_rate>
+        </sensor>
+      </link>
+    </model>
+    <model name="choke_south">
+      <static>true</static>
+      <pose>11.2 -3.3 1.1 0 0 0</pose>
+      <link name="link">
+        <collision name="collision">
+          <geometry>
+            <box>
+              <size>0.2 3.4 2.2</size>
+            </box>
+          </geometry>
+        </collision>
+        <visual name="visual">
+          <geometry>
+            <box>
+              <size>0.2 3.4 2.2</size>
+            </box>
+          </geometry>
+          <material>
+            <ambient>0.62 0.62 0.58 1</ambient>
+            <diffuse>0.72 0.72 0.68 1</diffuse>
+          </material>
+        </visual>
+        <sensor name="contact" type="contact">
+          <contact>
+            <collision>collision</collision>
+            <topic>/jackal_rl/obstacle_contacts</topic>
+          </contact>
+          <always_on>true</always_on>
+          <update_rate>50</update_rate>
+        </sensor>
+      </link>
+    </model>
+    <model name="far_pallet">
+      <static>true</static>
+      <pose>13.2 -2.2 0.25 0 0 0</pose>
+      <link name="link">
+        <collision name="collision">
+          <geometry>
+            <box>
+              <size>1.0 0.8 0.5</size>
+            </box>
+          </geometry>
+        </collision>
+        <visual name="visual">
+          <geometry>
+            <box>
+              <size>1.0 0.8 0.5</size>
+            </box>
+          </geometry>
+          <material>
+            <ambient>0.28 0.32 0.38 1</ambient>
+            <diffuse>0.35 0.40 0.48 1</diffuse>
+          </material>
+        </visual>
+        <sensor name="contact" type="contact">
+          <contact>
+            <collision>collision</collision>
+            <topic>/jackal_rl/obstacle_contacts</topic>
+          </contact>
+          <always_on>true</always_on>
+          <update_rate>50</update_rate>
+        </sensor>
+      </link>
+    </model>
+  </world>
+</sdf>

@@ -14,7 +14,9 @@ class RobotNavigationEnv(gym.Env):
     def __init__(self, height: int = 10, width: int = 10, obstacle_density: float = 0.2,
                  max_steps: int = 200, render_mode: str | None = None,
                  cell_size: int = 48, reward_config: RewardConfig | None = None,
-                 max_map_attempts: int = 1000) -> None:
+                 max_map_attempts: int = 1000,
+                 bfs_shaping: bool = False,
+                 shaping_gamma: float = 0.99) -> None:
         super().__init__()
         if height < 2 or width < 2:
             raise ValueError('height and width must be >= 2')
@@ -28,6 +30,10 @@ class RobotNavigationEnv(gym.Env):
         self.obstacle_density, self.max_steps = obstacle_density, max_steps
         self.render_mode, self.max_map_attempts = render_mode, max_map_attempts
         self.reward_config = reward_config or RewardConfig()
+        if not 0 <= shaping_gamma <= 1:
+            raise ValueError('shaping_gamma must be in [0, 1]')
+        self.bfs_shaping = bfs_shaping
+        self.shaping_gamma = shaping_gamma
         self.action_space = spaces.Discrete(4)
         self.observation_space = spaces.Dict({
             'agent': spaces.Box(low=np.array([0,0],dtype=np.int32),
@@ -83,8 +89,29 @@ class RobotNavigationEnv(gym.Env):
         terminated = self.agent == self.goal
         truncated = self.steps >= self.max_steps and not terminated
         self._finished = terminated or truncated
-        reward = calculate_reward(previous, self.agent, self.goal, collision,
-                                  terminated, self.reward_config)
+        if self.bfs_shaping:
+            previous_path = shortest_path(self.obstacles, previous, self.goal)
+            current_path = shortest_path(self.obstacles, self.agent, self.goal)
+            if previous_path is None or current_path is None:
+                raise RuntimeError('BFS shaping requires a reachable goal')
+            previous_distance = len(previous_path) - 1
+            current_distance = len(current_path) - 1
+
+            # Replace Manhattan progress with discounted potential shaping.
+            # Phi(s) = -BFS_distance(s, goal); Phi(goal) = 0.
+            shaping = self.reward_config.progress * (
+                previous_distance - self.shaping_gamma * current_distance
+            )
+            reward = (
+                self.reward_config.step
+                + (self.reward_config.collision if collision else 0.0)
+                + (self.reward_config.goal if terminated else 0.0)
+                + shaping
+            )
+            reward = float(reward)
+        else:
+            reward = calculate_reward(previous, self.agent, self.goal, collision,
+                                      terminated, self.reward_config)
         if self.render_mode == 'human':
             self.render()
         return self._observation(), reward, terminated, truncated, self._info(collision)

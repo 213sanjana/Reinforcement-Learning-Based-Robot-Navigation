@@ -1,0 +1,77 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<title>Four warehouse routes, 3 November 2026</title>
+<style>
+  body { font-family: sans-serif; margin: 32px; color: #17200f; background: #f7f6f1; }
+  h1 { margin-bottom: 8px; }
+  p { max-width: 760px; line-height: 1.45; }
+  table { border-collapse: collapse; width: 100%; max-width: 960px; background: white; }
+  th, td { border: 1px solid #c9c3b2; padding: 8px 10px; text-align: left; }
+  th { background: #e7efe4; }
+</style>
+</head>
+<body>
+<h1>Four warehouse routes</h1>
+<p>Saved from <code>artifacts/warehouse_ppo/routes/multi_route_3</code>. Policy <code>artifacts/warehouse_ppo/runs/run_20261103T054820Z_bf036311</code>. This is the second live pass of the four short routes. It is not the 14-checkpoint tour from the original spawn, and it does not replace <code>docs/warehouse_performance_demo.pdf</code>.</p>
+<p>4 of 4 routes reached their last checkpoint. Episode collisions 0. Timeouts 0. Mean path 3.81 m. Mean logged duration 29.75 s, counted at 0.2 s per control step. Mean closest scan 0.98 m. Mean final distance 0.26 m.</p>
+<table>
+  <thead>
+    <tr>
+      <th>Route</th>
+      <th>Final pose</th>
+      <th>Destination</th>
+      <th>Distance</th>
+      <th>Path</th>
+      <th>Logged time</th>
+      <th>Closest scan</th>
+      <th>Checkpoints</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <td>familiar_east</td>
+      <td>(1.23, −0.07)</td>
+      <td>(1.5, 0)</td>
+      <td>0.275 m</td>
+      <td>1.24 m</td>
+      <td>8.0 s</td>
+      <td>1.46 m</td>
+      <td>east_goal</td>
+    </tr>
+    <tr>
+      <td>south_shelf_aisle</td>
+      <td>(1.46, −4.55)</td>
+      <td>(1.5, −4.8)</td>
+      <td>0.256 m</td>
+      <td>6.77 m</td>
+      <td>56.8 s</td>
+      <td>0.62 m</td>
+      <td>shelf_row, south_gap, south_shelf</td>
+    </tr>
+    <tr>
+      <td>narrow_shelf_box_bay</td>
+      <td>(5.45, 1.95)</td>
+      <td>(5.7, 1.97)</td>
+      <td>0.255 m</td>
+      <td>3.96 m</td>
+      <td>29.8 s</td>
+      <td>0.91 m</td>
+      <td>bay_west, bay_middle, bay_east</td>
+    </tr>
+    <tr>
+      <td>north_box_lane</td>
+      <td>(1.20, 6.35)</td>
+      <td>(1.2, 6.6)</td>
+      <td>0.246 m</td>
+      <td>3.26 m</td>
+      <td>24.4 s</td>
+      <td>0.93 m</td>
+      <td>toward_dustbin, dustbin_approach, green_dustbin</td>
+    </tr>
+  </tbody>
+</table>
+<p>Each final pose is inside the 0.30 m arrival circle, and the stored goal distance matches that pose. Contact messages received during the run contained no robot-obstacle contact. Those messages also say they are not proof of collision-free driving. The safety monitor reduced some commands for a close forward obstacle and for rotation clearance, and the routes still finished.</p>
+</body>
+</html>

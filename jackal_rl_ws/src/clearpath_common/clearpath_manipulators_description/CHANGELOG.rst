@@ -1,0 +1,239 @@
+^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+Changelog for package clearpath_manipulators_description
+^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+
+1.3.11 (2026-06-02)
+-------------------
+* Fix: Robotiq 2F 140 Limits and Padding (`#311 <https://github.com/clearpathrobotics/clearpath_common/issues/311>`_) (`#312 <https://github.com/clearpathrobotics/clearpath_common/issues/312>`_)
+  * Use package instead of file to define mesh path
+  * Add padding parameter to define finger joint limits
+  * Tune down to 0.767
+  (cherry picked from commit 38b7ee125015b41d5509eaa1e035719f3b92a180)
+  Co-authored-by: luis-camero <88782189+luis-camero@users.noreply.github.com>
+* Contributors: mergify[bot]
+
+1.3.10 (2026-04-14)
+-------------------
+* Use package instead of file to define mesh path (`#307 <https://github.com/clearpathrobotics/clearpath_common/issues/307>`_) (`#309 <https://github.com/clearpathrobotics/clearpath_common/issues/309>`_)
+  (cherry picked from commit 6d46f773eef780969c7d3b0bceb6f3c8f6db70ec)
+  Co-authored-by: luis-camero <88782189+luis-camero@users.noreply.github.com>
+* [Humble] Fix: Update cmake version to 3.20 (`#305 <https://github.com/clearpathrobotics/clearpath_common/issues/305>`_)
+  * Fix: Update cmake version to 3.20 and fixed CI (`#295 <https://github.com/clearpathrobotics/clearpath_common/issues/295>`_)
+  * Update cmake version to 3.20
+  * Switch to ubuntu:noble container
+  * Use updated repos update action
+  * Install python and pip
+  * Add apt update
+  * Update repos update action version
+  (cherry picked from commit 5837b8961e8d9835fc1be33db864ed5eaafe6f6d)
+  * More changes to fix backport.
+  ---------
+  Co-authored-by: luis-camero <88782189+luis-camero@users.noreply.github.com>
+  Co-authored-by: Tony Baltovski <tbaltovski@clearpathrobotics.com>
+* Contributors: mergify[bot]
+
+1.3.9 (2026-01-30)
+------------------
+* Update Kinova 2F lite gripper joint limits (`#298 <https://github.com/clearpathrobotics/clearpath_common/issues/298>`_) (`#300 <https://github.com/clearpathrobotics/clearpath_common/issues/300>`_)
+* Contributors: mergify[bot]
+
+1.3.8 (2025-12-16)
+------------------
+
+1.3.7 (2025-09-18)
+------------------
+* Fix: Lift URDF Parameters (`#267 <https://github.com/clearpathrobotics/clearpath_common/issues/267>`_)
+  Pass 'add_mount' parameter to URDF
+* Contributors: luis-camero
+
+1.3.6 (2025-08-26)
+------------------
+* Add ewellix_description dependency (`#144 <https://github.com/clearpathrobotics/clearpath_common/issues/144>`_)
+* Contributors: luis-camero
+
+1.3.5 (2025-07-29)
+------------------
+* Feature: Franka Hand (`#244 <https://github.com/clearpathrobotics/clearpath_common/issues/244>`_)
+  * Remove ros2_control controllers
+  * Move gazebo control to a separate file
+* Contributors: luis-camero
+
+1.3.4 (2025-07-17)
+------------------
+* Fix: Franka Update (`#238 <https://github.com/clearpathrobotics/clearpath_common/issues/238>`_)
+  * Pass version parameter to Franka Hardware Interface
+  * Use franka_arm macro and always add position and velocity interfaces
+  * Only use effort
+* Contributors: luis-camero
+
+1.3.3 (2025-07-03)
+------------------
+* Fix/Feature: UR Arm Controller Update Rate (`#225 <https://github.com/clearpathrobotics/clearpath_common/issues/225>`_)
+  * Change controller update rate for universal robots to 500
+  * Use UniversalRobots update_rate parameters if available
+* Contributors: luis-camero
+
+1.3.2 (2025-04-15)
+------------------
+
+1.3.1 (2025-04-15)
+------------------
+
+1.3.0 (2025-04-15)
+------------------
+
+1.2.0 (2025-03-13)
+------------------
+* Feature Franka (`#171 <https://github.com/clearpathrobotics/clearpath_common/issues/171>`_)
+  * Initial franka addition
+  * Create joint instead of using connected_to parameter
+  * Custom entry for generating Franka param
+  * Franka control for multiple types
+  * Modify entire Franka arm xacro
+  * Add franka gripper
+  * Copy and modify franka description
+  * Add cutout for Franka arm_id
+  * Add dependency for franka_description
+* Feature: Manipulator Samples and Poses (`#163 <https://github.com/clearpathrobotics/clearpath_common/issues/163>`_)
+  * Add group_state macros to arm SRDF
+  * Add group_state macros to grippers SRDF
+  * Generate pose macros in URDF
+* Fix: Isolate Universal Robots driver and client library dependencies (`#164 <https://github.com/clearpathrobotics/clearpath_common/issues/164>`_)
+* Contributors: luis-camero
+
+1.1.1 (2025-01-16)
+------------------
+
+1.1.0 (2025-01-15)
+------------------
+* Ewellix Lift (`#136 <https://github.com/clearpathrobotics/clearpath_common/issues/136>`_)
+  Ewellix Lift
+  -  Remove upper_joint
+  - Add moveit jpc
+  - Add control for joint position controller
+  - Add hardware parameters
+  - Add lifts to generators
+  - Initial add of Ewellix lift description files
+* Contributors: luis-camero
+
+1.0.0 (2024-11-25)
+------------------
+* Add UR arm (`#110 <https://github.com/clearpathrobotics/clearpath_common/issues/110>`_)
+* Contributors: luis-camero
+
+0.3.4 (2024-10-08)
+------------------
+
+0.3.3 (2024-10-04)
+------------------
+
+0.3.2 (2024-09-29)
+------------------
+
+0.3.1 (2024-09-23)
+------------------
+
+0.3.0 (2024-09-19)
+------------------
+* Fixed package version on new packages to match old packages.
+* Changes.
+* Add meshes and URDF for robotiq 2f 140
+* Fixed all license headers
+* Added dependencies to manipulators description
+* Added Robotiq grippers for Kinova
+* Added all joints to the Kinova gripper SRDF
+* Removed unecessary parameter
+* Gripper joint set through arm URD
+* Added another variable to add namespace for MoveItt
+* Added argument to toggle manipulator controllers
+* Manipulator description to match platform description launch
+* Added all descriptions for kinova manipulators
+* Contributors: Luis Camero, Tony Baltovski
+
+* Add meshes and URDF for robotiq 2f 140
+* Fixed all license headers
+* Added dependencies to manipulators description
+* Added Robotiq grippers for Kinova
+* Added all joints to the Kinova gripper SRDF
+* Removed unecessary parameter
+* Gripper joint set through arm URD
+* Added another variable to add namespace for MoveItt
+* Added argument to toggle manipulator controllers
+* Manipulator description to match platform description launch
+* Added all descriptions for kinova manipulators
+* Contributors: Luis Camero
+
+0.2.11 (2024-08-08)
+-------------------
+
+0.2.10 (2024-07-25)
+-------------------
+
+0.2.9 (2024-05-28)
+------------------
+
+0.2.8 (2024-05-14)
+------------------
+
+0.2.7 (2024-04-08)
+------------------
+
+0.2.6 (2024-01-18)
+------------------
+
+0.2.5 (2024-01-15)
+------------------
+
+0.2.4 (2024-01-11)
+------------------
+
+0.2.3 (2024-01-08)
+------------------
+
+0.2.2 (2024-01-04)
+------------------
+
+0.2.1 (2023-12-21)
+------------------
+
+0.2.0 (2023-12-08)
+------------------
+
+0.1.3 (2023-11-03)
+------------------
+
+0.1.2 (2023-10-02)
+------------------
+
+0.1.1 (2023-08-25)
+------------------
+
+0.1.0 (2023-08-17)
+------------------
+
+0.0.9 (2023-07-31)
+------------------
+
+0.0.8 (2023-07-24)
+------------------
+
+0.0.7 (2023-07-19)
+------------------
+
+0.0.6 (2023-07-13)
+------------------
+
+0.0.5 (2023-07-12)
+------------------
+
+0.0.4 (2023-07-07)
+------------------
+
+0.0.3 (2023-07-05)
+------------------
+
+0.0.2 (2023-07-04)
+------------------
+
+0.0.1 (2023-06-21)
+------------------

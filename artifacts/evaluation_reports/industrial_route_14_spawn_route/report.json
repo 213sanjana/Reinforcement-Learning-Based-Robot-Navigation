@@ -1,0 +1,421 @@
+{
+  "report_version": 1,
+  "live_execution": false,
+  "active_family": "industrial_route_14",
+  "source_directory": "artifacts/warehouse_ppo/repeatability/spawn_route",
+  "comparison": {
+    "task_family": "industrial_route_14",
+    "methods": {
+      "ppo": "RECORDED",
+      "nav2": "NOT_RECORDED",
+      "astar": "NOT_RECORDED"
+    },
+    "ranking": null,
+    "reason": "Only PPO has a recorded result for industrial_route_14. Nav2 and A* are NOT_RECORDED and are not ranked. Other task families are not compared with this route."
+  },
+  "task_families": {
+    "industrial_route_14": {
+      "status": "RECORDED",
+      "identity": {
+        "world": {
+          "value": "industrial-warehouse",
+          "source": "checkpoint metadata.json world_name",
+          "note": "The trial files do not store the world. This value is the checkpoint training record named by summary.json."
+        },
+        "controller": {
+          "value": "ppo",
+          "source": "checkpoint metadata.json ppo.policy",
+          "note": "Checkpoint policy class is MlpPolicy."
+        },
+        "checkpoint": {
+          "value": "artifacts/warehouse_ppo/runs/run_20261103T054820Z_bf036311",
+          "source": "summary.json checkpoint"
+        },
+        "configuration": {
+          "value": null,
+          "reason": "No config path is stored in the trial files, summary.json, or checkpoint metadata.json."
+        },
+        "seed": {
+          "value": [
+            1,
+            2,
+            3,
+            4,
+            5
+          ],
+          "source": "trial JSON seed fields",
+          "checkpoint_training_seed": {
+            "value": 42,
+            "source": "checkpoint metadata.json seed",
+            "note": "Training seed from the checkpoint record, not the per-trial evaluation seeds."
+          }
+        },
+        "route": {
+          "id": "spawn_route",
+          "id_source": "trial directory name",
+          "spawn": [
+            0.0,
+            0.0,
+            0.0
+          ],
+          "spawn_source": "summary.json spawn",
+          "checkpoints": [
+            "toward_green_circle",
+            "green_circle",
+            "toward_shelf_row",
+            "shelf_row",
+            "shelf_face",
+            "bay_entry",
+            "shelf_box_west",
+            "shelf_box_middle",
+            "shelf_box_east",
+            "bay_exit",
+            "box_row_pass",
+            "toward_dustbin",
+            "dustbin_approach",
+            "green_dustbin"
+          ],
+          "checkpoints_source": "summary.json checkpoints"
+        },
+        "goal_tolerance_m": {
+          "value": null,
+          "reason": "Goal tolerance is not stored in the trial files, summary.json, or checkpoint metadata.json."
+        },
+        "execution_mode": {
+          "value": null,
+          "reason": "The trial files and summary.json do not store the evaluation execution mode. Checkpoint metadata execution describes the training run and is not copied as the evaluation mode.",
+          "note": "checkpoint metadata.json execution is stored only as checkpoint_record.training_execution."
+        },
+        "checkpoint_record": {
+          "path": "artifacts/warehouse_ppo/runs/run_20261103T054820Z_bf036311",
+          "metadata_path": "artifacts/warehouse_ppo/runs/run_20261103T054820Z_bf036311/metadata.json",
+          "metadata_present": true,
+          "weights_loaded": false,
+          "world_name": "industrial-warehouse",
+          "policy": "MlpPolicy",
+          "training_seed": 42,
+          "training_execution": "offline",
+          "observation_interface": "jackal_40d_v1",
+          "action_interface": "normalized_twist_v1",
+          "stage_id": "external_warehouse",
+          "git_head": "176cbcbef8de60aef4df58ddc39f8d14d1f1311d",
+          "note": "These fields describe the saved checkpoint named by summary.json. training_execution is not the evaluation execution mode. The policy zip was not opened."
+        }
+      },
+      "validation": {
+        "passed": true,
+        "trial_files": 5,
+        "aggregate_matches_summary": true,
+        "summary_rows_match_trial_files": true,
+        "checkpoint_lists_match": true,
+        "reached_checkpoints_are_ordered_prefixes": true
+      },
+      "metrics": {
+        "episodes": 5,
+        "successes": 1,
+        "collisions": 0,
+        "timeouts": 0,
+        "success_rate": 0.2,
+        "collision_rate": 0.0,
+        "timeout_rate": 0.0,
+        "mean_path_length_m": 21.433021544475046,
+        "mean_duration_s": 155.6399999999997,
+        "mean_time_to_goal_s": null,
+        "mean_linear_speed_mps": null,
+        "mean_angular_speed_radps": null,
+        "mean_min_clearance_m": 0.6606510519981384,
+        "mean_rotations": null,
+        "mean_terminal_goal_distance_m": 4.429590921638664,
+        "mean_episode_length": 778.2,
+        "mean_return": null,
+        "checkpoints_expected": 14,
+        "checkpoints_reached_per_trial": [
+          14,
+          13,
+          14,
+          14,
+          14
+        ],
+        "trials_with_all_checkpoint_names": 4,
+        "safety_rejected_episodes": 1,
+        "safety_rejection_count": null,
+        "collision_event_count": null,
+        "path_efficiency": null
+      },
+      "unavailable": {
+        "mean_time_to_goal_s": "Trial files store duration_s but not time_to_goal_s. The historical summary leaves this mean null, and duration_s is not substituted for it.",
+        "mean_linear_speed_mps": "Trial files do not store mean_linear_speed_mps.",
+        "mean_angular_speed_radps": "Trial files do not store mean_angular_speed_radps.",
+        "mean_rotations": "Trial files do not store rotations.",
+        "mean_return": "Trial files do not store episode_return.",
+        "safety_rejection_count": "The route driver can recover from an in-loop safety rejection, but it does not write that recovery count. Only a terminal reason of safety_rejected is stored.",
+        "collision_event_count": "collision is an episode flag, not a count of contact events.",
+        "path_efficiency": "Straight-line distance is not stored, so path efficiency is not computed.",
+        "goal_tolerance_m": "Goal tolerance is not stored in the trial files, summary.json, or checkpoint metadata.json.",
+        "configuration": "No config path is stored in the trial files, summary.json, or checkpoint metadata.json.",
+        "execution_mode": "The trial files and summary.json do not store the evaluation execution mode. Checkpoint metadata execution describes the training run and is not copied as the evaluation mode."
+      },
+      "notes": [
+        "Success is the stored success flag. A complete checkpoint-name list is not success by itself.",
+        "Trials 3 (goal_reached), 4 (goal_reached), 5 (goal_reached) list every checkpoint name, but success is false. The report does not recompute success.",
+        "Terminal safety_rejected episodes: 2. This is not a count of rejected commands."
+      ],
+      "trials": [
+        {
+          "trial": 1,
+          "seed": 1,
+          "spawn": [
+            0.0,
+            0.0,
+            0.0
+          ],
+          "success": true,
+          "collision": false,
+          "timeout": false,
+          "goal_distance": 0.28001414305846584,
+          "path_length_m": 21.292598725172617,
+          "duration_s": 151.39999999999995,
+          "min_clearance_m": 0.6801777482032776,
+          "episode_length": 757,
+          "termination_reason": "goal_reached",
+          "checkpoints_reached_count": 14,
+          "checkpoints_expected_count": 14,
+          "checkpoints_reached": [
+            "toward_green_circle",
+            "green_circle",
+            "toward_shelf_row",
+            "shelf_row",
+            "shelf_face",
+            "bay_entry",
+            "shelf_box_west",
+            "shelf_box_middle",
+            "shelf_box_east",
+            "bay_exit",
+            "box_row_pass",
+            "toward_dustbin",
+            "dustbin_approach",
+            "green_dustbin"
+          ],
+          "pose_xy": [
+            1.3193429848933516,
+            6.346691547181085
+          ],
+          "route_start": "toward_green_circle",
+          "destination": [
+            1.2,
+            6.6
+          ],
+          "source_file": "trial_01.json"
+        },
+        {
+          "trial": 2,
+          "seed": 2,
+          "spawn": [
+            0.0,
+            0.0,
+            0.0
+          ],
+          "success": false,
+          "collision": false,
+          "timeout": false,
+          "goal_distance": 5.725816558579383,
+          "path_length_m": 21.934810742976875,
+          "duration_s": 158.79999999999953,
+          "min_clearance_m": 0.4858156442642212,
+          "episode_length": 794,
+          "termination_reason": "safety_rejected",
+          "checkpoints_reached_count": 13,
+          "checkpoints_expected_count": 14,
+          "checkpoints_reached": [
+            "toward_green_circle",
+            "green_circle",
+            "toward_shelf_row",
+            "shelf_row",
+            "shelf_face",
+            "bay_entry",
+            "shelf_box_west",
+            "shelf_box_middle",
+            "shelf_box_east",
+            "bay_exit",
+            "box_row_pass",
+            "toward_dustbin",
+            "dustbin_approach"
+          ],
+          "pose_xy": [
+            -4.516472356817908,
+            6.926984795118301
+          ],
+          "route_start": "toward_green_circle",
+          "destination": [
+            1.2,
+            6.6
+          ],
+          "source_file": "trial_02.json"
+        },
+        {
+          "trial": 3,
+          "seed": 3,
+          "spawn": [
+            0.0,
+            0.0,
+            0.0
+          ],
+          "success": false,
+          "collision": false,
+          "timeout": false,
+          "goal_distance": 9.21680633597066,
+          "path_length_m": 21.327718344722054,
+          "duration_s": 150.6,
+          "min_clearance_m": 0.6401746273040771,
+          "episode_length": 753,
+          "termination_reason": "goal_reached",
+          "checkpoints_reached_count": 14,
+          "checkpoints_expected_count": 14,
+          "checkpoints_reached": [
+            "toward_green_circle",
+            "green_circle",
+            "toward_shelf_row",
+            "shelf_row",
+            "shelf_face",
+            "bay_entry",
+            "shelf_box_west",
+            "shelf_box_middle",
+            "shelf_box_east",
+            "bay_exit",
+            "box_row_pass",
+            "toward_dustbin",
+            "dustbin_approach",
+            "green_dustbin"
+          ],
+          "pose_xy": [
+            -5.770302616246093,
+            0.5697097521975156
+          ],
+          "route_start": "toward_green_circle",
+          "destination": [
+            1.2,
+            6.6
+          ],
+          "source_file": "trial_03.json"
+        },
+        {
+          "trial": 4,
+          "seed": 4,
+          "spawn": [
+            0.0,
+            0.0,
+            0.0
+          ],
+          "success": false,
+          "collision": false,
+          "timeout": false,
+          "goal_distance": 6.43934523550985,
+          "path_length_m": 21.295679700031904,
+          "duration_s": 157.19999999999962,
+          "min_clearance_m": 0.7851834297180176,
+          "episode_length": 786,
+          "termination_reason": "goal_reached",
+          "checkpoints_reached_count": 14,
+          "checkpoints_expected_count": 14,
+          "checkpoints_reached": [
+            "toward_green_circle",
+            "green_circle",
+            "toward_shelf_row",
+            "shelf_row",
+            "shelf_face",
+            "bay_entry",
+            "shelf_box_west",
+            "shelf_box_middle",
+            "shelf_box_east",
+            "bay_exit",
+            "box_row_pass",
+            "toward_dustbin",
+            "dustbin_approach",
+            "green_dustbin"
+          ],
+          "pose_xy": [
+            0.6950306933957152,
+            0.18048498237826385
+          ],
+          "route_start": "toward_green_circle",
+          "destination": [
+            1.2,
+            6.6
+          ],
+          "source_file": "trial_04.json"
+        },
+        {
+          "trial": 5,
+          "seed": 5,
+          "spawn": [
+            0.0,
+            0.0,
+            0.0
+          ],
+          "success": false,
+          "collision": false,
+          "timeout": false,
+          "goal_distance": 0.4859723350749616,
+          "path_length_m": 21.314300209471778,
+          "duration_s": 160.19999999999945,
+          "min_clearance_m": 0.7119038105010986,
+          "episode_length": 801,
+          "termination_reason": "goal_reached",
+          "checkpoints_reached_count": 14,
+          "checkpoints_expected_count": 14,
+          "checkpoints_reached": [
+            "toward_green_circle",
+            "green_circle",
+            "toward_shelf_row",
+            "shelf_row",
+            "shelf_face",
+            "bay_entry",
+            "shelf_box_west",
+            "shelf_box_middle",
+            "shelf_box_east",
+            "bay_exit",
+            "box_row_pass",
+            "toward_dustbin",
+            "dustbin_approach",
+            "green_dustbin"
+          ],
+          "pose_xy": [
+            0.7191713403080183,
+            6.670518866107044
+          ],
+          "route_start": "toward_green_circle",
+          "destination": [
+            1.2,
+            6.6
+          ],
+          "source_file": "trial_05.json"
+        }
+      ]
+    },
+    "industrial_short_routes": {
+      "status": "NOT_RECORDED",
+      "reason": "This report only reads the 14-stop spawn-route trials. Short-route results are a separate task and are not copied here.",
+      "metrics": null
+    },
+    "small_warehouse_roam": {
+      "status": "NOT_RECORDED",
+      "reason": "No small-warehouse roam record was an input. No small-warehouse performance figure is reported.",
+      "metrics": null
+    },
+    "cafe_roam": {
+      "status": "NOT_RECORDED",
+      "reason": "No cafe PPO roam record was an input. No cafe roam performance figure is reported.",
+      "metrics": null
+    },
+    "cafe_nav2_goal": {
+      "status": "NOT_RECORDED",
+      "reason": "Nav2 goal sending does not write a metric file in this repository. No Nav2 performance figure is reported.",
+      "metrics": null
+    },
+    "gridworld_manifest": {
+      "status": "NOT_RECORDED",
+      "reason": "GridWorld manifest results use a different protocol and were not inputs. No grid score is copied into this report.",
+      "metrics": null
+    }
+  }
+}

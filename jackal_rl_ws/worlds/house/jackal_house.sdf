@@ -1,0 +1,116 @@
+<?xml version="1.0" ?>
+<sdf version="1.8">
+  <!-- Indoor cafe. The Jackal spawn at the origin is on the open floor, inside the room. -->
+  <world name="jackal_house">
+    <gravity>0 0 -9.81</gravity>
+    <plugin filename="libignition-gazebo-physics-system.so" name="ignition::gazebo::systems::Physics"/>
+    <plugin filename="libignition-gazebo-user-commands-system.so" name="ignition::gazebo::systems::UserCommands"/>
+    <plugin filename="libignition-gazebo-scene-broadcaster-system.so" name="ignition::gazebo::systems::SceneBroadcaster"/>
+    <plugin filename="libignition-gazebo-sensors-system.so" name="ignition::gazebo::systems::Sensors">
+      <render_engine>ogre2</render_engine>
+    </plugin>
+    <plugin filename="libignition-gazebo-imu-system.so" name="ignition::gazebo::systems::Imu"/>
+    <plugin filename="libignition-gazebo-navsat-system.so" name="ignition::gazebo::systems::NavSat"/>
+    <plugin filename="libignition-gazebo-contact-system.so" name="ignition::gazebo::systems::Contact"/>
+    <light type="directional" name="sun">
+      <cast_shadows>true</cast_shadows>
+      <pose>0 -4 12 0 0 0</pose>
+      <diffuse>0.9 0.88 0.82 1</diffuse>
+      <specular>0.15 0.15 0.15 1</specular>
+      <direction>0.1 0.2 -1</direction>
+    </light>
+    <light type="point" name="room_light_near">
+      <pose>0.2 -2.0 2.35 0 0 0</pose>
+      <diffuse>0.95 0.9 0.8 1</diffuse>
+      <specular>0.1 0.1 0.1 1</specular>
+      <attenuation>
+        <range>12</range>
+        <constant>0.4</constant>
+        <linear>0.08</linear>
+        <quadratic>0.02</quadratic>
+      </attenuation>
+      <cast_shadows>false</cast_shadows>
+    </light>
+    <light type="point" name="room_light_mid">
+      <pose>0.4 -6.0 2.35 0 0 0</pose>
+      <diffuse>0.95 0.9 0.8 1</diffuse>
+      <specular>0.1 0.1 0.1 1</specular>
+      <attenuation>
+        <range>12</range>
+        <constant>0.4</constant>
+        <linear>0.08</linear>
+        <quadratic>0.02</quadratic>
+      </attenuation>
+      <cast_shadows>false</cast_shadows>
+    </light>
+    <light type="point" name="room_light_far">
+      <pose>0.4 -9.2 2.35 0 0 0</pose>
+      <diffuse>0.95 0.9 0.8 1</diffuse>
+      <specular>0.1 0.1 0.1 1</specular>
+      <attenuation>
+        <range>12</range>
+        <constant>0.4</constant>
+        <linear>0.08</linear>
+        <quadratic>0.02</quadratic>
+      </attenuation>
+      <cast_shadows>false</cast_shadows>
+    </light>
+    <include>
+      <uri>model://cafe</uri>
+      <name>cafe</name>
+      <!-- The mesh floor slab is 0.19 m thick. Shift it down so the walking surface is z=0. -->
+      <pose>0 0 -0.19 0 0 0</pose>
+    </include>
+    <include>
+      <uri>model://cafe_table</uri>
+      <name>table_near</name>
+      <pose>0.5 -1.6 0 0 0 0</pose>
+    </include>
+    <include>
+      <uri>model://cafe_table</uri>
+      <name>table_mid_east</name>
+      <pose>2.4 -5.5 0 0 0 0</pose>
+    </include>
+    <include>
+      <uri>model://cafe_table</uri>
+      <name>table_mid_west</name>
+      <pose>-1.5 -5.5 0 0 0 0</pose>
+    </include>
+    <include>
+      <uri>model://cafe_table</uri>
+      <name>table_far_east</name>
+      <pose>2.4 -9.0 0 0 0 0</pose>
+    </include>
+    <include>
+      <uri>model://cafe_table</uri>
+      <name>table_far_west</name>
+      <pose>-1.5 -9.0 0 0 0 0</pose>
+    </include>
+    <!-- The cafe mesh leaves the back doorway open at lidar height. Close it
+         so a clear scan cannot lead the robot out of the room. -->
+    <model name="cafe_back_door">
+      <static>true</static>
+      <pose>-3.61 -10.98 1.05 0 0 0</pose>
+      <link name="door">
+        <collision name="door">
+          <geometry>
+            <box>
+              <size>1.20 0.16 2.10</size>
+            </box>
+          </geometry>
+        </collision>
+        <visual name="door">
+          <geometry>
+            <box>
+              <size>1.16 0.08 2.05</size>
+            </box>
+          </geometry>
+          <material>
+            <ambient>0.32 0.22 0.14 1</ambient>
+            <diffuse>0.45 0.30 0.18 1</diffuse>
+          </material>
+        </visual>
+      </link>
+    </model>
+  </world>
+</sdf>

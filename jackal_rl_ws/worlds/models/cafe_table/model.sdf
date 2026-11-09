@@ -1,0 +1,70 @@
+<?xml version="1.0" ?>
+<sdf version="1.8">
+  <model name="cafe_table">
+    <static>true</static>
+    <link name="link">
+      <collision name="surface">
+        <pose>0 0 0.755 0 0 0</pose>
+        <geometry>
+          <box>
+            <size>0.913 0.913 0.04</size>
+          </box>
+        </geometry>
+      </collision>
+
+      <collision name="column">
+        <pose>0 0 0.37 0 0 0</pose>
+        <geometry>
+          <box>
+            <size>0.042 0.042 0.74</size>
+          </box>
+        </geometry>
+      </collision>
+
+      <collision name="base">
+        <pose>0 0 0.02 0 0 0</pose>
+        <geometry>
+          <box>
+            <size>0.56 0.56 0.04</size>
+          </box>
+        </geometry>
+      </collision>
+      <!-- The horizontal lidar is above the low base and only used to see the
+           4 cm column. This body matches the base footprint at scan height so
+           the robot turns before a wheel catches the base. -->
+      <collision name="footprint">
+        <pose>0 0 0.40 0 0 0</pose>
+        <geometry>
+          <cylinder>
+            <radius>0.32</radius>
+            <length>0.70</length>
+          </cylinder>
+        </geometry>
+      </collision>
+
+      <visual name="visual">
+        <geometry>
+          <mesh>
+            <uri>model://cafe_table/meshes/cafe_table.dae</uri>
+          </mesh>
+        </geometry>
+      </visual>
+      <sensor name="surface_contact" type="contact">
+        <contact><collision>surface</collision><topic>/jackal_rl/obstacle_contacts</topic></contact>
+        <always_on>true</always_on><update_rate>100</update_rate>
+      </sensor>
+      <sensor name="column_contact" type="contact">
+        <contact><collision>column</collision><topic>/jackal_rl/obstacle_contacts</topic></contact>
+        <always_on>true</always_on><update_rate>100</update_rate>
+      </sensor>
+      <sensor name="base_contact" type="contact">
+        <contact><collision>base</collision><topic>/jackal_rl/obstacle_contacts</topic></contact>
+        <always_on>true</always_on><update_rate>100</update_rate>
+      </sensor>
+      <sensor name="footprint_contact" type="contact">
+        <contact><collision>footprint</collision><topic>/jackal_rl/obstacle_contacts</topic></contact>
+        <always_on>true</always_on><update_rate>100</update_rate>
+      </sensor>
+    </link>
+  </model>
+</sdf>

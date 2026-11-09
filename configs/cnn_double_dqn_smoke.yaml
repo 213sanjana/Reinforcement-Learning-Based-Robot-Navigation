@@ -1,0 +1,43 @@
+agent:
+  architecture: cnn
+  batch_size: 64
+  bootstrap_on_truncation: true
+  double_dqn: true
+  epsilon_decay_steps: 150000
+  epsilon_end: 0.05
+  epsilon_start: 1.0
+  gamma: 0.99
+  gradient_clip: 10.0
+  hidden_size: 256
+  learning_rate: 0.0001
+  replay_capacity: 50000
+  target_update_frequency: 1000
+  train_frequency: 4
+  warmup_steps: 2000
+environment:
+  height: 10
+  max_steps: 150
+  obstacle_density: 0.18
+  width: 10
+evaluation:
+  device: auto
+  episodes: 100
+  results: artifacts/cnn_double_dqn_evaluation.json
+  route_plot: artifacts/cnn_double_dqn_route.png
+  seed: 90211
+training:
+  checkpoint: artifacts/smoke_cnn_final.pt
+  device: auto
+  figure: artifacts/smoke_cnn_training.png
+  fixed_map: false
+  log_interval: 5000
+  metrics: artifacts/smoke_cnn_metrics.csv
+  seed: 2027
+  total_steps: 200000
+validation:
+  best_checkpoint: artifacts/smoke_cnn_best.pt
+  enabled: true
+  episodes: 3
+  history: artifacts/smoke_cnn_validation.csv
+  interval: 100
+  seed: 50211

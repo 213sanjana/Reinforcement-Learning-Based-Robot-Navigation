@@ -1,0 +1,2 @@
+# Existing verified installation already has this version; no reinstall needed.
+stable-baselines3==2.9.0

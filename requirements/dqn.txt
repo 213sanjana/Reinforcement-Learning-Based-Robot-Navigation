@@ -1,0 +1,2 @@
+# Install alongside the existing project requirements (do not replace them).
+torch>=2.2,<3

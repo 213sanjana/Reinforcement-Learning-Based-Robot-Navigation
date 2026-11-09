@@ -1,0 +1,31 @@
+initialization: artifacts/ppo/pretrained_initialization.zip
+data:
+  train: artifacts/imitation/expert_density10_v1/train.npz
+  validation: artifacts/imitation/expert_density10_v1/validation.npz
+training:
+  total_timesteps: 300000
+  diagnostic_timesteps: 50000
+  seed: 42
+  device: auto
+  output_root: artifacts/ppo
+  checkpoint_interval: 10000
+ppo:
+  learning_rate: 0.0003
+  gamma: 0.99
+  n_steps: 1024
+  batch_size: 64
+  n_epochs: 10
+  gae_lambda: 0.95
+  clip_range: 0.2
+  ent_coef: 0.0
+  vf_coef: 0.5
+  max_grad_norm: 0.5
+  target_kl: 0.02
+validation:
+  episodes: 100
+  seed: 50211
+  interval: 5000
+  early_steps: [1024, 2048]
+  regression_drop: 0.15
+  regression_patience: 2
+  regression_min_steps: 2048

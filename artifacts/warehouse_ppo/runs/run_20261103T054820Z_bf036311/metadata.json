@@ -1,0 +1,49 @@
+{
+  "action_interface": "normalized_twist_v1",
+  "action_shape": [
+    2
+  ],
+  "device": "cpu",
+  "execution": "offline",
+  "normalize_actions": false,
+  "normalize_observations": false,
+  "observation_interface": "jackal_40d_v1",
+  "observation_shape": [
+    40
+  ],
+  "ppo": {
+    "batch_size": 64,
+    "checkpoint_interval": 2048,
+    "clip_range": 0.2,
+    "device": "cpu",
+    "ent_coef": 0.01,
+    "execution": "offline",
+    "gae_lambda": 0.95,
+    "gamma": 0.99,
+    "learning_rate": 0.0003,
+    "max_grad_norm": 0.5,
+    "min_episodes_for_best": 5,
+    "n_envs": 1,
+    "n_epochs": 10,
+    "n_steps": 1024,
+    "normalize_observations": false,
+    "policy": "MlpPolicy",
+    "seed": 42,
+    "total_timesteps": 40960,
+    "vf_coef": 0.5
+  },
+  "seed": 42,
+  "split": "train",
+  "stage_id": "external_warehouse",
+  "versions": {
+    "cuda_available": false,
+    "git_head": "176cbcbef8de60aef4df58ddc39f8d14d1f1311d",
+    "gymnasium": "1.1.1",
+    "numpy": "1.26.4",
+    "platform": "Linux-6.8.0-138-generic-x86_64-with-glibc2.35",
+    "python": "3.10.12",
+    "stable_baselines3": "2.9.0",
+    "torch": "2.14.1+cu130"
+  },
+  "world_name": "industrial-warehouse"
+}

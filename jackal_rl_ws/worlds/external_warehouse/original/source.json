@@ -1,0 +1,87 @@
+{
+  "selected_world": "industrial-warehouse",
+  "owner": "OpenRobotics",
+  "world_url": "https://fuel.gazebosim.org/1.0/OpenRobotics/worlds/industrial-warehouse",
+  "world_page": "https://app.gazebosim.org/OpenRobotics/fuel/worlds/industrial-warehouse",
+  "downloaded_version_directory": "4",
+  "original_sha256": "a80de9f6d76e6b589a8b080ccdbce87bd1b88cce9b88cf9de6c81af10602c161",
+  "original_bytes": 7522,
+  "license_name": "Creative Commons Attribution 4.0 International",
+  "license_url": "http://creativecommons.org/licenses/by/4.0/",
+  "upstream_models_repository": "https://github.com/aws-robotics/aws-robomaker-small-warehouse-world",
+  "upstream_repository_license": "Apache-2.0",
+  "models": {
+    "aws_robomaker_warehouse_Bucket_01": {
+      "fuel_url": "https://fuel.gazebosim.org/1.0/OpenRobotics/models/aws_robomaker_warehouse_Bucket_01",
+      "cached_version_directory": "3",
+      "local_path": "jackal_rl_ws/worlds/external_warehouse/models/aws_robomaker_warehouse_Bucket_01",
+      "include_count": 3
+    },
+    "aws_robomaker_warehouse_ClutteringA_01": {
+      "fuel_url": "https://fuel.gazebosim.org/1.0/OpenRobotics/models/aws_robomaker_warehouse_ClutteringA_01",
+      "cached_version_directory": "4",
+      "local_path": "jackal_rl_ws/worlds/external_warehouse/models/aws_robomaker_warehouse_ClutteringA_01",
+      "include_count": 3
+    },
+    "aws_robomaker_warehouse_ClutteringC_01": {
+      "fuel_url": "https://fuel.gazebosim.org/1.0/OpenRobotics/models/aws_robomaker_warehouse_ClutteringC_01",
+      "cached_version_directory": "4",
+      "local_path": "jackal_rl_ws/worlds/external_warehouse/models/aws_robomaker_warehouse_ClutteringC_01",
+      "include_count": 6
+    },
+    "aws_robomaker_warehouse_ClutteringD_01": {
+      "fuel_url": "https://fuel.gazebosim.org/1.0/OpenRobotics/models/aws_robomaker_warehouse_ClutteringD_01",
+      "cached_version_directory": "4",
+      "local_path": "jackal_rl_ws/worlds/external_warehouse/models/aws_robomaker_warehouse_ClutteringD_01",
+      "include_count": 1
+    },
+    "aws_robomaker_warehouse_GroundB_01": {
+      "fuel_url": "https://fuel.gazebosim.org/1.0/OpenRobotics/models/aws_robomaker_warehouse_GroundB_01",
+      "cached_version_directory": "4",
+      "local_path": "jackal_rl_ws/worlds/external_warehouse/models/aws_robomaker_warehouse_GroundB_01",
+      "include_count": 1
+    },
+    "aws_robomaker_warehouse_Lamp_01": {
+      "fuel_url": "https://fuel.gazebosim.org/1.0/OpenRobotics/models/aws_robomaker_warehouse_Lamp_01",
+      "cached_version_directory": "4",
+      "local_path": "jackal_rl_ws/worlds/external_warehouse/models/aws_robomaker_warehouse_Lamp_01",
+      "include_count": 1
+    },
+    "aws_robomaker_warehouse_PalletJackB_01": {
+      "fuel_url": "https://fuel.gazebosim.org/1.0/OpenRobotics/models/aws_robomaker_warehouse_PalletJackB_01",
+      "cached_version_directory": "4",
+      "local_path": "jackal_rl_ws/worlds/external_warehouse/models/aws_robomaker_warehouse_PalletJackB_01",
+      "include_count": 1
+    },
+    "aws_robomaker_warehouse_ShelfD_01": {
+      "fuel_url": "https://fuel.gazebosim.org/1.0/OpenRobotics/models/aws_robomaker_warehouse_ShelfD_01",
+      "cached_version_directory": "4",
+      "local_path": "jackal_rl_ws/worlds/external_warehouse/models/aws_robomaker_warehouse_ShelfD_01",
+      "include_count": 3
+    },
+    "aws_robomaker_warehouse_ShelfE_01": {
+      "fuel_url": "https://fuel.gazebosim.org/1.0/OpenRobotics/models/aws_robomaker_warehouse_ShelfE_01",
+      "cached_version_directory": "4",
+      "local_path": "jackal_rl_ws/worlds/external_warehouse/models/aws_robomaker_warehouse_ShelfE_01",
+      "include_count": 3
+    },
+    "aws_robomaker_warehouse_ShelfF_01": {
+      "fuel_url": "https://fuel.gazebosim.org/1.0/OpenRobotics/models/aws_robomaker_warehouse_ShelfF_01",
+      "cached_version_directory": "4",
+      "local_path": "jackal_rl_ws/worlds/external_warehouse/models/aws_robomaker_warehouse_ShelfF_01",
+      "include_count": 1
+    },
+    "aws_robomaker_warehouse_TrashCanC_01": {
+      "fuel_url": "https://fuel.gazebosim.org/1.0/OpenRobotics/models/aws_robomaker_warehouse_TrashCanC_01",
+      "cached_version_directory": "4",
+      "local_path": "jackal_rl_ws/worlds/external_warehouse/models/aws_robomaker_warehouse_TrashCanC_01",
+      "include_count": 1
+    },
+    "aws_robomaker_warehouse_WallB_01": {
+      "fuel_url": "https://fuel.gazebosim.org/1.0/OpenRobotics/models/aws_robomaker_warehouse_WallB_01",
+      "cached_version_directory": "4",
+      "local_path": "jackal_rl_ws/worlds/external_warehouse/models/aws_robomaker_warehouse_WallB_01",
+      "include_count": 1
+    }
+  }
+}

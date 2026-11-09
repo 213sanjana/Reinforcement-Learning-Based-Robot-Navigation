@@ -1,0 +1,42 @@
+# Phase 6F.1 Jackal behavior-cloning architecture and data pipeline.
+# Fits train-only observation statistics, saves an initialized policy,
+# and runs one forward pass. It does not train.
+#
+# Run from the repository root:
+#   python -m navigation.jackal_bc_inference --config configs/jackal_behavior_cloning_6f1.yaml
+
+phase: "6f.1"
+dataset:
+  root: artifacts/expert_dataset/v6e.2.0
+  train_split: train
+  validation_split: validation
+  test_split: test
+  read_test: false
+  success_only: false
+  action_key: actions
+model:
+  architecture: jackal_bc_v1
+  lidar_bins: 36
+  state_dim: 4
+  action_dim: 2
+  lidar_channels: [16, 32]
+  lidar_kernel_size: 5
+  lidar_embedding: 64
+  state_hidden: 32
+  state_embedding: 32
+  fusion_hidden: [128, 64]
+normalization:
+  epsilon: 1.0e-6
+  output: artifacts/behavior_cloning/jackal_6f1/observation_stats.json
+data:
+  batch_size: 64
+  context_length: 1
+  num_workers: 0
+runtime:
+  seed: 642
+  device: auto
+  deterministic: true
+checkpoint:
+  output: artifacts/behavior_cloning/jackal_6f1/initialized_policy.pt
+inference:
+  output: artifacts/behavior_cloning/jackal_6f1/example_inference.json

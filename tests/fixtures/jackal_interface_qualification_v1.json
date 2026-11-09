@@ -1,0 +1,7024 @@
+{
+  "schema": "jackal-interface-qualification-fixtures/1",
+  "version": 1,
+  "tokens": [
+    "NaN",
+    "+Inf",
+    "-Inf",
+    "pi",
+    "-pi",
+    "pi/2",
+    "3*pi/2",
+    "2*pi/N"
+  ],
+  "source_hashes": {
+    "jackal_rl_ws/src/jackal_rl_navigation/jackal_rl_navigation/observation_builder.py": "50284127c7024fd3dfb6403dc0c3bb1c35741ee3567b9beb99b8ac373f5d190a",
+    "jackal_rl_ws/src/jackal_rl_navigation/jackal_rl_navigation/action_mapper.py": "4728212e5a6653aafa01093476003b1a9710585709da0639c9701eb5e351a0dc",
+    "jackal_rl_ws/src/jackal_rl_navigation/jackal_rl_navigation/episode_outcome.py": "1cc0ea3d3f15c3266ce602e40c85baeed128b640e61f9fba2fa545348d78f10f",
+    "jackal_rl_ws/src/jackal_rl_navigation/jackal_rl_navigation/goal_frames.py": "3912286705be866381d335d687e2f0d95c687547d262dc7eded6f82dd32881d7"
+  },
+  "base": {
+    "run_id": "run-base",
+    "episode_id": "episode-base",
+    "snapshot_id": "snap-base",
+    "transition_index": 0,
+    "scan_source_id": "scan_fixture",
+    "odom_source_id": "odom_fixture",
+    "scan_frame": "lidar_fixture",
+    "odom_frame": "odom",
+    "child_frame": "base_link",
+    "ranges": {
+      "count": 72,
+      "fill": 6
+    },
+    "distance_m": 10.0,
+    "bearing_rad": "pi/2",
+    "linear_mps": 0.15,
+    "angular_rps": -0.3,
+    "scan_stamp_ns": 101,
+    "odom_stamp_ns": 101,
+    "scan_received_mono_s": 9.9,
+    "odom_received_mono_s": 9.9,
+    "capture_mono_s": 10.0,
+    "dispatch_mono_s": 10.0,
+    "angle_min_rad": "-pi",
+    "angle_increment_rad": "2*pi/72",
+    "prior_stamps": [
+      100,
+      100
+    ],
+    "action": [
+      0.5,
+      -0.5
+    ],
+    "dt": 0.1
+  },
+  "cases": [
+    {
+      "id": "F001",
+      "group": "sector_order",
+      "steps": [
+        {
+          "op": "dispatch",
+          "expect": {
+            "code": "OK",
+            "accepted": true,
+            "latched": false,
+            "predictor_calls": 1,
+            "captured": true,
+            "valid": true,
+            "reason": "",
+            "command": [
+              0.03,
+              -0.06
+            ],
+            "observation": [
+              0.25,
+              0.5,
+              0.5,
+              0.5,
+              0.5,
+              0.5,
+              0.5,
+              0.5,
+              0.5,
+              0.5,
+              0.5,
+              0.5,
+              0.5,
+              0.5,
+              0.5,
+              0.5,
+              0.5,
+              0.5,
+              0.5,
+              0.5,
+              0.5,
+              0.5,
+              0.5,
+              0.5,
+              0.5,
+              0.5,
+              0.5,
+              0.5,
+              0.5,
+              0.5,
+              0.5,
+              0.5,
+              0.5,
+              0.5,
+              0.5,
+              0.5,
+              0.5,
+              0.5,
+              0.5,
+              -0.5
+            ]
+          },
+          "ranges": {
+            "count": 72,
+            "fill": 6,
+            "set": {
+              "1": 3
+            }
+          }
+        }
+      ]
+    },
+    {
+      "id": "F002",
+      "group": "sector_order",
+      "steps": [
+        {
+          "op": "dispatch",
+          "expect": {
+            "code": "OK",
+            "accepted": true,
+            "latched": false,
+            "predictor_calls": 1,
+            "captured": true,
+            "valid": true,
+            "reason": "",
+            "command": [
+              0.03,
+              -0.06
+            ],
+            "observation": [
+              0.5,
+              0.25,
+              0.5,
+              0.5,
+              0.5,
+              0.5,
+              0.5,
+              0.5,
+              0.5,
+              0.5,
+              0.5,
+              0.5,
+              0.5,
+              0.5,
+              0.5,
+              0.5,
+              0.5,
+              0.5,
+              0.5,
+              0.5,
+              0.5,
+              0.5,
+              0.5,
+              0.5,
+              0.5,
+              0.5,
+              0.5,
+              0.5,
+              0.5,
+              0.5,
+              0.5,
+              0.5,
+              0.5,
+              0.5,
+              0.5,
+              0.5,
+              0.5,
+              0.5,
+              0.5,
+              -0.5
+            ]
+          },
+          "ranges": {
+            "count": 72,
+            "fill": 6,
+            "set": {
+              "3": 3
+            }
+          }
+        }
+      ]
+    },
+    {
+      "id": "F003",
+      "group": "sector_order",
+      "steps": [
+        {
+          "op": "dispatch",
+          "expect": {
+            "code": "OK",
+            "accepted": true,
+            "latched": false,
+            "predictor_calls": 1,
+            "captured": true,
+            "valid": true,
+            "reason": "",
+            "command": [
+              0.03,
+              -0.06
+            ],
+            "observation": [
+              0.5,
+              0.5,
+              0.25,
+              0.5,
+              0.5,
+              0.5,
+              0.5,
+              0.5,
+              0.5,
+              0.5,
+              0.5,
+              0.5,
+              0.5,
+              0.5,
+              0.5,
+              0.5,
+              0.5,
+              0.5,
+              0.5,
+              0.5,
+              0.5,
+              0.5,
+              0.5,
+              0.5,
+              0.5,
+              0.5,
+              0.5,
+              0.5,
+              0.5,
+              0.5,
+              0.5,
+              0.5,
+              0.5,
+              0.5,
+              0.5,
+              0.5,
+              0.5,
+              0.5,
+              0.5,
+              -0.5
+            ]
+          },
+          "ranges": {
+            "count": 72,
+            "fill": 6,
+            "set": {
+              "5": 3
+            }
+          }
+        }
+      ]
+    },
+    {
+      "id": "F004",
+      "group": "sector_order",
+      "steps": [
+        {
+          "op": "dispatch",
+          "expect": {
+            "code": "OK",
+            "accepted": true,
+            "latched": false,
+            "predictor_calls": 1,
+            "captured": true,
+            "valid": true,
+            "reason": "",
+            "command": [
+              0.03,
+              -0.06
+            ],
+            "observation": [
+              0.5,
+              0.5,
+              0.5,
+              0.25,
+              0.5,
+              0.5,
+              0.5,
+              0.5,
+              0.5,
+              0.5,
+              0.5,
+              0.5,
+              0.5,
+              0.5,
+              0.5,
+              0.5,
+              0.5,
+              0.5,
+              0.5,
+              0.5,
+              0.5,
+              0.5,
+              0.5,
+              0.5,
+              0.5,
+              0.5,
+              0.5,
+              0.5,
+              0.5,
+              0.5,
+              0.5,
+              0.5,
+              0.5,
+              0.5,
+              0.5,
+              0.5,
+              0.5,
+              0.5,
+              0.5,
+              -0.5
+            ]
+          },
+          "ranges": {
+            "count": 72,
+            "fill": 6,
+            "set": {
+              "7": 3
+            }
+          }
+        }
+      ]
+    },
+    {
+      "id": "F005",
+      "group": "sector_order",
+      "steps": [
+        {
+          "op": "dispatch",
+          "expect": {
+            "code": "OK",
+            "accepted": true,
+            "latched": false,
+            "predictor_calls": 1,
+            "captured": true,
+            "valid": true,
+            "reason": "",
+            "command": [
+              0.03,
+              -0.06
+            ],
+            "observation": [
+              0.5,
+              0.5,
+              0.5,
+              0.5,
+              0.25,
+              0.5,
+              0.5,
+              0.5,
+              0.5,
+              0.5,
+              0.5,
+              0.5,
+              0.5,
+              0.5,
+              0.5,
+              0.5,
+              0.5,
+              0.5,
+              0.5,
+              0.5,
+              0.5,
+              0.5,
+              0.5,
+              0.5,
+              0.5,
+              0.5,
+              0.5,
+              0.5,
+              0.5,
+              0.5,
+              0.5,
+              0.5,
+              0.5,
+              0.5,
+              0.5,
+              0.5,
+              0.5,
+              0.5,
+              0.5,
+              -0.5
+            ]
+          },
+          "ranges": {
+            "count": 72,
+            "fill": 6,
+            "set": {
+              "9": 3
+            }
+          }
+        }
+      ]
+    },
+    {
+      "id": "F006",
+      "group": "sector_order",
+      "steps": [
+        {
+          "op": "dispatch",
+          "expect": {
+            "code": "OK",
+            "accepted": true,
+            "latched": false,
+            "predictor_calls": 1,
+            "captured": true,
+            "valid": true,
+            "reason": "",
+            "command": [
+              0.03,
+              -0.06
+            ],
+            "observation": [
+              0.5,
+              0.5,
+              0.5,
+              0.5,
+              0.5,
+              0.25,
+              0.5,
+              0.5,
+              0.5,
+              0.5,
+              0.5,
+              0.5,
+              0.5,
+              0.5,
+              0.5,
+              0.5,
+              0.5,
+              0.5,
+              0.5,
+              0.5,
+              0.5,
+              0.5,
+              0.5,
+              0.5,
+              0.5,
+              0.5,
+              0.5,
+              0.5,
+              0.5,
+              0.5,
+              0.5,
+              0.5,
+              0.5,
+              0.5,
+              0.5,
+              0.5,
+              0.5,
+              0.5,
+              0.5,
+              -0.5
+            ]
+          },
+          "ranges": {
+            "count": 72,
+            "fill": 6,
+            "set": {
+              "11": 3
+            }
+          }
+        }
+      ]
+    },
+    {
+      "id": "F007",
+      "group": "sector_order",
+      "steps": [
+        {
+          "op": "dispatch",
+          "expect": {
+            "code": "OK",
+            "accepted": true,
+            "latched": false,
+            "predictor_calls": 1,
+            "captured": true,
+            "valid": true,
+            "reason": "",
+            "command": [
+              0.03,
+              -0.06
+            ],
+            "observation": [
+              0.5,
+              0.5,
+              0.5,
+              0.5,
+              0.5,
+              0.5,
+              0.25,
+              0.5,
+              0.5,
+              0.5,
+              0.5,
+              0.5,
+              0.5,
+              0.5,
+              0.5,
+              0.5,
+              0.5,
+              0.5,
+              0.5,
+              0.5,
+              0.5,
+              0.5,
+              0.5,
+              0.5,
+              0.5,
+              0.5,
+              0.5,
+              0.5,
+              0.5,
+              0.5,
+              0.5,
+              0.5,
+              0.5,
+              0.5,
+              0.5,
+              0.5,
+              0.5,
+              0.5,
+              0.5,
+              -0.5
+            ]
+          },
+          "ranges": {
+            "count": 72,
+            "fill": 6,
+            "set": {
+              "13": 3
+            }
+          }
+        }
+      ]
+    },
+    {
+      "id": "F008",
+      "group": "sector_order",
+      "steps": [
+        {
+          "op": "dispatch",
+          "expect": {
+            "code": "OK",
+            "accepted": true,
+            "latched": false,
+            "predictor_calls": 1,
+            "captured": true,
+            "valid": true,
+            "reason": "",
+            "command": [
+              0.03,
+              -0.06
+            ],
+            "observation": [
+              0.5,
+              0.5,
+              0.5,
+              0.5,
+              0.5,
+              0.5,
+              0.5,
+              0.25,
+              0.5,
+              0.5,
+              0.5,
+              0.5,
+              0.5,
+              0.5,
+              0.5,
+              0.5,
+              0.5,
+              0.5,
+              0.5,
+              0.5,
+              0.5,
+              0.5,
+              0.5,
+              0.5,
+              0.5,
+              0.5,
+              0.5,
+              0.5,
+              0.5,
+              0.5,
+              0.5,
+              0.5,
+              0.5,
+              0.5,
+              0.5,
+              0.5,
+              0.5,
+              0.5,
+              0.5,
+              -0.5
+            ]
+          },
+          "ranges": {
+            "count": 72,
+            "fill": 6,
+            "set": {
+              "15": 3
+            }
+          }
+        }
+      ]
+    },
+    {
+      "id": "F009",
+      "group": "sector_order",
+      "steps": [
+        {
+          "op": "dispatch",
+          "expect": {
+            "code": "OK",
+            "accepted": true,
+            "latched": false,
+            "predictor_calls": 1,
+            "captured": true,
+            "valid": true,
+            "reason": "",
+            "command": [
+              0.03,
+              -0.06
+            ],
+            "observation": [
+              0.5,
+              0.5,
+              0.5,
+              0.5,
+              0.5,
+              0.5,
+              0.5,
+              0.5,
+              0.25,
+              0.5,
+              0.5,
+              0.5,
+              0.5,
+              0.5,
+              0.5,
+              0.5,
+              0.5,
+              0.5,
+              0.5,
+              0.5,
+              0.5,
+              0.5,
+              0.5,
+              0.5,
+              0.5,
+              0.5,
+              0.5,
+              0.5,
+              0.5,
+              0.5,
+              0.5,
+              0.5,
+              0.5,
+              0.5,
+              0.5,
+              0.5,
+              0.5,
+              0.5,
+              0.5,
+              -0.5
+            ]
+          },
+          "ranges": {
+            "count": 72,
+            "fill": 6,
+            "set": {
+              "17": 3
+            }
+          }
+        }
+      ]
+    },
+    {
+      "id": "F010",
+      "group": "sector_order",
+      "steps": [
+        {
+          "op": "dispatch",
+          "expect": {
+            "code": "OK",
+            "accepted": true,
+            "latched": false,
+            "predictor_calls": 1,
+            "captured": true,
+            "valid": true,
+            "reason": "",
+            "command": [
+              0.03,
+              -0.06
+            ],
+            "observation": [
+              0.5,
+              0.5,
+              0.5,
+              0.5,
+              0.5,
+              0.5,
+              0.5,
+              0.5,
+              0.5,
+              0.25,
+              0.5,
+              0.5,
+              0.5,
+              0.5,
+              0.5,
+              0.5,
+              0.5,
+              0.5,
+              0.5,
+              0.5,
+              0.5,
+              0.5,
+              0.5,
+              0.5,
+              0.5,
+              0.5,
+              0.5,
+              0.5,
+              0.5,
+              0.5,
+              0.5,
+              0.5,
+              0.5,
+              0.5,
+              0.5,
+              0.5,
+              0.5,
+              0.5,
+              0.5,
+              -0.5
+            ]
+          },
+          "ranges": {
+            "count": 72,
+            "fill": 6,
+            "set": {
+              "19": 3
+            }
+          }
+        }
+      ]
+    },
+    {
+      "id": "F011",
+      "group": "sector_order",
+      "steps": [
+        {
+          "op": "dispatch",
+          "expect": {
+            "code": "OK",
+            "accepted": true,
+            "latched": false,
+            "predictor_calls": 1,
+            "captured": true,
+            "valid": true,
+            "reason": "",
+            "command": [
+              0.03,
+              -0.06
+            ],
+            "observation": [
+              0.5,
+              0.5,
+              0.5,
+              0.5,
+              0.5,
+              0.5,
+              0.5,
+              0.5,
+              0.5,
+              0.5,
+              0.25,
+              0.5,
+              0.5,
+              0.5,
+              0.5,
+              0.5,
+              0.5,
+              0.5,
+              0.5,
+              0.5,
+              0.5,
+              0.5,
+              0.5,
+              0.5,
+              0.5,
+              0.5,
+              0.5,
+              0.5,
+              0.5,
+              0.5,
+              0.5,
+              0.5,
+              0.5,
+              0.5,
+              0.5,
+              0.5,
+              0.5,
+              0.5,
+              0.5,
+              -0.5
+            ]
+          },
+          "ranges": {
+            "count": 72,
+            "fill": 6,
+            "set": {
+              "21": 3
+            }
+          }
+        }
+      ]
+    },
+    {
+      "id": "F012",
+      "group": "sector_order",
+      "steps": [
+        {
+          "op": "dispatch",
+          "expect": {
+            "code": "OK",
+            "accepted": true,
+            "latched": false,
+            "predictor_calls": 1,
+            "captured": true,
+            "valid": true,
+            "reason": "",
+            "command": [
+              0.03,
+              -0.06
+            ],
+            "observation": [
+              0.5,
+              0.5,
+              0.5,
+              0.5,
+              0.5,
+              0.5,
+              0.5,
+              0.5,
+              0.5,
+              0.5,
+              0.5,
+              0.25,
+              0.5,
+              0.5,
+              0.5,
+              0.5,
+              0.5,
+              0.5,
+              0.5,
+              0.5,
+              0.5,
+              0.5,
+              0.5,
+              0.5,
+              0.5,
+              0.5,
+              0.5,
+              0.5,
+              0.5,
+              0.5,
+              0.5,
+              0.5,
+              0.5,
+              0.5,
+              0.5,
+              0.5,
+              0.5,
+              0.5,
+              0.5,
+              -0.5
+            ]
+          },
+          "ranges": {
+            "count": 72,
+            "fill": 6,
+            "set": {
+              "23": 3
+            }
+          }
+        }
+      ]
+    },
+    {
+      "id": "F013",
+      "group": "sector_order",
+      "steps": [
+        {
+          "op": "dispatch",
+          "expect": {
+            "code": "OK",
+            "accepted": true,
+            "latched": false,
+            "predictor_calls": 1,
+            "captured": true,
+            "valid": true,
+            "reason": "",
+            "command": [
+              0.03,
+              -0.06
+            ],
+            "observation": [
+              0.5,
+              0.5,
+              0.5,
+              0.5,
+              0.5,
+              0.5,
+              0.5,
+              0.5,
+              0.5,
+              0.5,
+              0.5,
+              0.5,
+              0.25,
+              0.5,
+              0.5,
+              0.5,
+              0.5,
+              0.5,
+              0.5,
+              0.5,
+              0.5,
+              0.5,
+              0.5,
+              0.5,
+              0.5,
+              0.5,
+              0.5,
+              0.5,
+              0.5,
+              0.5,
+              0.5,
+              0.5,
+              0.5,
+              0.5,
+              0.5,
+              0.5,
+              0.5,
+              0.5,
+              0.5,
+              -0.5
+            ]
+          },
+          "ranges": {
+            "count": 72,
+            "fill": 6,
+            "set": {
+              "25": 3
+            }
+          }
+        }
+      ]
+    },
+    {
+      "id": "F014",
+      "group": "sector_order",
+      "steps": [
+        {
+          "op": "dispatch",
+          "expect": {
+            "code": "OK",
+            "accepted": true,
+            "latched": false,
+            "predictor_calls": 1,
+            "captured": true,
+            "valid": true,
+            "reason": "",
+            "command": [
+              0.03,
+              -0.06
+            ],
+            "observation": [
+              0.5,
+              0.5,
+              0.5,
+              0.5,
+              0.5,
+              0.5,
+              0.5,
+              0.5,
+              0.5,
+              0.5,
+              0.5,
+              0.5,
+              0.5,
+              0.25,
+              0.5,
+              0.5,
+              0.5,
+              0.5,
+              0.5,
+              0.5,
+              0.5,
+              0.5,
+              0.5,
+              0.5,
+              0.5,
+              0.5,
+              0.5,
+              0.5,
+              0.5,
+              0.5,
+              0.5,
+              0.5,
+              0.5,
+              0.5,
+              0.5,
+              0.5,
+              0.5,
+              0.5,
+              0.5,
+              -0.5
+            ]
+          },
+          "ranges": {
+            "count": 72,
+            "fill": 6,
+            "set": {
+              "27": 3
+            }
+          }
+        }
+      ]
+    },
+    {
+      "id": "F015",
+      "group": "sector_order",
+      "steps": [
+        {
+          "op": "dispatch",
+          "expect": {
+            "code": "OK",
+            "accepted": true,
+            "latched": false,
+            "predictor_calls": 1,
+            "captured": true,
+            "valid": true,
+            "reason": "",
+            "command": [
+              0.03,
+              -0.06
+            ],
+            "observation": [
+              0.5,
+              0.5,
+              0.5,
+              0.5,
+              0.5,
+              0.5,
+              0.5,
+              0.5,
+              0.5,
+              0.5,
+              0.5,
+              0.5,
+              0.5,
+              0.5,
+              0.25,
+              0.5,
+              0.5,
+              0.5,
+              0.5,
+              0.5,
+              0.5,
+              0.5,
+              0.5,
+              0.5,
+              0.5,
+              0.5,
+              0.5,
+              0.5,
+              0.5,
+              0.5,
+              0.5,
+              0.5,
+              0.5,
+              0.5,
+              0.5,
+              0.5,
+              0.5,
+              0.5,
+              0.5,
+              -0.5
+            ]
+          },
+          "ranges": {
+            "count": 72,
+            "fill": 6,
+            "set": {
+              "29": 3
+            }
+          }
+        }
+      ]
+    },
+    {
+      "id": "F016",
+      "group": "sector_order",
+      "steps": [
+        {
+          "op": "dispatch",
+          "expect": {
+            "code": "OK",
+            "accepted": true,
+            "latched": false,
+            "predictor_calls": 1,
+            "captured": true,
+            "valid": true,
+            "reason": "",
+            "command": [
+              0.03,
+              -0.06
+            ],
+            "observation": [
+              0.5,
+              0.5,
+              0.5,
+              0.5,
+              0.5,
+              0.5,
+              0.5,
+              0.5,
+              0.5,
+              0.5,
+              0.5,
+              0.5,
+              0.5,
+              0.5,
+              0.5,
+              0.25,
+              0.5,
+              0.5,
+              0.5,
+              0.5,
+              0.5,
+              0.5,
+              0.5,
+              0.5,
+              0.5,
+              0.5,
+              0.5,
+              0.5,
+              0.5,
+              0.5,
+              0.5,
+              0.5,
+              0.5,
+              0.5,
+              0.5,
+              0.5,
+              0.5,
+              0.5,
+              0.5,
+              -0.5
+            ]
+          },
+          "ranges": {
+            "count": 72,
+            "fill": 6,
+            "set": {
+              "31": 3
+            }
+          }
+        }
+      ]
+    },
+    {
+      "id": "F017",
+      "group": "sector_order",
+      "steps": [
+        {
+          "op": "dispatch",
+          "expect": {
+            "code": "OK",
+            "accepted": true,
+            "latched": false,
+            "predictor_calls": 1,
+            "captured": true,
+            "valid": true,
+            "reason": "",
+            "command": [
+              0.03,
+              -0.06
+            ],
+            "observation": [
+              0.5,
+              0.5,
+              0.5,
+              0.5,
+              0.5,
+              0.5,
+              0.5,
+              0.5,
+              0.5,
+              0.5,
+              0.5,
+              0.5,
+              0.5,
+              0.5,
+              0.5,
+              0.5,
+              0.25,
+              0.5,
+              0.5,
+              0.5,
+              0.5,
+              0.5,
+              0.5,
+              0.5,
+              0.5,
+              0.5,
+              0.5,
+              0.5,
+              0.5,
+              0.5,
+              0.5,
+              0.5,
+              0.5,
+              0.5,
+              0.5,
+              0.5,
+              0.5,
+              0.5,
+              0.5,
+              -0.5
+            ]
+          },
+          "ranges": {
+            "count": 72,
+            "fill": 6,
+            "set": {
+              "33": 3
+            }
+          }
+        }
+      ]
+    },
+    {
+      "id": "F018",
+      "group": "sector_order",
+      "steps": [
+        {
+          "op": "dispatch",
+          "expect": {
+            "code": "OK",
+            "accepted": true,
+            "latched": false,
+            "predictor_calls": 1,
+            "captured": true,
+            "valid": true,
+            "reason": "",
+            "command": [
+              0.03,
+              -0.06
+            ],
+            "observation": [
+              0.5,
+              0.5,
+              0.5,
+              0.5,
+              0.5,
+              0.5,
+              0.5,
+              0.5,
+              0.5,
+              0.5,
+              0.5,
+              0.5,
+              0.5,
+              0.5,
+              0.5,
+              0.5,
+              0.5,
+              0.25,
+              0.5,
+              0.5,
+              0.5,
+              0.5,
+              0.5,
+              0.5,
+              0.5,
+              0.5,
+              0.5,
+              0.5,
+              0.5,
+              0.5,
+              0.5,
+              0.5,
+              0.5,
+              0.5,
+              0.5,
+              0.5,
+              0.5,
+              0.5,
+              0.5,
+              -0.5
+            ]
+          },
+          "ranges": {
+            "count": 72,
+            "fill": 6,
+            "set": {
+              "35": 3
+            }
+          }
+        }
+      ]
+    },
+    {
+      "id": "F019",
+      "group": "sector_order",
+      "steps": [
+        {
+          "op": "dispatch",
+          "expect": {
+            "code": "OK",
+            "accepted": true,
+            "latched": false,
+            "predictor_calls": 1,
+            "captured": true,
+            "valid": true,
+            "reason": "",
+            "command": [
+              0.03,
+              -0.06
+            ],
+            "observation": [
+              0.5,
+              0.5,
+              0.5,
+              0.5,
+              0.5,
+              0.5,
+              0.5,
+              0.5,
+              0.5,
+              0.5,
+              0.5,
+              0.5,
+              0.5,
+              0.5,
+              0.5,
+              0.5,
+              0.5,
+              0.5,
+              0.25,
+              0.5,
+              0.5,
+              0.5,
+              0.5,
+              0.5,
+              0.5,
+              0.5,
+              0.5,
+              0.5,
+              0.5,
+              0.5,
+              0.5,
+              0.5,
+              0.5,
+              0.5,
+              0.5,
+              0.5,
+              0.5,
+              0.5,
+              0.5,
+              -0.5
+            ]
+          },
+          "ranges": {
+            "count": 72,
+            "fill": 6,
+            "set": {
+              "37": 3
+            }
+          }
+        }
+      ]
+    },
+    {
+      "id": "F020",
+      "group": "sector_order",
+      "steps": [
+        {
+          "op": "dispatch",
+          "expect": {
+            "code": "OK",
+            "accepted": true,
+            "latched": false,
+            "predictor_calls": 1,
+            "captured": true,
+            "valid": true,
+            "reason": "",
+            "command": [
+              0.03,
+              -0.06
+            ],
+            "observation": [
+              0.5,
+              0.5,
+              0.5,
+              0.5,
+              0.5,
+              0.5,
+              0.5,
+              0.5,
+              0.5,
+              0.5,
+              0.5,
+              0.5,
+              0.5,
+              0.5,
+              0.5,
+              0.5,
+              0.5,
+              0.5,
+              0.5,
+              0.25,
+              0.5,
+              0.5,
+              0.5,
+              0.5,
+              0.5,
+              0.5,
+              0.5,
+              0.5,
+              0.5,
+              0.5,
+              0.5,
+              0.5,
+              0.5,
+              0.5,
+              0.5,
+              0.5,
+              0.5,
+              0.5,
+              0.5,
+              -0.5
+            ]
+          },
+          "ranges": {
+            "count": 72,
+            "fill": 6,
+            "set": {
+              "39": 3
+            }
+          }
+        }
+      ]
+    },
+    {
+      "id": "F021",
+      "group": "sector_order",
+      "steps": [
+        {
+          "op": "dispatch",
+          "expect": {
+            "code": "OK",
+            "accepted": true,
+            "latched": false,
+            "predictor_calls": 1,
+            "captured": true,
+            "valid": true,
+            "reason": "",
+            "command": [
+              0.03,
+              -0.06
+            ],
+            "observation": [
+              0.5,
+              0.5,
+              0.5,
+              0.5,
+              0.5,
+              0.5,
+              0.5,
+              0.5,
+              0.5,
+              0.5,
+              0.5,
+              0.5,
+              0.5,
+              0.5,
+              0.5,
+              0.5,
+              0.5,
+              0.5,
+              0.5,
+              0.5,
+              0.25,
+              0.5,
+              0.5,
+              0.5,
+              0.5,
+              0.5,
+              0.5,
+              0.5,
+              0.5,
+              0.5,
+              0.5,
+              0.5,
+              0.5,
+              0.5,
+              0.5,
+              0.5,
+              0.5,
+              0.5,
+              0.5,
+              -0.5
+            ]
+          },
+          "ranges": {
+            "count": 72,
+            "fill": 6,
+            "set": {
+              "41": 3
+            }
+          }
+        }
+      ]
+    },
+    {
+      "id": "F022",
+      "group": "sector_order",
+      "steps": [
+        {
+          "op": "dispatch",
+          "expect": {
+            "code": "OK",
+            "accepted": true,
+            "latched": false,
+            "predictor_calls": 1,
+            "captured": true,
+            "valid": true,
+            "reason": "",
+            "command": [
+              0.03,
+              -0.06
+            ],
+            "observation": [
+              0.5,
+              0.5,
+              0.5,
+              0.5,
+              0.5,
+              0.5,
+              0.5,
+              0.5,
+              0.5,
+              0.5,
+              0.5,
+              0.5,
+              0.5,
+              0.5,
+              0.5,
+              0.5,
+              0.5,
+              0.5,
+              0.5,
+              0.5,
+              0.5,
+              0.25,
+              0.5,
+              0.5,
+              0.5,
+              0.5,
+              0.5,
+              0.5,
+              0.5,
+              0.5,
+              0.5,
+              0.5,
+              0.5,
+              0.5,
+              0.5,
+              0.5,
+              0.5,
+              0.5,
+              0.5,
+              -0.5
+            ]
+          },
+          "ranges": {
+            "count": 72,
+            "fill": 6,
+            "set": {
+              "43": 3
+            }
+          }
+        }
+      ]
+    },
+    {
+      "id": "F023",
+      "group": "sector_order",
+      "steps": [
+        {
+          "op": "dispatch",
+          "expect": {
+            "code": "OK",
+            "accepted": true,
+            "latched": false,
+            "predictor_calls": 1,
+            "captured": true,
+            "valid": true,
+            "reason": "",
+            "command": [
+              0.03,
+              -0.06
+            ],
+            "observation": [
+              0.5,
+              0.5,
+              0.5,
+              0.5,
+              0.5,
+              0.5,
+              0.5,
+              0.5,
+              0.5,
+              0.5,
+              0.5,
+              0.5,
+              0.5,
+              0.5,
+              0.5,
+              0.5,
+              0.5,
+              0.5,
+              0.5,
+              0.5,
+              0.5,
+              0.5,
+              0.25,
+              0.5,
+              0.5,
+              0.5,
+              0.5,
+              0.5,
+              0.5,
+              0.5,
+              0.5,
+              0.5,
+              0.5,
+              0.5,
+              0.5,
+              0.5,
+              0.5,
+              0.5,
+              0.5,
+              -0.5
+            ]
+          },
+          "ranges": {
+            "count": 72,
+            "fill": 6,
+            "set": {
+              "45": 3
+            }
+          }
+        }
+      ]
+    },
+    {
+      "id": "F024",
+      "group": "sector_order",
+      "steps": [
+        {
+          "op": "dispatch",
+          "expect": {
+            "code": "OK",
+            "accepted": true,
+            "latched": false,
+            "predictor_calls": 1,
+            "captured": true,
+            "valid": true,
+            "reason": "",
+            "command": [
+              0.03,
+              -0.06
+            ],
+            "observation": [
+              0.5,
+              0.5,
+              0.5,
+              0.5,
+              0.5,
+              0.5,
+              0.5,
+              0.5,
+              0.5,
+              0.5,
+              0.5,
+              0.5,
+              0.5,
+              0.5,
+              0.5,
+              0.5,
+              0.5,
+              0.5,
+              0.5,
+              0.5,
+              0.5,
+              0.5,
+              0.5,
+              0.25,
+              0.5,
+              0.5,
+              0.5,
+              0.5,
+              0.5,
+              0.5,
+              0.5,
+              0.5,
+              0.5,
+              0.5,
+              0.5,
+              0.5,
+              0.5,
+              0.5,
+              0.5,
+              -0.5
+            ]
+          },
+          "ranges": {
+            "count": 72,
+            "fill": 6,
+            "set": {
+              "47": 3
+            }
+          }
+        }
+      ]
+    },
+    {
+      "id": "F025",
+      "group": "sector_order",
+      "steps": [
+        {
+          "op": "dispatch",
+          "expect": {
+            "code": "OK",
+            "accepted": true,
+            "latched": false,
+            "predictor_calls": 1,
+            "captured": true,
+            "valid": true,
+            "reason": "",
+            "command": [
+              0.03,
+              -0.06
+            ],
+            "observation": [
+              0.5,
+              0.5,
+              0.5,
+              0.5,
+              0.5,
+              0.5,
+              0.5,
+              0.5,
+              0.5,
+              0.5,
+              0.5,
+              0.5,
+              0.5,
+              0.5,
+              0.5,
+              0.5,
+              0.5,
+              0.5,
+              0.5,
+              0.5,
+              0.5,
+              0.5,
+              0.5,
+              0.5,
+              0.25,
+              0.5,
+              0.5,
+              0.5,
+              0.5,
+              0.5,
+              0.5,
+              0.5,
+              0.5,
+              0.5,
+              0.5,
+              0.5,
+              0.5,
+              0.5,
+              0.5,
+              -0.5
+            ]
+          },
+          "ranges": {
+            "count": 72,
+            "fill": 6,
+            "set": {
+              "49": 3
+            }
+          }
+        }
+      ]
+    },
+    {
+      "id": "F026",
+      "group": "sector_order",
+      "steps": [
+        {
+          "op": "dispatch",
+          "expect": {
+            "code": "OK",
+            "accepted": true,
+            "latched": false,
+            "predictor_calls": 1,
+            "captured": true,
+            "valid": true,
+            "reason": "",
+            "command": [
+              0.03,
+              -0.06
+            ],
+            "observation": [
+              0.5,
+              0.5,
+              0.5,
+              0.5,
+              0.5,
+              0.5,
+              0.5,
+              0.5,
+              0.5,
+              0.5,
+              0.5,
+              0.5,
+              0.5,
+              0.5,
+              0.5,
+              0.5,
+              0.5,
+              0.5,
+              0.5,
+              0.5,
+              0.5,
+              0.5,
+              0.5,
+              0.5,
+              0.5,
+              0.25,
+              0.5,
+              0.5,
+              0.5,
+              0.5,
+              0.5,
+              0.5,
+              0.5,
+              0.5,
+              0.5,
+              0.5,
+              0.5,
+              0.5,
+              0.5,
+              -0.5
+            ]
+          },
+          "ranges": {
+            "count": 72,
+            "fill": 6,
+            "set": {
+              "51": 3
+            }
+          }
+        }
+      ]
+    },
+    {
+      "id": "F027",
+      "group": "sector_order",
+      "steps": [
+        {
+          "op": "dispatch",
+          "expect": {
+            "code": "OK",
+            "accepted": true,
+            "latched": false,
+            "predictor_calls": 1,
+            "captured": true,
+            "valid": true,
+            "reason": "",
+            "command": [
+              0.03,
+              -0.06
+            ],
+            "observation": [
+              0.5,
+              0.5,
+              0.5,
+              0.5,
+              0.5,
+              0.5,
+              0.5,
+              0.5,
+              0.5,
+              0.5,
+              0.5,
+              0.5,
+              0.5,
+              0.5,
+              0.5,
+              0.5,
+              0.5,
+              0.5,
+              0.5,
+              0.5,
+              0.5,
+              0.5,
+              0.5,
+              0.5,
+              0.5,
+              0.5,
+              0.25,
+              0.5,
+              0.5,
+              0.5,
+              0.5,
+              0.5,
+              0.5,
+              0.5,
+              0.5,
+              0.5,
+              0.5,
+              0.5,
+              0.5,
+              -0.5
+            ]
+          },
+          "ranges": {
+            "count": 72,
+            "fill": 6,
+            "set": {
+              "53": 3
+            }
+          }
+        }
+      ]
+    },
+    {
+      "id": "F028",
+      "group": "sector_order",
+      "steps": [
+        {
+          "op": "dispatch",
+          "expect": {
+            "code": "OK",
+            "accepted": true,
+            "latched": false,
+            "predictor_calls": 1,
+            "captured": true,
+            "valid": true,
+            "reason": "",
+            "command": [
+              0.03,
+              -0.06
+            ],
+            "observation": [
+              0.5,
+              0.5,
+              0.5,
+              0.5,
+              0.5,
+              0.5,
+              0.5,
+              0.5,
+              0.5,
+              0.5,
+              0.5,
+              0.5,
+              0.5,
+              0.5,
+              0.5,
+              0.5,
+              0.5,
+              0.5,
+              0.5,
+              0.5,
+              0.5,
+              0.5,
+              0.5,
+              0.5,
+              0.5,
+              0.5,
+              0.5,
+              0.25,
+              0.5,
+              0.5,
+              0.5,
+              0.5,
+              0.5,
+              0.5,
+              0.5,
+              0.5,
+              0.5,
+              0.5,
+              0.5,
+              -0.5
+            ]
+          },
+          "ranges": {
+            "count": 72,
+            "fill": 6,
+            "set": {
+              "55": 3
+            }
+          }
+        }
+      ]
+    },
+    {
+      "id": "F029",
+      "group": "sector_order",
+      "steps": [
+        {
+          "op": "dispatch",
+          "expect": {
+            "code": "OK",
+            "accepted": true,
+            "latched": false,
+            "predictor_calls": 1,
+            "captured": true,
+            "valid": true,
+            "reason": "",
+            "command": [
+              0.03,
+              -0.06
+            ],
+            "observation": [
+              0.5,
+              0.5,
+              0.5,
+              0.5,
+              0.5,
+              0.5,
+              0.5,
+              0.5,
+              0.5,
+              0.5,
+              0.5,
+              0.5,
+              0.5,
+              0.5,
+              0.5,
+              0.5,
+              0.5,
+              0.5,
+              0.5,
+              0.5,
+              0.5,
+              0.5,
+              0.5,
+              0.5,
+              0.5,
+              0.5,
+              0.5,
+              0.5,
+              0.25,
+              0.5,
+              0.5,
+              0.5,
+              0.5,
+              0.5,
+              0.5,
+              0.5,
+              0.5,
+              0.5,
+              0.5,
+              -0.5
+            ]
+          },
+          "ranges": {
+            "count": 72,
+            "fill": 6,
+            "set": {
+              "57": 3
+            }
+          }
+        }
+      ]
+    },
+    {
+      "id": "F030",
+      "group": "sector_order",
+      "steps": [
+        {
+          "op": "dispatch",
+          "expect": {
+            "code": "OK",
+            "accepted": true,
+            "latched": false,
+            "predictor_calls": 1,
+            "captured": true,
+            "valid": true,
+            "reason": "",
+            "command": [
+              0.03,
+              -0.06
+            ],
+            "observation": [
+              0.5,
+              0.5,
+              0.5,
+              0.5,
+              0.5,
+              0.5,
+              0.5,
+              0.5,
+              0.5,
+              0.5,
+              0.5,
+              0.5,
+              0.5,
+              0.5,
+              0.5,
+              0.5,
+              0.5,
+              0.5,
+              0.5,
+              0.5,
+              0.5,
+              0.5,
+              0.5,
+              0.5,
+              0.5,
+              0.5,
+              0.5,
+              0.5,
+              0.5,
+              0.25,
+              0.5,
+              0.5,
+              0.5,
+              0.5,
+              0.5,
+              0.5,
+              0.5,
+              0.5,
+              0.5,
+              -0.5
+            ]
+          },
+          "ranges": {
+            "count": 72,
+            "fill": 6,
+            "set": {
+              "59": 3
+            }
+          }
+        }
+      ]
+    },
+    {
+      "id": "F031",
+      "group": "sector_order",
+      "steps": [
+        {
+          "op": "dispatch",
+          "expect": {
+            "code": "OK",
+            "accepted": true,
+            "latched": false,
+            "predictor_calls": 1,
+            "captured": true,
+            "valid": true,
+            "reason": "",
+            "command": [
+              0.03,
+              -0.06
+            ],
+            "observation": [
+              0.5,
+              0.5,
+              0.5,
+              0.5,
+              0.5,
+              0.5,
+              0.5,
+              0.5,
+              0.5,
+              0.5,
+              0.5,
+              0.5,
+              0.5,
+              0.5,
+              0.5,
+              0.5,
+              0.5,
+              0.5,
+              0.5,
+              0.5,
+              0.5,
+              0.5,
+              0.5,
+              0.5,
+              0.5,
+              0.5,
+              0.5,
+              0.5,
+              0.5,
+              0.5,
+              0.25,
+              0.5,
+              0.5,
+              0.5,
+              0.5,
+              0.5,
+              0.5,
+              0.5,
+              0.5,
+              -0.5
+            ]
+          },
+          "ranges": {
+            "count": 72,
+            "fill": 6,
+            "set": {
+              "61": 3
+            }
+          }
+        }
+      ]
+    },
+    {
+      "id": "F032",
+      "group": "sector_order",
+      "steps": [
+        {
+          "op": "dispatch",
+          "expect": {
+            "code": "OK",
+            "accepted": true,
+            "latched": false,
+            "predictor_calls": 1,
+            "captured": true,
+            "valid": true,
+            "reason": "",
+            "command": [
+              0.03,
+              -0.06
+            ],
+            "observation": [
+              0.5,
+              0.5,
+              0.5,
+              0.5,
+              0.5,
+              0.5,
+              0.5,
+              0.5,
+              0.5,
+              0.5,
+              0.5,
+              0.5,
+              0.5,
+              0.5,
+              0.5,
+              0.5,
+              0.5,
+              0.5,
+              0.5,
+              0.5,
+              0.5,
+              0.5,
+              0.5,
+              0.5,
+              0.5,
+              0.5,
+              0.5,
+              0.5,
+              0.5,
+              0.5,
+              0.5,
+              0.25,
+              0.5,
+              0.5,
+              0.5,
+              0.5,
+              0.5,
+              0.5,
+              0.5,
+              -0.5
+            ]
+          },
+          "ranges": {
+            "count": 72,
+            "fill": 6,
+            "set": {
+              "63": 3
+            }
+          }
+        }
+      ]
+    },
+    {
+      "id": "F033",
+      "group": "sector_order",
+      "steps": [
+        {
+          "op": "dispatch",
+          "expect": {
+            "code": "OK",
+            "accepted": true,
+            "latched": false,
+            "predictor_calls": 1,
+            "captured": true,
+            "valid": true,
+            "reason": "",
+            "command": [
+              0.03,
+              -0.06
+            ],
+            "observation": [
+              0.5,
+              0.5,
+              0.5,
+              0.5,
+              0.5,
+              0.5,
+              0.5,
+              0.5,
+              0.5,
+              0.5,
+              0.5,
+              0.5,
+              0.5,
+              0.5,
+              0.5,
+              0.5,
+              0.5,
+              0.5,
+              0.5,
+              0.5,
+              0.5,
+              0.5,
+              0.5,
+              0.5,
+              0.5,
+              0.5,
+              0.5,
+              0.5,
+              0.5,
+              0.5,
+              0.5,
+              0.5,
+              0.25,
+              0.5,
+              0.5,
+              0.5,
+              0.5,
+              0.5,
+              0.5,
+              -0.5
+            ]
+          },
+          "ranges": {
+            "count": 72,
+            "fill": 6,
+            "set": {
+              "65": 3
+            }
+          }
+        }
+      ]
+    },
+    {
+      "id": "F034",
+      "group": "sector_order",
+      "steps": [
+        {
+          "op": "dispatch",
+          "expect": {
+            "code": "OK",
+            "accepted": true,
+            "latched": false,
+            "predictor_calls": 1,
+            "captured": true,
+            "valid": true,
+            "reason": "",
+            "command": [
+              0.03,
+              -0.06
+            ],
+            "observation": [
+              0.5,
+              0.5,
+              0.5,
+              0.5,
+              0.5,
+              0.5,
+              0.5,
+              0.5,
+              0.5,
+              0.5,
+              0.5,
+              0.5,
+              0.5,
+              0.5,
+              0.5,
+              0.5,
+              0.5,
+              0.5,
+              0.5,
+              0.5,
+              0.5,
+              0.5,
+              0.5,
+              0.5,
+              0.5,
+              0.5,
+              0.5,
+              0.5,
+              0.5,
+              0.5,
+              0.5,
+              0.5,
+              0.5,
+              0.25,
+              0.5,
+              0.5,
+              0.5,
+              0.5,
+              0.5,
+              -0.5
+            ]
+          },
+          "ranges": {
+            "count": 72,
+            "fill": 6,
+            "set": {
+              "67": 3
+            }
+          }
+        }
+      ]
+    },
+    {
+      "id": "F035",
+      "group": "sector_order",
+      "steps": [
+        {
+          "op": "dispatch",
+          "expect": {
+            "code": "OK",
+            "accepted": true,
+            "latched": false,
+            "predictor_calls": 1,
+            "captured": true,
+            "valid": true,
+            "reason": "",
+            "command": [
+              0.03,
+              -0.06
+            ],
+            "observation": [
+              0.5,
+              0.5,
+              0.5,
+              0.5,
+              0.5,
+              0.5,
+              0.5,
+              0.5,
+              0.5,
+              0.5,
+              0.5,
+              0.5,
+              0.5,
+              0.5,
+              0.5,
+              0.5,
+              0.5,
+              0.5,
+              0.5,
+              0.5,
+              0.5,
+              0.5,
+              0.5,
+              0.5,
+              0.5,
+              0.5,
+              0.5,
+              0.5,
+              0.5,
+              0.5,
+              0.5,
+              0.5,
+              0.5,
+              0.5,
+              0.25,
+              0.5,
+              0.5,
+              0.5,
+              0.5,
+              -0.5
+            ]
+          },
+          "ranges": {
+            "count": 72,
+            "fill": 6,
+            "set": {
+              "69": 3
+            }
+          }
+        }
+      ]
+    },
+    {
+      "id": "F036",
+      "group": "sector_order",
+      "steps": [
+        {
+          "op": "dispatch",
+          "expect": {
+            "code": "OK",
+            "accepted": true,
+            "latched": false,
+            "predictor_calls": 1,
+            "captured": true,
+            "valid": true,
+            "reason": "",
+            "command": [
+              0.03,
+              -0.06
+            ],
+            "observation": [
+              0.5,
+              0.5,
+              0.5,
+              0.5,
+              0.5,
+              0.5,
+              0.5,
+              0.5,
+              0.5,
+              0.5,
+              0.5,
+              0.5,
+              0.5,
+              0.5,
+              0.5,
+              0.5,
+              0.5,
+              0.5,
+              0.5,
+              0.5,
+              0.5,
+              0.5,
+              0.5,
+              0.5,
+              0.5,
+              0.5,
+              0.5,
+              0.5,
+              0.5,
+              0.5,
+              0.5,
+              0.5,
+              0.5,
+              0.5,
+              0.5,
+              0.25,
+              0.5,
+              0.5,
+              0.5,
+              -0.5
+            ]
+          },
+          "ranges": {
+            "count": 72,
+            "fill": 6,
+            "set": {
+              "71": 3
+            }
+          }
+        }
+      ]
+    },
+    {
+      "id": "F037",
+      "group": "scan_boundaries",
+      "steps": [
+        {
+          "op": "dispatch",
+          "expect": {
+            "code": "OK",
+            "accepted": true,
+            "latched": false,
+            "predictor_calls": 1,
+            "captured": true,
+            "valid": true,
+            "reason": "",
+            "command": [
+              0.03,
+              -0.06
+            ],
+            "observation": [
+              1.0,
+              1.0,
+              1.0,
+              1.0,
+              1.0,
+              1.0,
+              1.0,
+              1.0,
+              1.0,
+              1.0,
+              1.0,
+              1.0,
+              1.0,
+              1.0,
+              1.0,
+              1.0,
+              1.0,
+              1.0,
+              1.0,
+              1.0,
+              1.0,
+              1.0,
+              1.0,
+              1.0,
+              1.0,
+              1.0,
+              1.0,
+              1.0,
+              1.0,
+              1.0,
+              1.0,
+              1.0,
+              1.0,
+              1.0,
+              1.0,
+              1.0,
+              0.5,
+              0.5,
+              0.5,
+              -0.5
+            ]
+          },
+          "ranges": {
+            "count": 36,
+            "fill": 12
+          }
+        }
+      ]
+    },
+    {
+      "id": "F038",
+      "group": "scan_boundaries",
+      "steps": [
+        {
+          "op": "dispatch",
+          "expect": {
+            "code": "OK",
+            "accepted": true,
+            "latched": false,
+            "predictor_calls": 1,
+            "captured": true,
+            "valid": true,
+            "reason": "",
+            "command": [
+              0.03,
+              -0.06
+            ],
+            "observation": [
+              1.0,
+              1.0,
+              1.0,
+              1.0,
+              1.0,
+              1.0,
+              1.0,
+              1.0,
+              1.0,
+              1.0,
+              1.0,
+              1.0,
+              1.0,
+              1.0,
+              1.0,
+              1.0,
+              1.0,
+              1.0,
+              1.0,
+              1.0,
+              1.0,
+              1.0,
+              1.0,
+              1.0,
+              1.0,
+              1.0,
+              1.0,
+              1.0,
+              1.0,
+              1.0,
+              1.0,
+              1.0,
+              1.0,
+              1.0,
+              1.0,
+              1.0,
+              0.5,
+              0.5,
+              0.5,
+              -0.5
+            ]
+          },
+          "ranges": {
+            "count": 36,
+            "fill": 24
+          }
+        }
+      ]
+    },
+    {
+      "id": "F039",
+      "group": "scan_boundaries",
+      "steps": [
+        {
+          "op": "dispatch",
+          "expect": {
+            "code": "OK",
+            "accepted": true,
+            "latched": false,
+            "predictor_calls": 1,
+            "captured": true,
+            "valid": true,
+            "reason": "",
+            "command": [
+              0.03,
+              -0.06
+            ],
+            "observation": [
+              1.0,
+              1.0,
+              1.0,
+              1.0,
+              1.0,
+              1.0,
+              1.0,
+              1.0,
+              1.0,
+              1.0,
+              1.0,
+              1.0,
+              1.0,
+              1.0,
+              1.0,
+              1.0,
+              1.0,
+              1.0,
+              1.0,
+              1.0,
+              1.0,
+              1.0,
+              1.0,
+              1.0,
+              1.0,
+              1.0,
+              1.0,
+              1.0,
+              1.0,
+              1.0,
+              1.0,
+              1.0,
+              1.0,
+              1.0,
+              1.0,
+              1.0,
+              0.5,
+              0.5,
+              0.5,
+              -0.5
+            ]
+          },
+          "ranges": {
+            "count": 36,
+            "fill": "+Inf"
+          }
+        }
+      ]
+    },
+    {
+      "id": "F040",
+      "group": "scan_boundaries",
+      "steps": [
+        {
+          "op": "dispatch",
+          "expect": {
+            "code": "INVALID_OBSERVATION",
+            "accepted": false,
+            "latched": true,
+            "predictor_calls": 0,
+            "captured": true,
+            "command": [
+              0.0,
+              0.0
+            ],
+            "observation": [
+              0.0,
+              0.0,
+              0.0,
+              0.0,
+              0.0,
+              0.0,
+              0.0,
+              0.0,
+              0.0,
+              0.0,
+              0.0,
+              0.0,
+              0.0,
+              0.0,
+              0.0,
+              0.0,
+              0.0,
+              0.0,
+              0.0,
+              0.0,
+              0.0,
+              0.0,
+              0.0,
+              0.0,
+              0.0,
+              0.0,
+              0.0,
+              0.0,
+              0.0,
+              0.0,
+              0.0,
+              0.0,
+              0.0,
+              0.0,
+              0.0,
+              0.0,
+              0.0,
+              0.0,
+              0.0,
+              0.0
+            ],
+            "valid": false,
+            "reason": "Invalid LiDAR data"
+          },
+          "ranges": {
+            "count": 36,
+            "fill": 0
+          }
+        }
+      ]
+    },
+    {
+      "id": "F041",
+      "group": "scan_boundaries",
+      "steps": [
+        {
+          "op": "dispatch",
+          "expect": {
+            "code": "INVALID_OBSERVATION",
+            "accepted": false,
+            "latched": true,
+            "predictor_calls": 0,
+            "captured": true,
+            "command": [
+              0.0,
+              0.0
+            ],
+            "observation": [
+              0.0,
+              0.0,
+              0.0,
+              0.0,
+              0.0,
+              0.0,
+              0.0,
+              0.0,
+              0.0,
+              0.0,
+              0.0,
+              0.0,
+              0.0,
+              0.0,
+              0.0,
+              0.0,
+              0.0,
+              0.0,
+              0.0,
+              0.0,
+              0.0,
+              0.0,
+              0.0,
+              0.0,
+              0.0,
+              0.0,
+              0.0,
+              0.0,
+              0.0,
+              0.0,
+              0.0,
+              0.0,
+              0.0,
+              0.0,
+              0.0,
+              0.0,
+              0.0,
+              0.0,
+              0.0,
+              0.0
+            ],
+            "valid": false,
+            "reason": "Invalid LiDAR data"
+          },
+          "ranges": {
+            "count": 36,
+            "fill": -1
+          }
+        }
+      ]
+    },
+    {
+      "id": "F042",
+      "group": "scan_boundaries",
+      "steps": [
+        {
+          "op": "dispatch",
+          "expect": {
+            "code": "INVALID_OBSERVATION",
+            "accepted": false,
+            "latched": true,
+            "predictor_calls": 0,
+            "captured": true,
+            "command": [
+              0.0,
+              0.0
+            ],
+            "observation": [
+              0.0,
+              0.0,
+              0.0,
+              0.0,
+              0.0,
+              0.0,
+              0.0,
+              0.0,
+              0.0,
+              0.0,
+              0.0,
+              0.0,
+              0.0,
+              0.0,
+              0.0,
+              0.0,
+              0.0,
+              0.0,
+              0.0,
+              0.0,
+              0.0,
+              0.0,
+              0.0,
+              0.0,
+              0.0,
+              0.0,
+              0.0,
+              0.0,
+              0.0,
+              0.0,
+              0.0,
+              0.0,
+              0.0,
+              0.0,
+              0.0,
+              0.0,
+              0.0,
+              0.0,
+              0.0,
+              0.0
+            ],
+            "valid": false,
+            "reason": "Invalid LiDAR data"
+          },
+          "ranges": {
+            "count": 36,
+            "fill": "NaN"
+          }
+        }
+      ]
+    },
+    {
+      "id": "F043",
+      "group": "scan_boundaries",
+      "steps": [
+        {
+          "op": "dispatch",
+          "expect": {
+            "code": "INVALID_OBSERVATION",
+            "accepted": false,
+            "latched": true,
+            "predictor_calls": 0,
+            "captured": true,
+            "command": [
+              0.0,
+              0.0
+            ],
+            "observation": [
+              0.0,
+              0.0,
+              0.0,
+              0.0,
+              0.0,
+              0.0,
+              0.0,
+              0.0,
+              0.0,
+              0.0,
+              0.0,
+              0.0,
+              0.0,
+              0.0,
+              0.0,
+              0.0,
+              0.0,
+              0.0,
+              0.0,
+              0.0,
+              0.0,
+              0.0,
+              0.0,
+              0.0,
+              0.0,
+              0.0,
+              0.0,
+              0.0,
+              0.0,
+              0.0,
+              0.0,
+              0.0,
+              0.0,
+              0.0,
+              0.0,
+              0.0,
+              0.0,
+              0.0,
+              0.0,
+              0.0
+            ],
+            "valid": false,
+            "reason": "Invalid LiDAR data"
+          },
+          "ranges": {
+            "count": 36,
+            "fill": "-Inf"
+          }
+        }
+      ]
+    },
+    {
+      "id": "F044",
+      "group": "scan_boundaries",
+      "steps": [
+        {
+          "op": "dispatch",
+          "expect": {
+            "code": "OK",
+            "accepted": true,
+            "latched": false,
+            "predictor_calls": 1,
+            "captured": true,
+            "valid": true,
+            "reason": "",
+            "command": [
+              0.03,
+              -0.06
+            ],
+            "observation": [
+              0.5,
+              0.5,
+              0.5,
+              0.5,
+              0.5,
+              0.5,
+              0.5,
+              0.5,
+              0.5,
+              0.5,
+              0.5,
+              0.5,
+              0.5,
+              0.5,
+              0.5,
+              0.5,
+              0.5,
+              0.5,
+              0.5,
+              0.5,
+              0.5,
+              0.5,
+              0.5,
+              0.5,
+              0.5,
+              0.5,
+              0.5,
+              0.5,
+              0.5,
+              0.5,
+              0.5,
+              0.5,
+              0.5,
+              0.5,
+              0.5,
+              0.5,
+              0.5,
+              0.5,
+              0.5,
+              -0.5
+            ]
+          },
+          "ranges": {
+            "count": 72,
+            "fill": 6,
+            "set": {
+              "0": "NaN"
+            }
+          }
+        }
+      ]
+    },
+    {
+      "id": "F045",
+      "group": "scan_boundaries",
+      "steps": [
+        {
+          "op": "dispatch",
+          "expect": {
+            "code": "OK",
+            "accepted": true,
+            "latched": false,
+            "predictor_calls": 1,
+            "captured": true,
+            "valid": true,
+            "reason": "",
+            "command": [
+              0.03,
+              -0.06
+            ],
+            "observation": [
+              0.5,
+              0.5,
+              0.5,
+              0.5,
+              0.5,
+              0.5,
+              0.5,
+              0.5,
+              0.5,
+              0.5,
+              0.5,
+              0.5,
+              0.5,
+              0.5,
+              0.5,
+              0.5,
+              0.5,
+              0.5,
+              0.5,
+              0.5,
+              0.5,
+              0.5,
+              0.5,
+              0.5,
+              0.5,
+              0.5,
+              0.5,
+              0.5,
+              0.5,
+              0.5,
+              0.5,
+              0.5,
+              0.5,
+              0.5,
+              0.5,
+              0.5,
+              0.5,
+              0.5,
+              0.5,
+              -0.5
+            ]
+          },
+          "ranges": {
+            "count": 72,
+            "fill": 6,
+            "set": {
+              "0": "-Inf"
+            }
+          }
+        }
+      ]
+    },
+    {
+      "id": "F046",
+      "group": "scan_boundaries",
+      "steps": [
+        {
+          "op": "dispatch",
+          "expect": {
+            "code": "OK",
+            "accepted": true,
+            "latched": false,
+            "predictor_calls": 1,
+            "captured": true,
+            "valid": true,
+            "reason": "",
+            "command": [
+              0.03,
+              -0.06
+            ],
+            "observation": [
+              0.25,
+              0.75,
+              0.5,
+              0.5,
+              0.5,
+              0.5,
+              0.5,
+              0.5,
+              0.5,
+              0.5,
+              0.5,
+              0.5,
+              0.5,
+              0.5,
+              0.5,
+              0.5,
+              0.5,
+              0.5,
+              0.5,
+              0.5,
+              0.5,
+              0.5,
+              0.5,
+              0.5,
+              0.5,
+              0.5,
+              0.5,
+              0.5,
+              0.5,
+              0.5,
+              0.5,
+              0.5,
+              0.5,
+              0.5,
+              0.5,
+              0.5,
+              0.5,
+              0.5,
+              0.5,
+              -0.5
+            ]
+          },
+          "ranges": {
+            "count": 37,
+            "fill": 6,
+            "set": {
+              "1": 3,
+              "2": 9
+            }
+          }
+        }
+      ]
+    },
+    {
+      "id": "F047",
+      "group": "scan_boundaries",
+      "steps": [
+        {
+          "op": "dispatch",
+          "expect": {
+            "code": "INVALID_OBSERVATION",
+            "accepted": false,
+            "latched": true,
+            "predictor_calls": 0,
+            "captured": true,
+            "command": [
+              0.0,
+              0.0
+            ],
+            "observation": [
+              0.0,
+              0.0,
+              0.0,
+              0.0,
+              0.0,
+              0.0,
+              0.0,
+              0.0,
+              0.0,
+              0.0,
+              0.0,
+              0.0,
+              0.0,
+              0.0,
+              0.0,
+              0.0,
+              0.0,
+              0.0,
+              0.0,
+              0.0,
+              0.0,
+              0.0,
+              0.0,
+              0.0,
+              0.0,
+              0.0,
+              0.0,
+              0.0,
+              0.0,
+              0.0,
+              0.0,
+              0.0,
+              0.0,
+              0.0,
+              0.0,
+              0.0,
+              0.0,
+              0.0,
+              0.0,
+              0.0
+            ],
+            "valid": false,
+            "reason": "Invalid LiDAR data"
+          },
+          "ranges": {
+            "count": 35,
+            "fill": 6
+          }
+        }
+      ]
+    },
+    {
+      "id": "F048",
+      "group": "scan_boundaries",
+      "steps": [
+        {
+          "op": "dispatch",
+          "expect": {
+            "code": "INVALID_OBSERVATION",
+            "accepted": false,
+            "latched": true,
+            "predictor_calls": 0,
+            "captured": true,
+            "command": [
+              0.0,
+              0.0
+            ],
+            "observation": [
+              0.0,
+              0.0,
+              0.0,
+              0.0,
+              0.0,
+              0.0,
+              0.0,
+              0.0,
+              0.0,
+              0.0,
+              0.0,
+              0.0,
+              0.0,
+              0.0,
+              0.0,
+              0.0,
+              0.0,
+              0.0,
+              0.0,
+              0.0,
+              0.0,
+              0.0,
+              0.0,
+              0.0,
+              0.0,
+              0.0,
+              0.0,
+              0.0,
+              0.0,
+              0.0,
+              0.0,
+              0.0,
+              0.0,
+              0.0,
+              0.0,
+              0.0,
+              0.0,
+              0.0,
+              0.0,
+              0.0
+            ],
+            "valid": false,
+            "reason": "Invalid LiDAR data"
+          },
+          "ranges": {
+            "shape": [
+              6,
+              6
+            ],
+            "fill": 6
+          }
+        }
+      ]
+    },
+    {
+      "id": "F049",
+      "group": "state_features",
+      "steps": [
+        {
+          "op": "dispatch",
+          "expect": {
+            "code": "OK",
+            "accepted": true,
+            "latched": false,
+            "predictor_calls": 1,
+            "captured": true,
+            "valid": true,
+            "reason": "",
+            "command": [
+              0.03,
+              -0.06
+            ],
+            "observation": [
+              0.5,
+              0.5,
+              0.5,
+              0.5,
+              0.5,
+              0.5,
+              0.5,
+              0.5,
+              0.5,
+              0.5,
+              0.5,
+              0.5,
+              0.5,
+              0.5,
+              0.5,
+              0.5,
+              0.5,
+              0.5,
+              0.5,
+              0.5,
+              0.5,
+              0.5,
+              0.5,
+              0.5,
+              0.5,
+              0.5,
+              0.5,
+              0.5,
+              0.5,
+              0.5,
+              0.5,
+              0.5,
+              0.5,
+              0.5,
+              0.5,
+              0.5,
+              0.0,
+              0.5,
+              0.5,
+              -0.5
+            ]
+          },
+          "distance_m": 0
+        }
+      ]
+    },
+    {
+      "id": "F050",
+      "group": "state_features",
+      "steps": [
+        {
+          "op": "dispatch",
+          "expect": {
+            "code": "OK",
+            "accepted": true,
+            "latched": false,
+            "predictor_calls": 1,
+            "captured": true,
+            "valid": true,
+            "reason": "",
+            "command": [
+              0.03,
+              -0.06
+            ],
+            "observation": [
+              0.5,
+              0.5,
+              0.5,
+              0.5,
+              0.5,
+              0.5,
+              0.5,
+              0.5,
+              0.5,
+              0.5,
+              0.5,
+              0.5,
+              0.5,
+              0.5,
+              0.5,
+              0.5,
+              0.5,
+              0.5,
+              0.5,
+              0.5,
+              0.5,
+              0.5,
+              0.5,
+              0.5,
+              0.5,
+              0.5,
+              0.5,
+              0.5,
+              0.5,
+              0.5,
+              0.5,
+              0.5,
+              0.5,
+              0.5,
+              0.5,
+              0.5,
+              1.0,
+              0.5,
+              0.5,
+              -0.5
+            ]
+          },
+          "distance_m": 40
+        }
+      ]
+    },
+    {
+      "id": "F051",
+      "group": "state_features",
+      "steps": [
+        {
+          "op": "dispatch",
+          "expect": {
+            "code": "INVALID_OBSERVATION",
+            "accepted": false,
+            "latched": true,
+            "predictor_calls": 0,
+            "captured": true,
+            "command": [
+              0.0,
+              0.0
+            ],
+            "observation": [
+              0.0,
+              0.0,
+              0.0,
+              0.0,
+              0.0,
+              0.0,
+              0.0,
+              0.0,
+              0.0,
+              0.0,
+              0.0,
+              0.0,
+              0.0,
+              0.0,
+              0.0,
+              0.0,
+              0.0,
+              0.0,
+              0.0,
+              0.0,
+              0.0,
+              0.0,
+              0.0,
+              0.0,
+              0.0,
+              0.0,
+              0.0,
+              0.0,
+              0.0,
+              0.0,
+              0.0,
+              0.0,
+              0.0,
+              0.0,
+              0.0,
+              0.0,
+              0.0,
+              0.0,
+              0.0,
+              0.0
+            ],
+            "valid": false,
+            "reason": "Negative goal distance"
+          },
+          "distance_m": -1
+        }
+      ]
+    },
+    {
+      "id": "F052",
+      "group": "state_features",
+      "steps": [
+        {
+          "op": "dispatch",
+          "expect": {
+            "code": "OK",
+            "accepted": true,
+            "latched": false,
+            "predictor_calls": 1,
+            "captured": true,
+            "valid": true,
+            "reason": "",
+            "command": [
+              0.03,
+              -0.06
+            ],
+            "observation": [
+              0.5,
+              0.5,
+              0.5,
+              0.5,
+              0.5,
+              0.5,
+              0.5,
+              0.5,
+              0.5,
+              0.5,
+              0.5,
+              0.5,
+              0.5,
+              0.5,
+              0.5,
+              0.5,
+              0.5,
+              0.5,
+              0.5,
+              0.5,
+              0.5,
+              0.5,
+              0.5,
+              0.5,
+              0.5,
+              0.5,
+              0.5,
+              0.5,
+              0.5,
+              0.5,
+              0.5,
+              0.5,
+              0.5,
+              0.5,
+              0.5,
+              0.5,
+              0.5,
+              1.0,
+              0.5,
+              -0.5
+            ]
+          },
+          "bearing_rad": "pi"
+        }
+      ]
+    },
+    {
+      "id": "F053",
+      "group": "state_features",
+      "steps": [
+        {
+          "op": "dispatch",
+          "expect": {
+            "code": "OK",
+            "accepted": true,
+            "latched": false,
+            "predictor_calls": 1,
+            "captured": true,
+            "valid": true,
+            "reason": "",
+            "command": [
+              0.03,
+              -0.06
+            ],
+            "observation": [
+              0.5,
+              0.5,
+              0.5,
+              0.5,
+              0.5,
+              0.5,
+              0.5,
+              0.5,
+              0.5,
+              0.5,
+              0.5,
+              0.5,
+              0.5,
+              0.5,
+              0.5,
+              0.5,
+              0.5,
+              0.5,
+              0.5,
+              0.5,
+              0.5,
+              0.5,
+              0.5,
+              0.5,
+              0.5,
+              0.5,
+              0.5,
+              0.5,
+              0.5,
+              0.5,
+              0.5,
+              0.5,
+              0.5,
+              0.5,
+              0.5,
+              0.5,
+              0.5,
+              -1.0,
+              0.5,
+              -0.5
+            ]
+          },
+          "bearing_rad": "-pi"
+        }
+      ]
+    },
+    {
+      "id": "F054",
+      "group": "state_features",
+      "steps": [
+        {
+          "op": "dispatch",
+          "expect": {
+            "code": "OK",
+            "accepted": true,
+            "latched": false,
+            "predictor_calls": 1,
+            "captured": true,
+            "valid": true,
+            "reason": "",
+            "command": [
+              0.03,
+              -0.06
+            ],
+            "observation": [
+              0.5,
+              0.5,
+              0.5,
+              0.5,
+              0.5,
+              0.5,
+              0.5,
+              0.5,
+              0.5,
+              0.5,
+              0.5,
+              0.5,
+              0.5,
+              0.5,
+              0.5,
+              0.5,
+              0.5,
+              0.5,
+              0.5,
+              0.5,
+              0.5,
+              0.5,
+              0.5,
+              0.5,
+              0.5,
+              0.5,
+              0.5,
+              0.5,
+              0.5,
+              0.5,
+              0.5,
+              0.5,
+              0.5,
+              0.5,
+              0.5,
+              0.5,
+              0.5,
+              -0.5,
+              0.5,
+              -0.5
+            ]
+          },
+          "bearing_rad": "3*pi/2"
+        }
+      ]
+    },
+    {
+      "id": "F055",
+      "group": "state_features",
+      "steps": [
+        {
+          "op": "dispatch",
+          "expect": {
+            "code": "OK",
+            "accepted": true,
+            "latched": false,
+            "predictor_calls": 1,
+            "captured": true,
+            "valid": true,
+            "reason": "",
+            "command": [
+              0.03,
+              -0.06
+            ],
+            "observation": [
+              0.5,
+              0.5,
+              0.5,
+              0.5,
+              0.5,
+              0.5,
+              0.5,
+              0.5,
+              0.5,
+              0.5,
+              0.5,
+              0.5,
+              0.5,
+              0.5,
+              0.5,
+              0.5,
+              0.5,
+              0.5,
+              0.5,
+              0.5,
+              0.5,
+              0.5,
+              0.5,
+              0.5,
+              0.5,
+              0.5,
+              0.5,
+              0.5,
+              0.5,
+              0.5,
+              0.5,
+              0.5,
+              0.5,
+              0.5,
+              0.5,
+              0.5,
+              0.5,
+              0.5,
+              1.0,
+              -0.5
+            ]
+          },
+          "linear_mps": 3
+        }
+      ]
+    },
+    {
+      "id": "F056",
+      "group": "state_features",
+      "steps": [
+        {
+          "op": "dispatch",
+          "expect": {
+            "code": "OK",
+            "accepted": true,
+            "latched": false,
+            "predictor_calls": 1,
+            "captured": true,
+            "valid": true,
+            "reason": "",
+            "command": [
+              0.03,
+              -0.06
+            ],
+            "observation": [
+              0.5,
+              0.5,
+              0.5,
+              0.5,
+              0.5,
+              0.5,
+              0.5,
+              0.5,
+              0.5,
+              0.5,
+              0.5,
+              0.5,
+              0.5,
+              0.5,
+              0.5,
+              0.5,
+              0.5,
+              0.5,
+              0.5,
+              0.5,
+              0.5,
+              0.5,
+              0.5,
+              0.5,
+              0.5,
+              0.5,
+              0.5,
+              0.5,
+              0.5,
+              0.5,
+              0.5,
+              0.5,
+              0.5,
+              0.5,
+              0.5,
+              0.5,
+              0.5,
+              0.5,
+              0.5,
+              -1.0
+            ]
+          },
+          "angular_rps": -6
+        }
+      ]
+    },
+    {
+      "id": "F057",
+      "group": "state_features",
+      "steps": [
+        {
+          "op": "dispatch",
+          "expect": {
+            "code": "INVALID_OBSERVATION",
+            "accepted": false,
+            "latched": true,
+            "predictor_calls": 0,
+            "captured": true,
+            "command": [
+              0.0,
+              0.0
+            ],
+            "observation": [
+              0.0,
+              0.0,
+              0.0,
+              0.0,
+              0.0,
+              0.0,
+              0.0,
+              0.0,
+              0.0,
+              0.0,
+              0.0,
+              0.0,
+              0.0,
+              0.0,
+              0.0,
+              0.0,
+              0.0,
+              0.0,
+              0.0,
+              0.0,
+              0.0,
+              0.0,
+              0.0,
+              0.0,
+              0.0,
+              0.0,
+              0.0,
+              0.0,
+              0.0,
+              0.0,
+              0.0,
+              0.0,
+              0.0,
+              0.0,
+              0.0,
+              0.0,
+              0.0,
+              0.0,
+              0.0,
+              0.0
+            ],
+            "valid": false,
+            "reason": "Non-finite input feature"
+          },
+          "distance_m": "NaN"
+        }
+      ]
+    },
+    {
+      "id": "F058",
+      "group": "state_features",
+      "steps": [
+        {
+          "op": "dispatch",
+          "expect": {
+            "code": "INVALID_OBSERVATION",
+            "accepted": false,
+            "latched": true,
+            "predictor_calls": 0,
+            "captured": true,
+            "command": [
+              0.0,
+              0.0
+            ],
+            "observation": [
+              0.0,
+              0.0,
+              0.0,
+              0.0,
+              0.0,
+              0.0,
+              0.0,
+              0.0,
+              0.0,
+              0.0,
+              0.0,
+              0.0,
+              0.0,
+              0.0,
+              0.0,
+              0.0,
+              0.0,
+              0.0,
+              0.0,
+              0.0,
+              0.0,
+              0.0,
+              0.0,
+              0.0,
+              0.0,
+              0.0,
+              0.0,
+              0.0,
+              0.0,
+              0.0,
+              0.0,
+              0.0,
+              0.0,
+              0.0,
+              0.0,
+              0.0,
+              0.0,
+              0.0,
+              0.0,
+              0.0
+            ],
+            "valid": false,
+            "reason": "Non-finite input feature"
+          },
+          "bearing_rad": "+Inf"
+        }
+      ]
+    },
+    {
+      "id": "F059",
+      "group": "state_features",
+      "steps": [
+        {
+          "op": "dispatch",
+          "expect": {
+            "code": "INVALID_OBSERVATION",
+            "accepted": false,
+            "latched": true,
+            "predictor_calls": 0,
+            "captured": true,
+            "command": [
+              0.0,
+              0.0
+            ],
+            "observation": [
+              0.0,
+              0.0,
+              0.0,
+              0.0,
+              0.0,
+              0.0,
+              0.0,
+              0.0,
+              0.0,
+              0.0,
+              0.0,
+              0.0,
+              0.0,
+              0.0,
+              0.0,
+              0.0,
+              0.0,
+              0.0,
+              0.0,
+              0.0,
+              0.0,
+              0.0,
+              0.0,
+              0.0,
+              0.0,
+              0.0,
+              0.0,
+              0.0,
+              0.0,
+              0.0,
+              0.0,
+              0.0,
+              0.0,
+              0.0,
+              0.0,
+              0.0,
+              0.0,
+              0.0,
+              0.0,
+              0.0
+            ],
+            "valid": false,
+            "reason": "Non-finite input feature"
+          },
+          "linear_mps": "-Inf"
+        }
+      ]
+    },
+    {
+      "id": "F060",
+      "group": "state_features",
+      "steps": [
+        {
+          "op": "dispatch",
+          "expect": {
+            "code": "INVALID_OBSERVATION",
+            "accepted": false,
+            "latched": true,
+            "predictor_calls": 0,
+            "captured": true,
+            "command": [
+              0.0,
+              0.0
+            ],
+            "observation": [
+              0.0,
+              0.0,
+              0.0,
+              0.0,
+              0.0,
+              0.0,
+              0.0,
+              0.0,
+              0.0,
+              0.0,
+              0.0,
+              0.0,
+              0.0,
+              0.0,
+              0.0,
+              0.0,
+              0.0,
+              0.0,
+              0.0,
+              0.0,
+              0.0,
+              0.0,
+              0.0,
+              0.0,
+              0.0,
+              0.0,
+              0.0,
+              0.0,
+              0.0,
+              0.0,
+              0.0,
+              0.0,
+              0.0,
+              0.0,
+              0.0,
+              0.0,
+              0.0,
+              0.0,
+              0.0,
+              0.0
+            ],
+            "valid": false,
+            "reason": "Non-finite input feature"
+          },
+          "angular_rps": "NaN"
+        }
+      ]
+    },
+    {
+      "id": "F061",
+      "group": "snapshot_guards",
+      "steps": [
+        {
+          "op": "dispatch",
+          "expect": {
+            "code": "MISSING_INPUT",
+            "accepted": false,
+            "latched": true,
+            "predictor_calls": 0,
+            "captured": true,
+            "command": [
+              0.0,
+              0.0
+            ],
+            "observation": null,
+            "valid": null,
+            "reason": null
+          },
+          "snapshot": null
+        }
+      ]
+    },
+    {
+      "id": "F062",
+      "group": "snapshot_guards",
+      "steps": [
+        {
+          "op": "dispatch",
+          "expect": {
+            "code": "MISSING_INPUT",
+            "accepted": false,
+            "latched": true,
+            "predictor_calls": 0,
+            "captured": true,
+            "command": [
+              0.0,
+              0.0
+            ],
+            "observation": null,
+            "valid": null,
+            "reason": null
+          },
+          "ranges": null
+        }
+      ]
+    },
+    {
+      "id": "F063",
+      "group": "snapshot_guards",
+      "steps": [
+        {
+          "op": "dispatch",
+          "expect": {
+            "code": "MALFORMED_INPUT",
+            "accepted": false,
+            "latched": true,
+            "predictor_calls": 0,
+            "captured": true,
+            "command": [
+              0.0,
+              0.0
+            ],
+            "observation": null,
+            "valid": null,
+            "reason": null
+          },
+          "distance_m": [
+            10
+          ]
+        }
+      ]
+    },
+    {
+      "id": "F064",
+      "group": "snapshot_guards",
+      "steps": [
+        {
+          "op": "dispatch",
+          "expect": {
+            "code": "STALE_INPUT",
+            "accepted": false,
+            "latched": true,
+            "predictor_calls": 0,
+            "captured": true,
+            "command": [
+              0.0,
+              0.0
+            ],
+            "observation": null,
+            "valid": null,
+            "reason": null
+          },
+          "scan_received_mono_s": 9.499999
+        }
+      ]
+    },
+    {
+      "id": "F065",
+      "group": "snapshot_guards",
+      "steps": [
+        {
+          "op": "dispatch",
+          "expect": {
+            "code": "STALE_INPUT",
+            "accepted": false,
+            "latched": true,
+            "predictor_calls": 0,
+            "captured": true,
+            "command": [
+              0.0,
+              0.0
+            ],
+            "observation": null,
+            "valid": null,
+            "reason": null
+          },
+          "odom_received_mono_s": 9.499999
+        }
+      ]
+    },
+    {
+      "id": "F066",
+      "group": "snapshot_guards",
+      "steps": [
+        {
+          "op": "dispatch",
+          "expect": {
+            "code": "OK",
+            "accepted": true,
+            "latched": false,
+            "predictor_calls": 1,
+            "captured": true,
+            "valid": true,
+            "reason": "",
+            "command": [
+              0.03,
+              -0.06
+            ],
+            "observation": [
+              0.5,
+              0.5,
+              0.5,
+              0.5,
+              0.5,
+              0.5,
+              0.5,
+              0.5,
+              0.5,
+              0.5,
+              0.5,
+              0.5,
+              0.5,
+              0.5,
+              0.5,
+              0.5,
+              0.5,
+              0.5,
+              0.5,
+              0.5,
+              0.5,
+              0.5,
+              0.5,
+              0.5,
+              0.5,
+              0.5,
+              0.5,
+              0.5,
+              0.5,
+              0.5,
+              0.5,
+              0.5,
+              0.5,
+              0.5,
+              0.5,
+              0.5,
+              0.5,
+              0.5,
+              0.5,
+              -0.5
+            ]
+          },
+          "scan_received_mono_s": 9.5,
+          "odom_received_mono_s": 9.5
+        }
+      ]
+    },
+    {
+      "id": "F067",
+      "group": "snapshot_guards",
+      "steps": [
+        {
+          "op": "dispatch",
+          "expect": {
+            "code": "STALE_INPUT",
+            "accepted": false,
+            "latched": true,
+            "predictor_calls": 1,
+            "captured": true,
+            "command": [
+              0.0,
+              0.0
+            ],
+            "observation": [
+              0.5,
+              0.5,
+              0.5,
+              0.5,
+              0.5,
+              0.5,
+              0.5,
+              0.5,
+              0.5,
+              0.5,
+              0.5,
+              0.5,
+              0.5,
+              0.5,
+              0.5,
+              0.5,
+              0.5,
+              0.5,
+              0.5,
+              0.5,
+              0.5,
+              0.5,
+              0.5,
+              0.5,
+              0.5,
+              0.5,
+              0.5,
+              0.5,
+              0.5,
+              0.5,
+              0.5,
+              0.5,
+              0.5,
+              0.5,
+              0.5,
+              0.5,
+              0.5,
+              0.5,
+              0.5,
+              -0.5
+            ],
+            "valid": true,
+            "reason": ""
+          },
+          "scan_received_mono_s": 9.6,
+          "odom_received_mono_s": 9.6,
+          "capture_mono_s": 10.0,
+          "dispatch_mono_s": 10.2
+        }
+      ]
+    },
+    {
+      "id": "F068",
+      "group": "snapshot_guards",
+      "steps": [
+        {
+          "op": "dispatch",
+          "expect": {
+            "code": "STALE_INPUT",
+            "accepted": false,
+            "latched": true,
+            "predictor_calls": 1,
+            "captured": true,
+            "command": [
+              0.0,
+              0.0
+            ],
+            "observation": [
+              0.5,
+              0.5,
+              0.5,
+              0.5,
+              0.5,
+              0.5,
+              0.5,
+              0.5,
+              0.5,
+              0.5,
+              0.5,
+              0.5,
+              0.5,
+              0.5,
+              0.5,
+              0.5,
+              0.5,
+              0.5,
+              0.5,
+              0.5,
+              0.5,
+              0.5,
+              0.5,
+              0.5,
+              0.5,
+              0.5,
+              0.5,
+              0.5,
+              0.5,
+              0.5,
+              0.5,
+              0.5,
+              0.5,
+              0.5,
+              0.5,
+              0.5,
+              0.5,
+              0.5,
+              0.5,
+              -0.5
+            ],
+            "valid": true,
+            "reason": ""
+          },
+          "scan_received_mono_s": 9.6,
+          "odom_received_mono_s": 9.6,
+          "capture_mono_s": 10.0,
+          "dispatch_mono_s": 10.2,
+          "unrelated_cache": true
+        }
+      ]
+    },
+    {
+      "id": "F069",
+      "group": "snapshot_guards",
+      "steps": [
+        {
+          "op": "dispatch",
+          "expect": {
+            "code": "NONADVANCING_STAMP",
+            "accepted": false,
+            "latched": true,
+            "predictor_calls": 0,
+            "captured": true,
+            "command": [
+              0.0,
+              0.0
+            ],
+            "observation": null,
+            "valid": null,
+            "reason": null
+          },
+          "scan_stamp_ns": 100,
+          "odom_stamp_ns": 102
+        }
+      ]
+    },
+    {
+      "id": "F070",
+      "group": "snapshot_guards",
+      "steps": [
+        {
+          "op": "dispatch",
+          "expect": {
+            "code": "NONADVANCING_STAMP",
+            "accepted": false,
+            "latched": true,
+            "predictor_calls": 0,
+            "captured": true,
+            "command": [
+              0.0,
+              0.0
+            ],
+            "observation": null,
+            "valid": null,
+            "reason": null
+          },
+          "scan_stamp_ns": 102,
+          "odom_stamp_ns": 99
+        }
+      ]
+    },
+    {
+      "id": "F071",
+      "group": "snapshot_guards",
+      "steps": [
+        {
+          "op": "dispatch",
+          "expect": {
+            "code": "INVALID_STAMP",
+            "accepted": false,
+            "latched": true,
+            "predictor_calls": 0,
+            "captured": true,
+            "command": [
+              0.0,
+              0.0
+            ],
+            "observation": null,
+            "valid": null,
+            "reason": null
+          },
+          "scan_stamp_ns": null
+        }
+      ]
+    },
+    {
+      "id": "F072",
+      "group": "snapshot_guards",
+      "steps": [
+        {
+          "op": "dispatch",
+          "expect": {
+            "code": "FRAME_MISMATCH",
+            "accepted": false,
+            "latched": true,
+            "predictor_calls": 0,
+            "captured": true,
+            "command": [
+              0.0,
+              0.0
+            ],
+            "observation": null,
+            "valid": null,
+            "reason": null
+          },
+          "scan_frame": "wrong"
+        }
+      ]
+    },
+    {
+      "id": "F073",
+      "group": "snapshot_guards",
+      "steps": [
+        {
+          "op": "dispatch",
+          "expect": {
+            "code": "FRAME_MISMATCH",
+            "accepted": false,
+            "latched": true,
+            "predictor_calls": 0,
+            "captured": true,
+            "command": [
+              0.0,
+              0.0
+            ],
+            "observation": null,
+            "valid": null,
+            "reason": null
+          },
+          "odom_frame": "map"
+        }
+      ]
+    },
+    {
+      "id": "F074",
+      "group": "snapshot_guards",
+      "steps": [
+        {
+          "op": "dispatch",
+          "expect": {
+            "code": "ASSOCIATION_MISMATCH",
+            "accepted": false,
+            "latched": true,
+            "predictor_calls": 1,
+            "captured": true,
+            "command": [
+              0.0,
+              0.0
+            ],
+            "observation": [
+              0.5,
+              0.5,
+              0.5,
+              0.5,
+              0.5,
+              0.5,
+              0.5,
+              0.5,
+              0.5,
+              0.5,
+              0.5,
+              0.5,
+              0.5,
+              0.5,
+              0.5,
+              0.5,
+              0.5,
+              0.5,
+              0.5,
+              0.5,
+              0.5,
+              0.5,
+              0.5,
+              0.5,
+              0.5,
+              0.5,
+              0.5,
+              0.5,
+              0.5,
+              0.5,
+              0.5,
+              0.5,
+              0.5,
+              0.5,
+              0.5,
+              0.5,
+              0.5,
+              0.5,
+              0.5,
+              -0.5
+            ],
+            "valid": true,
+            "reason": ""
+          },
+          "association_snapshot_id": "other-snapshot"
+        }
+      ]
+    },
+    {
+      "id": "F075",
+      "group": "snapshot_guards",
+      "steps": [
+        {
+          "op": "dispatch",
+          "expect": {
+            "code": "SOURCE_MISMATCH",
+            "accepted": false,
+            "latched": true,
+            "predictor_calls": 0,
+            "captured": true,
+            "command": [
+              0.0,
+              0.0
+            ],
+            "observation": null,
+            "valid": null,
+            "reason": null
+          },
+          "scan_source_id": "other_scanner"
+        }
+      ]
+    },
+    {
+      "id": "F076",
+      "group": "snapshot_guards",
+      "steps": [
+        {
+          "op": "dispatch",
+          "expect": {
+            "code": "CLOCK_ORDER",
+            "accepted": false,
+            "latched": true,
+            "predictor_calls": 0,
+            "captured": true,
+            "command": [
+              0.0,
+              0.0
+            ],
+            "observation": null,
+            "valid": null,
+            "reason": null
+          },
+          "scan_received_mono_s": 10.1,
+          "odom_received_mono_s": 10.1,
+          "capture_mono_s": 10.0,
+          "dispatch_mono_s": 10.0
+        },
+        {
+          "op": "dispatch",
+          "expect": {
+            "code": "CLOCK_ORDER",
+            "accepted": false,
+            "latched": true,
+            "predictor_calls": 0,
+            "captured": true,
+            "command": [
+              0.0,
+              0.0
+            ],
+            "observation": null,
+            "valid": null,
+            "reason": null
+          },
+          "new_harness": true,
+          "capture_mono_s": 10.0,
+          "dispatch_mono_s": 9.9
+        }
+      ]
+    },
+    {
+      "id": "F077",
+      "group": "action_mapping",
+      "steps": [
+        {
+          "op": "direct_mapper",
+          "action": [
+            1,
+            1
+          ],
+          "dt": 0.05,
+          "expect": {
+            "raised": null,
+            "accepted": true,
+            "command": [
+              0.015,
+              0.03
+            ],
+            "predictor_calls": 0
+          }
+        },
+        {
+          "op": "dispatch",
+          "expect": {
+            "code": "OK",
+            "accepted": true,
+            "latched": false,
+            "predictor_calls": 1,
+            "captured": true,
+            "valid": true,
+            "reason": "",
+            "command": [
+              0.015,
+              0.03
+            ],
+            "observation": [
+              0.5,
+              0.5,
+              0.5,
+              0.5,
+              0.5,
+              0.5,
+              0.5,
+              0.5,
+              0.5,
+              0.5,
+              0.5,
+              0.5,
+              0.5,
+              0.5,
+              0.5,
+              0.5,
+              0.5,
+              0.5,
+              0.5,
+              0.5,
+              0.5,
+              0.5,
+              0.5,
+              0.5,
+              0.5,
+              0.5,
+              0.5,
+              0.5,
+              0.5,
+              0.5,
+              0.5,
+              0.5,
+              0.5,
+              0.5,
+              0.5,
+              0.5,
+              0.5,
+              0.5,
+              0.5,
+              -0.5
+            ]
+          },
+          "action": [
+            1,
+            1
+          ],
+          "dt": 0.05,
+          "scan_stamp_ns": 101,
+          "odom_stamp_ns": 101,
+          "scan_received_mono_s": 9.9,
+          "odom_received_mono_s": 9.9,
+          "capture_mono_s": 10.0,
+          "dispatch_mono_s": 10.0
+        }
+      ],
+      "sink_commands": [
+        [
+          0.015,
+          0.03
+        ]
+      ]
+    },
+    {
+      "id": "F078",
+      "group": "action_mapping",
+      "steps": [
+        {
+          "op": "direct_mapper",
+          "action": [
+            -1,
+            -1
+          ],
+          "dt": 1,
+          "expect": {
+            "raised": null,
+            "accepted": true,
+            "command": [
+              -0.15,
+              -0.6
+            ],
+            "predictor_calls": 0
+          }
+        },
+        {
+          "op": "dispatch",
+          "expect": {
+            "code": "OK",
+            "accepted": true,
+            "latched": false,
+            "predictor_calls": 1,
+            "captured": true,
+            "valid": true,
+            "reason": "",
+            "command": [
+              -0.15,
+              -0.6
+            ],
+            "observation": [
+              0.5,
+              0.5,
+              0.5,
+              0.5,
+              0.5,
+              0.5,
+              0.5,
+              0.5,
+              0.5,
+              0.5,
+              0.5,
+              0.5,
+              0.5,
+              0.5,
+              0.5,
+              0.5,
+              0.5,
+              0.5,
+              0.5,
+              0.5,
+              0.5,
+              0.5,
+              0.5,
+              0.5,
+              0.5,
+              0.5,
+              0.5,
+              0.5,
+              0.5,
+              0.5,
+              0.5,
+              0.5,
+              0.5,
+              0.5,
+              0.5,
+              0.5,
+              0.5,
+              0.5,
+              0.5,
+              -0.5
+            ]
+          },
+          "action": [
+            -1,
+            -1
+          ],
+          "dt": 1,
+          "scan_stamp_ns": 101,
+          "odom_stamp_ns": 101,
+          "scan_received_mono_s": 9.9,
+          "odom_received_mono_s": 9.9,
+          "capture_mono_s": 10.0,
+          "dispatch_mono_s": 10.0
+        }
+      ],
+      "sink_commands": [
+        [
+          -0.15,
+          -0.6
+        ]
+      ]
+    },
+    {
+      "id": "F079",
+      "group": "action_mapping",
+      "steps": [
+        {
+          "op": "direct_mapper",
+          "action": [
+            1,
+            1
+          ],
+          "dt": 10,
+          "expect": {
+            "raised": null,
+            "accepted": true,
+            "command": [
+              0.3,
+              0.6
+            ],
+            "predictor_calls": 0
+          }
+        },
+        {
+          "op": "dispatch",
+          "expect": {
+            "code": "OK",
+            "accepted": true,
+            "latched": false,
+            "predictor_calls": 1,
+            "captured": true,
+            "valid": true,
+            "reason": "",
+            "command": [
+              0.3,
+              0.6
+            ],
+            "observation": [
+              0.5,
+              0.5,
+              0.5,
+              0.5,
+              0.5,
+              0.5,
+              0.5,
+              0.5,
+              0.5,
+              0.5,
+              0.5,
+              0.5,
+              0.5,
+              0.5,
+              0.5,
+              0.5,
+              0.5,
+              0.5,
+              0.5,
+              0.5,
+              0.5,
+              0.5,
+              0.5,
+              0.5,
+              0.5,
+              0.5,
+              0.5,
+              0.5,
+              0.5,
+              0.5,
+              0.5,
+              0.5,
+              0.5,
+              0.5,
+              0.5,
+              0.5,
+              0.5,
+              0.5,
+              0.5,
+              -0.5
+            ]
+          },
+          "action": [
+            1,
+            1
+          ],
+          "dt": 10,
+          "scan_stamp_ns": 101,
+          "odom_stamp_ns": 101,
+          "scan_received_mono_s": 9.9,
+          "odom_received_mono_s": 9.9,
+          "capture_mono_s": 10.0,
+          "dispatch_mono_s": 10.0
+        }
+      ],
+      "sink_commands": [
+        [
+          0.3,
+          0.6
+        ]
+      ]
+    },
+    {
+      "id": "F080",
+      "group": "action_mapping",
+      "steps": [
+        {
+          "op": "direct_mapper",
+          "action": [
+            0.5,
+            -0.5
+          ],
+          "dt": 0.1,
+          "expect": {
+            "raised": null,
+            "accepted": true,
+            "command": [
+              0.03,
+              -0.06
+            ],
+            "predictor_calls": 0
+          }
+        },
+        {
+          "op": "direct_mapper",
+          "action": [
+            0.5,
+            -0.5
+          ],
+          "dt": 0.1,
+          "expect": {
+            "raised": null,
+            "accepted": true,
+            "command": [
+              0.06,
+              -0.12
+            ],
+            "predictor_calls": 0
+          }
+        },
+        {
+          "op": "dispatch",
+          "expect": {
+            "code": "OK",
+            "accepted": true,
+            "latched": false,
+            "predictor_calls": 1,
+            "captured": true,
+            "valid": true,
+            "reason": "",
+            "command": [
+              0.03,
+              -0.06
+            ],
+            "observation": [
+              0.5,
+              0.5,
+              0.5,
+              0.5,
+              0.5,
+              0.5,
+              0.5,
+              0.5,
+              0.5,
+              0.5,
+              0.5,
+              0.5,
+              0.5,
+              0.5,
+              0.5,
+              0.5,
+              0.5,
+              0.5,
+              0.5,
+              0.5,
+              0.5,
+              0.5,
+              0.5,
+              0.5,
+              0.5,
+              0.5,
+              0.5,
+              0.5,
+              0.5,
+              0.5,
+              0.5,
+              0.5,
+              0.5,
+              0.5,
+              0.5,
+              0.5,
+              0.5,
+              0.5,
+              0.5,
+              -0.5
+            ]
+          },
+          "action": [
+            0.5,
+            -0.5
+          ],
+          "dt": 0.1,
+          "scan_stamp_ns": 101,
+          "odom_stamp_ns": 101,
+          "scan_received_mono_s": 9.9,
+          "odom_received_mono_s": 9.9,
+          "capture_mono_s": 10.0,
+          "dispatch_mono_s": 10.0
+        },
+        {
+          "op": "dispatch",
+          "expect": {
+            "code": "OK",
+            "accepted": true,
+            "latched": false,
+            "predictor_calls": 1,
+            "captured": true,
+            "valid": true,
+            "reason": "",
+            "command": [
+              0.06,
+              -0.12
+            ],
+            "observation": [
+              0.5,
+              0.5,
+              0.5,
+              0.5,
+              0.5,
+              0.5,
+              0.5,
+              0.5,
+              0.5,
+              0.5,
+              0.5,
+              0.5,
+              0.5,
+              0.5,
+              0.5,
+              0.5,
+              0.5,
+              0.5,
+              0.5,
+              0.5,
+              0.5,
+              0.5,
+              0.5,
+              0.5,
+              0.5,
+              0.5,
+              0.5,
+              0.5,
+              0.5,
+              0.5,
+              0.5,
+              0.5,
+              0.5,
+              0.5,
+              0.5,
+              0.5,
+              0.5,
+              0.5,
+              0.5,
+              -0.5
+            ]
+          },
+          "action": [
+            0.5,
+            -0.5
+          ],
+          "dt": 0.1,
+          "scan_stamp_ns": 102,
+          "odom_stamp_ns": 102,
+          "scan_received_mono_s": 10.0,
+          "odom_received_mono_s": 10.0,
+          "capture_mono_s": 10.1,
+          "dispatch_mono_s": 10.1
+        }
+      ],
+      "sink_commands": [
+        [
+          0.03,
+          -0.06
+        ],
+        [
+          0.06,
+          -0.12
+        ]
+      ]
+    },
+    {
+      "id": "F081",
+      "group": "action_mapping",
+      "steps": [
+        {
+          "op": "direct_mapper",
+          "action": [
+            1,
+            1
+          ],
+          "dt": 1,
+          "expect": {
+            "raised": null,
+            "accepted": true,
+            "command": [
+              0.3,
+              0.6
+            ],
+            "predictor_calls": 0
+          }
+        },
+        {
+          "op": "direct_mapper",
+          "action": [
+            -1,
+            -1
+          ],
+          "dt": 0.1,
+          "expect": {
+            "raised": null,
+            "accepted": true,
+            "command": [
+              0.27,
+              0.54
+            ],
+            "predictor_calls": 0
+          }
+        },
+        {
+          "op": "dispatch",
+          "expect": {
+            "code": "OK",
+            "accepted": true,
+            "latched": false,
+            "predictor_calls": 1,
+            "captured": true,
+            "valid": true,
+            "reason": "",
+            "command": [
+              0.3,
+              0.6
+            ],
+            "observation": [
+              0.5,
+              0.5,
+              0.5,
+              0.5,
+              0.5,
+              0.5,
+              0.5,
+              0.5,
+              0.5,
+              0.5,
+              0.5,
+              0.5,
+              0.5,
+              0.5,
+              0.5,
+              0.5,
+              0.5,
+              0.5,
+              0.5,
+              0.5,
+              0.5,
+              0.5,
+              0.5,
+              0.5,
+              0.5,
+              0.5,
+              0.5,
+              0.5,
+              0.5,
+              0.5,
+              0.5,
+              0.5,
+              0.5,
+              0.5,
+              0.5,
+              0.5,
+              0.5,
+              0.5,
+              0.5,
+              -0.5
+            ]
+          },
+          "action": [
+            1,
+            1
+          ],
+          "dt": 1,
+          "scan_stamp_ns": 101,
+          "odom_stamp_ns": 101,
+          "scan_received_mono_s": 9.9,
+          "odom_received_mono_s": 9.9,
+          "capture_mono_s": 10.0,
+          "dispatch_mono_s": 10.0
+        },
+        {
+          "op": "dispatch",
+          "expect": {
+            "code": "OK",
+            "accepted": true,
+            "latched": false,
+            "predictor_calls": 1,
+            "captured": true,
+            "valid": true,
+            "reason": "",
+            "command": [
+              0.27,
+              0.54
+            ],
+            "observation": [
+              0.5,
+              0.5,
+              0.5,
+              0.5,
+              0.5,
+              0.5,
+              0.5,
+              0.5,
+              0.5,
+              0.5,
+              0.5,
+              0.5,
+              0.5,
+              0.5,
+              0.5,
+              0.5,
+              0.5,
+              0.5,
+              0.5,
+              0.5,
+              0.5,
+              0.5,
+              0.5,
+              0.5,
+              0.5,
+              0.5,
+              0.5,
+              0.5,
+              0.5,
+              0.5,
+              0.5,
+              0.5,
+              0.5,
+              0.5,
+              0.5,
+              0.5,
+              0.5,
+              0.5,
+              0.5,
+              -0.5
+            ]
+          },
+          "action": [
+            -1,
+            -1
+          ],
+          "dt": 0.1,
+          "scan_stamp_ns": 102,
+          "odom_stamp_ns": 102,
+          "scan_received_mono_s": 10.0,
+          "odom_received_mono_s": 10.0,
+          "capture_mono_s": 10.1,
+          "dispatch_mono_s": 10.1
+        }
+      ],
+      "sink_commands": [
+        [
+          0.3,
+          0.6
+        ],
+        [
+          0.27,
+          0.54
+        ]
+      ]
+    },
+    {
+      "id": "F082",
+      "group": "action_mapping",
+      "steps": [
+        {
+          "op": "direct_mapper",
+          "action": [
+            0,
+            0
+          ],
+          "dt": 0.1,
+          "set_previous": [
+            0.3,
+            0.6
+          ],
+          "expect": {
+            "raised": null,
+            "accepted": true,
+            "command": [
+              0.27,
+              0.54
+            ],
+            "previous_after": [
+              0.27,
+              0.54
+            ],
+            "predictor_calls": 0
+          }
+        }
+      ]
+    },
+    {
+      "id": "F083",
+      "group": "action_mapping",
+      "steps": [
+        {
+          "op": "direct_mapper",
+          "action": 1,
+          "dt": 0.1,
+          "set_previous": [
+            0.3,
+            0.6
+          ],
+          "expect": {
+            "raised": "ValueError",
+            "accepted": false,
+            "command": null,
+            "message_contains": "exactly two",
+            "previous_unchanged": true,
+            "predictor_calls": 0
+          }
+        },
+        {
+          "op": "dispatch",
+          "expect": {
+            "code": "INVALID_ACTION",
+            "accepted": false,
+            "latched": true,
+            "predictor_calls": 1,
+            "captured": true,
+            "command": [
+              0.0,
+              0.0
+            ],
+            "observation": [
+              0.5,
+              0.5,
+              0.5,
+              0.5,
+              0.5,
+              0.5,
+              0.5,
+              0.5,
+              0.5,
+              0.5,
+              0.5,
+              0.5,
+              0.5,
+              0.5,
+              0.5,
+              0.5,
+              0.5,
+              0.5,
+              0.5,
+              0.5,
+              0.5,
+              0.5,
+              0.5,
+              0.5,
+              0.5,
+              0.5,
+              0.5,
+              0.5,
+              0.5,
+              0.5,
+              0.5,
+              0.5,
+              0.5,
+              0.5,
+              0.5,
+              0.5,
+              0.5,
+              0.5,
+              0.5,
+              -0.5
+            ],
+            "valid": true,
+            "reason": ""
+          },
+          "action": 1
+        }
+      ],
+      "sink_commands": [
+        [
+          0.0,
+          0.0
+        ]
+      ]
+    },
+    {
+      "id": "F084",
+      "group": "action_mapping",
+      "steps": [
+        {
+          "op": "direct_mapper",
+          "action": [
+            1
+          ],
+          "dt": 0.1,
+          "set_previous": [
+            0.3,
+            0.6
+          ],
+          "expect": {
+            "raised": "ValueError",
+            "accepted": false,
+            "command": null,
+            "message_contains": "exactly two",
+            "previous_unchanged": true,
+            "predictor_calls": 0
+          }
+        },
+        {
+          "op": "dispatch",
+          "expect": {
+            "code": "INVALID_ACTION",
+            "accepted": false,
+            "latched": true,
+            "predictor_calls": 1,
+            "captured": true,
+            "command": [
+              0.0,
+              0.0
+            ],
+            "observation": [
+              0.5,
+              0.5,
+              0.5,
+              0.5,
+              0.5,
+              0.5,
+              0.5,
+              0.5,
+              0.5,
+              0.5,
+              0.5,
+              0.5,
+              0.5,
+              0.5,
+              0.5,
+              0.5,
+              0.5,
+              0.5,
+              0.5,
+              0.5,
+              0.5,
+              0.5,
+              0.5,
+              0.5,
+              0.5,
+              0.5,
+              0.5,
+              0.5,
+              0.5,
+              0.5,
+              0.5,
+              0.5,
+              0.5,
+              0.5,
+              0.5,
+              0.5,
+              0.5,
+              0.5,
+              0.5,
+              -0.5
+            ],
+            "valid": true,
+            "reason": ""
+          },
+          "action": [
+            1
+          ]
+        }
+      ],
+      "sink_commands": [
+        [
+          0.0,
+          0.0
+        ]
+      ]
+    },
+    {
+      "id": "F085",
+      "group": "action_mapping",
+      "steps": [
+        {
+          "op": "direct_mapper",
+          "action": [
+            [
+              0,
+              0
+            ]
+          ],
+          "dt": 0.1,
+          "set_previous": [
+            0.3,
+            0.6
+          ],
+          "expect": {
+            "raised": "ValueError",
+            "accepted": false,
+            "command": null,
+            "message_contains": "exactly two",
+            "previous_unchanged": true,
+            "predictor_calls": 0
+          }
+        },
+        {
+          "op": "dispatch",
+          "expect": {
+            "code": "INVALID_ACTION",
+            "accepted": false,
+            "latched": true,
+            "predictor_calls": 1,
+            "captured": true,
+            "command": [
+              0.0,
+              0.0
+            ],
+            "observation": [
+              0.5,
+              0.5,
+              0.5,
+              0.5,
+              0.5,
+              0.5,
+              0.5,
+              0.5,
+              0.5,
+              0.5,
+              0.5,
+              0.5,
+              0.5,
+              0.5,
+              0.5,
+              0.5,
+              0.5,
+              0.5,
+              0.5,
+              0.5,
+              0.5,
+              0.5,
+              0.5,
+              0.5,
+              0.5,
+              0.5,
+              0.5,
+              0.5,
+              0.5,
+              0.5,
+              0.5,
+              0.5,
+              0.5,
+              0.5,
+              0.5,
+              0.5,
+              0.5,
+              0.5,
+              0.5,
+              -0.5
+            ],
+            "valid": true,
+            "reason": ""
+          },
+          "action": [
+            [
+              0,
+              0
+            ]
+          ]
+        }
+      ],
+      "sink_commands": [
+        [
+          0.0,
+          0.0
+        ]
+      ]
+    },
+    {
+      "id": "F086",
+      "group": "action_mapping",
+      "steps": [
+        {
+          "op": "direct_mapper",
+          "action": [
+            "NaN",
+            0
+          ],
+          "dt": 0.1,
+          "set_previous": [
+            0.3,
+            0.6
+          ],
+          "expect": {
+            "raised": "ValueError",
+            "accepted": false,
+            "command": null,
+            "message_contains": "Action values must be finite",
+            "previous_unchanged": true,
+            "predictor_calls": 0
+          }
+        },
+        {
+          "op": "dispatch",
+          "expect": {
+            "code": "INVALID_ACTION",
+            "accepted": false,
+            "latched": true,
+            "predictor_calls": 1,
+            "captured": true,
+            "command": [
+              0.0,
+              0.0
+            ],
+            "observation": [
+              0.5,
+              0.5,
+              0.5,
+              0.5,
+              0.5,
+              0.5,
+              0.5,
+              0.5,
+              0.5,
+              0.5,
+              0.5,
+              0.5,
+              0.5,
+              0.5,
+              0.5,
+              0.5,
+              0.5,
+              0.5,
+              0.5,
+              0.5,
+              0.5,
+              0.5,
+              0.5,
+              0.5,
+              0.5,
+              0.5,
+              0.5,
+              0.5,
+              0.5,
+              0.5,
+              0.5,
+              0.5,
+              0.5,
+              0.5,
+              0.5,
+              0.5,
+              0.5,
+              0.5,
+              0.5,
+              -0.5
+            ],
+            "valid": true,
+            "reason": ""
+          },
+          "action": [
+            "NaN",
+            0
+          ]
+        }
+      ],
+      "sink_commands": [
+        [
+          0.0,
+          0.0
+        ]
+      ]
+    },
+    {
+      "id": "F087",
+      "group": "action_mapping",
+      "steps": [
+        {
+          "op": "direct_mapper",
+          "action": [
+            0,
+            "+Inf"
+          ],
+          "dt": 0.1,
+          "set_previous": [
+            0.3,
+            0.6
+          ],
+          "expect": {
+            "raised": "ValueError",
+            "accepted": false,
+            "command": null,
+            "message_contains": "Action values must be finite",
+            "previous_unchanged": true,
+            "predictor_calls": 0
+          }
+        },
+        {
+          "op": "dispatch",
+          "expect": {
+            "code": "INVALID_ACTION",
+            "accepted": false,
+            "latched": true,
+            "predictor_calls": 1,
+            "captured": true,
+            "command": [
+              0.0,
+              0.0
+            ],
+            "observation": [
+              0.5,
+              0.5,
+              0.5,
+              0.5,
+              0.5,
+              0.5,
+              0.5,
+              0.5,
+              0.5,
+              0.5,
+              0.5,
+              0.5,
+              0.5,
+              0.5,
+              0.5,
+              0.5,
+              0.5,
+              0.5,
+              0.5,
+              0.5,
+              0.5,
+              0.5,
+              0.5,
+              0.5,
+              0.5,
+              0.5,
+              0.5,
+              0.5,
+              0.5,
+              0.5,
+              0.5,
+              0.5,
+              0.5,
+              0.5,
+              0.5,
+              0.5,
+              0.5,
+              0.5,
+              0.5,
+              -0.5
+            ],
+            "valid": true,
+            "reason": ""
+          },
+          "action": [
+            0,
+            "+Inf"
+          ]
+        }
+      ],
+      "sink_commands": [
+        [
+          0.0,
+          0.0
+        ]
+      ]
+    },
+    {
+      "id": "F088",
+      "group": "action_mapping",
+      "steps": [
+        {
+          "op": "direct_mapper",
+          "action": [
+            1.0001,
+            0
+          ],
+          "dt": 0.1,
+          "set_previous": [
+            0.3,
+            0.6
+          ],
+          "expect": {
+            "raised": "ValueError",
+            "accepted": false,
+            "command": null,
+            "message_contains": "[-1, 1]",
+            "previous_unchanged": true,
+            "predictor_calls": 0
+          }
+        },
+        {
+          "op": "dispatch",
+          "expect": {
+            "code": "INVALID_ACTION",
+            "accepted": false,
+            "latched": true,
+            "predictor_calls": 1,
+            "captured": true,
+            "command": [
+              0.0,
+              0.0
+            ],
+            "observation": [
+              0.5,
+              0.5,
+              0.5,
+              0.5,
+              0.5,
+              0.5,
+              0.5,
+              0.5,
+              0.5,
+              0.5,
+              0.5,
+              0.5,
+              0.5,
+              0.5,
+              0.5,
+              0.5,
+              0.5,
+              0.5,
+              0.5,
+              0.5,
+              0.5,
+              0.5,
+              0.5,
+              0.5,
+              0.5,
+              0.5,
+              0.5,
+              0.5,
+              0.5,
+              0.5,
+              0.5,
+              0.5,
+              0.5,
+              0.5,
+              0.5,
+              0.5,
+              0.5,
+              0.5,
+              0.5,
+              -0.5
+            ],
+            "valid": true,
+            "reason": ""
+          },
+          "action": [
+            1.0001,
+            0
+          ]
+        }
+      ],
+      "sink_commands": [
+        [
+          0.0,
+          0.0
+        ]
+      ]
+    },
+    {
+      "id": "F089",
+      "group": "action_mapping",
+      "steps": [
+        {
+          "op": "direct_mapper",
+          "action": [
+            0,
+            -1.0001
+          ],
+          "dt": 0.1,
+          "set_previous": [
+            0.3,
+            0.6
+          ],
+          "expect": {
+            "raised": "ValueError",
+            "accepted": false,
+            "command": null,
+            "message_contains": "[-1, 1]",
+            "previous_unchanged": true,
+            "predictor_calls": 0
+          }
+        },
+        {
+          "op": "dispatch",
+          "expect": {
+            "code": "INVALID_ACTION",
+            "accepted": false,
+            "latched": true,
+            "predictor_calls": 1,
+            "captured": true,
+            "command": [
+              0.0,
+              0.0
+            ],
+            "observation": [
+              0.5,
+              0.5,
+              0.5,
+              0.5,
+              0.5,
+              0.5,
+              0.5,
+              0.5,
+              0.5,
+              0.5,
+              0.5,
+              0.5,
+              0.5,
+              0.5,
+              0.5,
+              0.5,
+              0.5,
+              0.5,
+              0.5,
+              0.5,
+              0.5,
+              0.5,
+              0.5,
+              0.5,
+              0.5,
+              0.5,
+              0.5,
+              0.5,
+              0.5,
+              0.5,
+              0.5,
+              0.5,
+              0.5,
+              0.5,
+              0.5,
+              0.5,
+              0.5,
+              0.5,
+              0.5,
+              -0.5
+            ],
+            "valid": true,
+            "reason": ""
+          },
+          "action": [
+            0,
+            -1.0001
+          ]
+        }
+      ],
+      "sink_commands": [
+        [
+          0.0,
+          0.0
+        ]
+      ]
+    },
+    {
+      "id": "F090",
+      "group": "action_mapping",
+      "steps": [
+        {
+          "op": "direct_mapper",
+          "action": [
+            0,
+            0
+          ],
+          "dt": 0.049,
+          "set_previous": [
+            0.3,
+            0.6
+          ],
+          "expect": {
+            "raised": "ValueError",
+            "accepted": false,
+            "command": null,
+            "message_contains": "shorter than configured minimum",
+            "previous_unchanged": true,
+            "predictor_calls": 0
+          }
+        },
+        {
+          "op": "dispatch",
+          "expect": {
+            "code": "INVALID_ACTION",
+            "accepted": false,
+            "latched": true,
+            "predictor_calls": 1,
+            "captured": true,
+            "command": [
+              0.0,
+              0.0
+            ],
+            "observation": [
+              0.5,
+              0.5,
+              0.5,
+              0.5,
+              0.5,
+              0.5,
+              0.5,
+              0.5,
+              0.5,
+              0.5,
+              0.5,
+              0.5,
+              0.5,
+              0.5,
+              0.5,
+              0.5,
+              0.5,
+              0.5,
+              0.5,
+              0.5,
+              0.5,
+              0.5,
+              0.5,
+              0.5,
+              0.5,
+              0.5,
+              0.5,
+              0.5,
+              0.5,
+              0.5,
+              0.5,
+              0.5,
+              0.5,
+              0.5,
+              0.5,
+              0.5,
+              0.5,
+              0.5,
+              0.5,
+              -0.5
+            ],
+            "valid": true,
+            "reason": ""
+          },
+          "action": [
+            0,
+            0
+          ],
+          "dt": 0.049
+        }
+      ],
+      "sink_commands": [
+        [
+          0.0,
+          0.0
+        ]
+      ]
+    },
+    {
+      "id": "F091",
+      "group": "action_mapping",
+      "steps": [
+        {
+          "op": "direct_mapper",
+          "action": [
+            0,
+            0
+          ],
+          "dt": 0,
+          "set_previous": [
+            0.3,
+            0.6
+          ],
+          "expect": {
+            "raised": "ValueError",
+            "accepted": false,
+            "command": null,
+            "message_contains": "positive and finite",
+            "previous_unchanged": true,
+            "predictor_calls": 0
+          }
+        },
+        {
+          "op": "dispatch",
+          "expect": {
+            "code": "INVALID_ACTION",
+            "accepted": false,
+            "latched": true,
+            "predictor_calls": 1,
+            "captured": true,
+            "command": [
+              0.0,
+              0.0
+            ],
+            "observation": [
+              0.5,
+              0.5,
+              0.5,
+              0.5,
+              0.5,
+              0.5,
+              0.5,
+              0.5,
+              0.5,
+              0.5,
+              0.5,
+              0.5,
+              0.5,
+              0.5,
+              0.5,
+              0.5,
+              0.5,
+              0.5,
+              0.5,
+              0.5,
+              0.5,
+              0.5,
+              0.5,
+              0.5,
+              0.5,
+              0.5,
+              0.5,
+              0.5,
+              0.5,
+              0.5,
+              0.5,
+              0.5,
+              0.5,
+              0.5,
+              0.5,
+              0.5,
+              0.5,
+              0.5,
+              0.5,
+              -0.5
+            ],
+            "valid": true,
+            "reason": ""
+          },
+          "action": [
+            0,
+            0
+          ],
+          "dt": 0
+        }
+      ],
+      "sink_commands": [
+        [
+          0.0,
+          0.0
+        ]
+      ]
+    },
+    {
+      "id": "F092",
+      "group": "action_mapping",
+      "steps": [
+        {
+          "op": "direct_mapper",
+          "action": [
+            0,
+            0
+          ],
+          "dt": "NaN",
+          "set_previous": [
+            0.3,
+            0.6
+          ],
+          "expect": {
+            "raised": "ValueError",
+            "accepted": false,
+            "command": null,
+            "message_contains": "positive and finite",
+            "previous_unchanged": true,
+            "predictor_calls": 0
+          }
+        },
+        {
+          "op": "dispatch",
+          "expect": {
+            "code": "INVALID_ACTION",
+            "accepted": false,
+            "latched": true,
+            "predictor_calls": 1,
+            "captured": true,
+            "command": [
+              0.0,
+              0.0
+            ],
+            "observation": [
+              0.5,
+              0.5,
+              0.5,
+              0.5,
+              0.5,
+              0.5,
+              0.5,
+              0.5,
+              0.5,
+              0.5,
+              0.5,
+              0.5,
+              0.5,
+              0.5,
+              0.5,
+              0.5,
+              0.5,
+              0.5,
+              0.5,
+              0.5,
+              0.5,
+              0.5,
+              0.5,
+              0.5,
+              0.5,
+              0.5,
+              0.5,
+              0.5,
+              0.5,
+              0.5,
+              0.5,
+              0.5,
+              0.5,
+              0.5,
+              0.5,
+              0.5,
+              0.5,
+              0.5,
+              0.5,
+              -0.5
+            ],
+            "valid": true,
+            "reason": ""
+          },
+          "action": [
+            0,
+            0
+          ],
+          "dt": "NaN"
+        }
+      ],
+      "sink_commands": [
+        [
+          0.0,
+          0.0
+        ]
+      ]
+    },
+    {
+      "id": "F093",
+      "group": "lifecycle_and_pure_frames",
+      "steps": [
+        {
+          "op": "outcome",
+          "goal_distance": 0.1,
+          "collision_detected": true,
+          "episode_steps": 300,
+          "max_episode_steps": 300,
+          "goal_tolerance": 0.3,
+          "expect": {
+            "terminated": true,
+            "truncated": false,
+            "reward_adjustment": -10.0,
+            "termination_reason": "collision",
+            "collision_detected": true,
+            "goal_reached": false,
+            "time_limit_reached": false,
+            "code": "TERMINAL",
+            "accepted": false,
+            "latched": true,
+            "captured": true,
+            "command": [
+              0.0,
+              0.0
+            ],
+            "predictor_calls": 0
+          }
+        }
+      ]
+    },
+    {
+      "id": "F094",
+      "group": "lifecycle_and_pure_frames",
+      "steps": [
+        {
+          "op": "outcome",
+          "goal_distance": 0.3,
+          "collision_detected": false,
+          "episode_steps": 300,
+          "max_episode_steps": 300,
+          "goal_tolerance": 0.3,
+          "expect": {
+            "terminated": true,
+            "truncated": false,
+            "reward_adjustment": 20.0,
+            "termination_reason": "goal_reached",
+            "collision_detected": false,
+            "goal_reached": true,
+            "time_limit_reached": false,
+            "code": "TERMINAL",
+            "accepted": false,
+            "latched": true,
+            "captured": true,
+            "command": [
+              0.0,
+              0.0
+            ],
+            "predictor_calls": 0
+          }
+        }
+      ]
+    },
+    {
+      "id": "F095",
+      "group": "lifecycle_and_pure_frames",
+      "steps": [
+        {
+          "op": "outcome",
+          "goal_distance": 1.0,
+          "collision_detected": false,
+          "episode_steps": 300,
+          "max_episode_steps": 300,
+          "goal_tolerance": 0.3,
+          "expect": {
+            "terminated": false,
+            "truncated": true,
+            "reward_adjustment": 0.0,
+            "termination_reason": "time_limit",
+            "collision_detected": false,
+            "goal_reached": false,
+            "time_limit_reached": true,
+            "code": "TIME_LIMIT",
+            "accepted": false,
+            "latched": true,
+            "captured": true,
+            "command": [
+              0.0,
+              0.0
+            ],
+            "predictor_calls": 0
+          }
+        },
+        {
+          "op": "dispatch",
+          "expect": {
+            "code": "TIME_LIMIT",
+            "accepted": false,
+            "latched": true,
+            "predictor_calls": 0,
+            "captured": true,
+            "command": [
+              0.0,
+              0.0
+            ],
+            "observation": null,
+            "valid": null,
+            "reason": null
+          },
+          "scan_stamp_ns": 102,
+          "odom_stamp_ns": 102,
+          "scan_received_mono_s": 10.0,
+          "odom_received_mono_s": 10.0,
+          "capture_mono_s": 10.1,
+          "dispatch_mono_s": 10.1
+        }
+      ]
+    },
+    {
+      "id": "F096",
+      "group": "lifecycle_and_pure_frames",
+      "steps": [
+        {
+          "op": "outcome",
+          "goal_distance": 1.0,
+          "collision_detected": false,
+          "episode_steps": 299,
+          "max_episode_steps": 300,
+          "goal_tolerance": 0.3,
+          "expect": {
+            "terminated": false,
+            "truncated": false,
+            "reward_adjustment": 0.0,
+            "termination_reason": null,
+            "collision_detected": false,
+            "goal_reached": false,
+            "time_limit_reached": false,
+            "code": "CONTINUE",
+            "accepted": true,
+            "latched": false,
+            "captured": false,
+            "command": null,
+            "predictor_calls": 0
+          }
+        }
+      ]
+    },
+    {
+      "id": "F097",
+      "group": "lifecycle_and_pure_frames",
+      "steps": [
+        {
+          "op": "dispatch",
+          "expect": {
+            "code": "OK",
+            "accepted": true,
+            "latched": false,
+            "predictor_calls": 1,
+            "captured": true,
+            "valid": true,
+            "reason": "",
+            "command": [
+              0.3,
+              0.6
+            ],
+            "observation": [
+              0.5,
+              0.5,
+              0.5,
+              0.5,
+              0.5,
+              0.5,
+              0.5,
+              0.5,
+              0.5,
+              0.5,
+              0.5,
+              0.5,
+              0.5,
+              0.5,
+              0.5,
+              0.5,
+              0.5,
+              0.5,
+              0.5,
+              0.5,
+              0.5,
+              0.5,
+              0.5,
+              0.5,
+              0.5,
+              0.5,
+              0.5,
+              0.5,
+              0.5,
+              0.5,
+              0.5,
+              0.5,
+              0.5,
+              0.5,
+              0.5,
+              0.5,
+              0.5,
+              0.5,
+              0.5,
+              -0.5
+            ]
+          },
+          "action": [
+            1,
+            1
+          ],
+          "dt": 1,
+          "scan_stamp_ns": 101,
+          "odom_stamp_ns": 101,
+          "scan_received_mono_s": 9.9,
+          "odom_received_mono_s": 9.9,
+          "capture_mono_s": 10.0,
+          "dispatch_mono_s": 10.0
+        },
+        {
+          "op": "stop",
+          "expect": {
+            "code": "STOPPED",
+            "accepted": false,
+            "latched": true,
+            "captured": true,
+            "command": [
+              0.0,
+              0.0
+            ],
+            "predictor_calls": 0,
+            "mapper_previous": [
+              0.0,
+              0.0
+            ]
+          }
+        },
+        {
+          "op": "dispatch",
+          "expect": {
+            "code": "STOPPED",
+            "accepted": false,
+            "latched": true,
+            "predictor_calls": 0,
+            "captured": true,
+            "command": [
+              0.0,
+              0.0
+            ],
+            "observation": null,
+            "valid": null,
+            "reason": null
+          }
+        },
+        {
+          "op": "reset_episode",
+          "episode_id": "episode-base",
+          "expect": {
+            "accepted": false,
+            "code": "EPISODE_REARM_REJECTED",
+            "latched": true,
+            "captured": false,
+            "command": null,
+            "predictor_calls": 0
+          }
+        },
+        {
+          "op": "reset_episode",
+          "episode_id": "episode-new",
+          "expect": {
+            "accepted": true,
+            "code": "OK",
+            "latched": false,
+            "captured": false,
+            "command": null,
+            "predictor_calls": 0
+          }
+        },
+        {
+          "op": "dispatch",
+          "expect": {
+            "code": "OK",
+            "accepted": true,
+            "latched": false,
+            "predictor_calls": 1,
+            "captured": true,
+            "valid": true,
+            "reason": "",
+            "command": [
+              0.03,
+              -0.06
+            ],
+            "observation": [
+              0.5,
+              0.5,
+              0.5,
+              0.5,
+              0.5,
+              0.5,
+              0.5,
+              0.5,
+              0.5,
+              0.5,
+              0.5,
+              0.5,
+              0.5,
+              0.5,
+              0.5,
+              0.5,
+              0.5,
+              0.5,
+              0.5,
+              0.5,
+              0.5,
+              0.5,
+              0.5,
+              0.5,
+              0.5,
+              0.5,
+              0.5,
+              0.5,
+              0.5,
+              0.5,
+              0.5,
+              0.5,
+              0.5,
+              0.5,
+              0.5,
+              0.5,
+              0.5,
+              0.5,
+              0.5,
+              -0.5
+            ]
+          },
+          "episode_id": "episode-new",
+          "action": [
+            0.5,
+            -0.5
+          ],
+          "dt": 0.1
+        }
+      ],
+      "sink_commands": [
+        [
+          0.3,
+          0.6
+        ],
+        [
+          0.0,
+          0.0
+        ],
+        [
+          0.0,
+          0.0
+        ],
+        [
+          0.03,
+          -0.06
+        ]
+      ]
+    },
+    {
+      "id": "F098",
+      "group": "lifecycle_and_pure_frames",
+      "steps": [
+        {
+          "op": "dispatch",
+          "expect": {
+            "code": "OK",
+            "accepted": true,
+            "latched": false,
+            "predictor_calls": 1,
+            "captured": true,
+            "valid": true,
+            "reason": "",
+            "command": [
+              0.3,
+              0.6
+            ],
+            "observation": [
+              0.5,
+              0.5,
+              0.5,
+              0.5,
+              0.5,
+              0.5,
+              0.5,
+              0.5,
+              0.5,
+              0.5,
+              0.5,
+              0.5,
+              0.5,
+              0.5,
+              0.5,
+              0.5,
+              0.5,
+              0.5,
+              0.5,
+              0.5,
+              0.5,
+              0.5,
+              0.5,
+              0.5,
+              0.5,
+              0.5,
+              0.5,
+              0.5,
+              0.5,
+              0.5,
+              0.5,
+              0.5,
+              0.5,
+              0.5,
+              0.5,
+              0.5,
+              0.5,
+              0.5,
+              0.5,
+              -0.5
+            ]
+          },
+          "action": [
+            1,
+            1
+          ],
+          "dt": 1,
+          "scan_stamp_ns": 101,
+          "odom_stamp_ns": 101,
+          "scan_received_mono_s": 9.9,
+          "odom_received_mono_s": 9.9,
+          "capture_mono_s": 10.0,
+          "dispatch_mono_s": 10.0
+        },
+        {
+          "op": "dispatch",
+          "expect": {
+            "code": "STOP",
+            "accepted": true,
+            "latched": false,
+            "predictor_calls": 1,
+            "captured": true,
+            "valid": true,
+            "reason": "",
+            "command": [
+              0.0,
+              0.0
+            ],
+            "observation": [
+              0.5,
+              0.5,
+              0.5,
+              0.5,
+              0.5,
+              0.5,
+              0.5,
+              0.5,
+              0.5,
+              0.5,
+              0.5,
+              0.5,
+              0.5,
+              0.5,
+              0.5,
+              0.5,
+              0.5,
+              0.5,
+              0.5,
+              0.5,
+              0.5,
+              0.5,
+              0.5,
+              0.5,
+              0.5,
+              0.5,
+              0.5,
+              0.5,
+              0.5,
+              0.5,
+              0.5,
+              0.5,
+              0.5,
+              0.5,
+              0.5,
+              0.5,
+              0.5,
+              0.5,
+              0.5,
+              -0.5
+            ],
+            "mapper_previous": [
+              0.0,
+              0.0
+            ]
+          },
+          "action": [
+            0,
+            0
+          ],
+          "dt": 0.1,
+          "scan_stamp_ns": 102,
+          "odom_stamp_ns": 102,
+          "scan_received_mono_s": 10.0,
+          "odom_received_mono_s": 10.0,
+          "capture_mono_s": 10.1,
+          "dispatch_mono_s": 10.1
+        }
+      ],
+      "sink_commands": [
+        [
+          0.3,
+          0.6
+        ],
+        [
+          0.0,
+          0.0
+        ]
+      ]
+    },
+    {
+      "id": "F099",
+      "group": "lifecycle_and_pure_frames",
+      "steps": [
+        {
+          "op": "immutability",
+          "expect": {
+            "input_isolated": true,
+            "frozen_field_rejected": true,
+            "observation_write_rejected": true,
+            "sink_record_frozen": true,
+            "hash_unchanged": true,
+            "accepted": true,
+            "code": "OK",
+            "captured": true,
+            "command": [
+              0.03,
+              -0.06
+            ],
+            "predictor_calls": 1,
+            "latched": false
+          }
+        }
+      ]
+    },
+    {
+      "id": "F100",
+      "group": "lifecycle_and_pure_frames",
+      "steps": [
+        {
+          "op": "goal_frame",
+          "world_goal": [
+            11,
+            20
+          ],
+          "world_pose": [
+            10,
+            20,
+            "pi/2"
+          ],
+          "odom_pose": [
+            0,
+            0,
+            0
+          ],
+          "expect": {
+            "odom_goal": [
+              0.0,
+              -1.0
+            ],
+            "code": "OK",
+            "accepted": true
+          }
+        }
+      ]
+    }
+  ]
+}

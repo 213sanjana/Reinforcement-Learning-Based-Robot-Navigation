@@ -1,0 +1,76 @@
+<?xml version="1.0"?>
+<robot xmlns:xacro="http://www.ros.org/wiki/xacro" name="j100-0000">
+
+  <!-- Common -->
+  <xacro:include filename="$(find clearpath_platform_description)/urdf/common.urdf.xacro"/>
+
+  <!-- Platform -->
+  <xacro:include filename="$(find clearpath_platform_description)/urdf/j100/j100.urdf.xacro"/>
+  <xacro:j100 wheel="default"/>
+
+
+  <!-- Attachments -->
+
+  <xacro:include filename="$(find clearpath_platform_description)/urdf/j100/attachments/fender.urdf.xacro"/>
+  <xacro:fender name="front_fender" model="default" parent_link="base_link">
+    <origin xyz="0.0 0.0 0.0" rpy="0.0 0.0 0.0"/>
+  </xacro:fender>
+
+  <xacro:include filename="$(find clearpath_platform_description)/urdf/j100/attachments/fender.urdf.xacro"/>
+  <xacro:fender name="rear_fender" model="default" parent_link="base_link">
+    <origin xyz="0.0 0.0 0.0" rpy="0.0 0.0 3.1415"/>
+  </xacro:fender>
+
+
+  <!-- Links -->
+
+
+  <!-- Mounts -->
+
+
+  <!-- Sensors -->
+
+  <!-- lidar3d_0
+       One horizontal ring, forward 180 degrees. Downward rings hit the
+       ground and the robot, so they are not the 2D obstacle scan.
+       A miss stays +inf. -->
+  <xacro:include filename="$(find clearpath_sensors_description)/urdf/velodyne_lidar.urdf.xacro"/>
+  <xacro:velodyne_lidar name="lidar3d_0" parent_link="default_mount" ang_res_h="0.4" ang_res_v="2.0" min_ang_h="-1.570796" max_ang_h="1.570796" min_ang_v="0.0" max_ang_v="0.0" min_range="0.1" max_range="130.0" update_rate="50">
+    <origin xyz="0.0 0.0 0.0" rpy="0.0 0.0 0.0"/>
+  </xacro:velodyne_lidar>
+
+  <!-- camera_0 -->
+  <xacro:include filename="$(find clearpath_sensors_description)/urdf/intel_realsense.urdf.xacro"/>
+  <xacro:intel_realsense name="camera_0" parent_link="default_mount" update_rate="30" image_height="480" image_width="640">
+    <origin xyz="0.16 0.0 0.08" rpy="0.0 0.0 0.0"/>
+  </xacro:intel_realsense>
+
+
+  <!-- Manipulators -->
+
+
+  <!-- Extras -->
+
+  <!-- Fortress contact sensors. Wheel-ground contacts are real and are
+       filtered out by the navigation monitor. The chassis sensor is the
+       body collision used for later obstacle contacts. -->
+  <xacro:macro name="jackal_contact_sensor" params="link_name collision_name sensor_name">
+    <gazebo reference="${link_name}">
+      <sensor name="${sensor_name}" type="contact">
+        <always_on>true</always_on>
+        <update_rate>100</update_rate>
+        <contact>
+          <collision>${collision_name}</collision>
+          <topic>/jackal_rl/obstacle_contacts</topic>
+        </contact>
+      </sensor>
+    </gazebo>
+  </xacro:macro>
+
+  <xacro:jackal_contact_sensor link_name="base_link" collision_name="base_link_fixed_joint_lump__chassis_link_collision" sensor_name="chassis_contact"/>
+  <xacro:jackal_contact_sensor link_name="front_left_wheel_link" collision_name="front_left_wheel_link_collision" sensor_name="front_left_wheel_contact"/>
+  <xacro:jackal_contact_sensor link_name="front_right_wheel_link" collision_name="front_right_wheel_link_collision" sensor_name="front_right_wheel_contact"/>
+  <xacro:jackal_contact_sensor link_name="rear_left_wheel_link" collision_name="rear_left_wheel_link_collision" sensor_name="rear_left_wheel_contact"/>
+  <xacro:jackal_contact_sensor link_name="rear_right_wheel_link" collision_name="rear_right_wheel_link_collision" sensor_name="rear_right_wheel_contact"/>
+
+</robot>

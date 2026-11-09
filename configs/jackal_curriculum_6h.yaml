@@ -1,0 +1,13 @@
+phase: 6h
+base_config: configs/jackal_ppo_diagnostic_6g3_bc.yaml
+seed: 642
+total_timesteps: 10240
+interval: 2048
+wall_clock_timeout_s: 10800
+pilot_timesteps: 256
+pilot_timeout_s: 1200
+development_episodes: 12
+min_level_steps: 2048
+required_passes: 2
+output_root: artifacts/ppo/jackal_6h/curriculum
+budget_reason: 'Bounded first curriculum experiment; historical 0.25-0.32 seconds/step plus evaluation, estimated 45-70 minutes; hard three-hour cap.'

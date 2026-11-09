@@ -1,0 +1,17 @@
+data:
+  train: artifacts/imitation/expert_density10_v1/train.npz
+  validation: artifacts/imitation/expert_density10_v1/validation.npz
+model:
+  hidden_size: 256
+training:
+  batch_size: 128
+  learning_rate: 0.0003
+  epochs: 50
+  patience: 8
+  min_delta: 0.0
+  seed: 2027
+  device: auto
+  num_workers: 0
+  deterministic: true
+  gradient_clip: 1.0
+  output_directory: artifacts/imitation/behavior_cloning

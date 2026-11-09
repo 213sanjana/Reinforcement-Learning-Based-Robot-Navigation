@@ -1,0 +1,4885 @@
+{
+  "schema_version": 1,
+  "provenance": "synthetic",
+  "source_pins": {
+    "navigation/jackal_interface_qualification.py": "57a7e61439a4c371398d00d1f4fd8be25bc34cdc0814599cd2f83fc2312a48db",
+    "jackal_rl_ws/src/jackal_rl_navigation/jackal_rl_navigation/observation_builder.py": "50284127c7024fd3dfb6403dc0c3bb1c35741ee3567b9beb99b8ac373f5d190a",
+    "jackal_rl_ws/src/jackal_rl_navigation/jackal_rl_navigation/action_mapper.py": "4728212e5a6653aafa01093476003b1a9710585709da0639c9701eb5e351a0dc",
+    "jackal_rl_ws/src/jackal_rl_navigation/jackal_rl_navigation/goal_frames.py": "3912286705be866381d335d687e2f0d95c687547d262dc7eded6f82dd32881d7",
+    "jackal_rl_ws/src/jackal_rl_navigation/jackal_rl_navigation/episode_outcome.py": "1cc0ea3d3f15c3266ce602e40c85baeed128b640e61f9fba2fa545348d78f10f"
+  },
+  "base_record": {
+    "identity": {
+      "run_id": "run-A",
+      "episode_id": "episode-A",
+      "snapshot_id": "C001-s0",
+      "transition_index": 0
+    },
+    "scan_source": {
+      "source_id": "scan_fixture",
+      "topic": "/scan",
+      "message_type": "sensor_msgs/msg/LaserScan",
+      "origin": "synthetic-scan-A",
+      "provenance": "synthetic"
+    },
+    "odom_source": {
+      "source_id": "odom_fixture",
+      "topic": "/odom",
+      "message_type": "nav_msgs/msg/Odometry",
+      "origin": "synthetic-odom-A",
+      "provenance": "synthetic"
+    },
+    "clock": {
+      "domain": "synthetic_monotonic",
+      "epoch": "epoch-A",
+      "scan_received_mono_s": 9.9,
+      "odom_received_mono_s": 9.9,
+      "capture_mono_s": 10.0,
+      "dispatch_mono_s": 10.0
+    },
+    "scan": {
+      "header": {
+        "frame_id": "lidar_fixture",
+        "stamp": {
+          "sec": 1,
+          "nanosec": 1
+        }
+      },
+      "ranges": [
+        12.0,
+        12.0,
+        12.0,
+        12.0,
+        12.0,
+        12.0,
+        12.0,
+        12.0,
+        12.0,
+        12.0,
+        12.0,
+        12.0,
+        12.0,
+        12.0,
+        12.0,
+        12.0,
+        12.0,
+        12.0,
+        12.0,
+        12.0,
+        12.0,
+        12.0,
+        12.0,
+        12.0,
+        12.0,
+        12.0,
+        12.0,
+        12.0,
+        12.0,
+        12.0,
+        12.0,
+        12.0,
+        12.0,
+        12.0,
+        12.0,
+        12.0
+      ],
+      "angle_min": -3.141592653589793,
+      "angle_max": 2.9670597283903604,
+      "angle_increment": 0.17453292519943295,
+      "range_min": 0.1,
+      "range_max": 130.0,
+      "time_increment": 0.0,
+      "scan_time": 0.0
+    },
+    "odom": {
+      "header": {
+        "frame_id": "odom",
+        "stamp": {
+          "sec": 1,
+          "nanosec": 1
+        }
+      },
+      "child_frame_id": "base_link",
+      "pose": {
+        "pose": {
+          "position": {
+            "x": 0.0,
+            "y": 0.0,
+            "z": 0.0
+          },
+          "orientation": {
+            "x": 0.0,
+            "y": 0.0,
+            "z": 0.0,
+            "w": 1.0
+          }
+        }
+      },
+      "twist": {
+        "twist": {
+          "linear": {
+            "x": 0.0,
+            "y": 0.0,
+            "z": 0.0
+          },
+          "angular": {
+            "x": 0.0,
+            "y": 0.0,
+            "z": 0.0
+          }
+        }
+      }
+    },
+    "goal": {
+      "frame_id": "odom",
+      "x": 2.0,
+      "y": 0.0,
+      "origin": "synthetic-goal-A",
+      "alignment_reference": "none"
+    }
+  },
+  "cases": [
+    {
+      "id": "C001",
+      "description": "base canonical snapshot and provenance",
+      "steps": [
+        {
+          "operation": "convert_dispatch",
+          "fresh_harness": true,
+          "overrides": {
+            "identity.snapshot_id": "C001-s0"
+          },
+          "delete_paths": [],
+          "expected": {
+            "attempted": true,
+            "completed": true,
+            "converter_status": true,
+            "converter_code": "ADAPTER_OK",
+            "snapshot_present": true,
+            "qualifier_status": true,
+            "qualifier_code": "OK",
+            "observation": {
+              "valid": true,
+              "reason": "",
+              "shape": [
+                40
+              ],
+              "dtype": "float32",
+              "vector": [
+                1.0,
+                1.0,
+                1.0,
+                1.0,
+                1.0,
+                1.0,
+                1.0,
+                1.0,
+                1.0,
+                1.0,
+                1.0,
+                1.0,
+                1.0,
+                1.0,
+                1.0,
+                1.0,
+                1.0,
+                1.0,
+                1.0,
+                1.0,
+                1.0,
+                1.0,
+                1.0,
+                1.0,
+                1.0,
+                1.0,
+                1.0,
+                1.0,
+                1.0,
+                1.0,
+                1.0,
+                1.0,
+                1.0,
+                1.0,
+                1.0,
+                1.0,
+                0.10000000149011612,
+                0.0,
+                0.0,
+                0.0
+              ],
+              "sha256": "7167efd3309991bbc6b4ea784ecee4044cebcce4d290010227e50884ff793839"
+            },
+            "predictor_call_delta": 1,
+            "appended_sink_count": 1,
+            "appended_sink_records": [
+              {
+                "sequence": 1,
+                "run_id": "run-A",
+                "episode_id": "episode-A",
+                "snapshot_id": "C001-s0",
+                "observation_hash": "7167efd3309991bbc6b4ea784ecee4044cebcce4d290010227e50884ff793839",
+                "dummy_id": "constant-dummy-v1",
+                "action": [
+                  0.5,
+                  -0.5
+                ],
+                "linear": 0.03,
+                "angular": -0.06,
+                "monotonic_s": 10.0,
+                "decision": "ACCEPT",
+                "reason": "OK"
+              }
+            ],
+            "retained_history": [
+              {
+                "sequence": 1,
+                "run_id": "run-A",
+                "episode_id": "episode-A",
+                "snapshot_id": "C001-s0",
+                "observation_hash": "7167efd3309991bbc6b4ea784ecee4044cebcce4d290010227e50884ff793839",
+                "dummy_id": "constant-dummy-v1",
+                "action": [
+                  0.5,
+                  -0.5
+                ],
+                "linear": 0.03,
+                "angular": -0.06,
+                "monotonic_s": 10.0,
+                "decision": "ACCEPT",
+                "reason": "OK"
+              }
+            ],
+            "accepted_history": {
+              "scan_stamp_ns": 1000000001,
+              "odom_stamp_ns": 1000000001,
+              "dispatch_mono_s": 10.0
+            },
+            "latch": null,
+            "reset": "not_called"
+          }
+        }
+      ]
+    },
+    {
+      "id": "C002",
+      "description": "yaw positive pi/2",
+      "steps": [
+        {
+          "operation": "convert_dispatch",
+          "fresh_harness": true,
+          "overrides": {
+            "identity.snapshot_id": "C002-s0",
+            "odom.pose.pose.orientation.z": 0.7071067811865475,
+            "odom.pose.pose.orientation.w": 0.7071067811865476
+          },
+          "delete_paths": [],
+          "expected": {
+            "attempted": true,
+            "completed": true,
+            "converter_status": true,
+            "converter_code": "ADAPTER_OK",
+            "snapshot_present": true,
+            "qualifier_status": true,
+            "qualifier_code": "OK",
+            "observation": {
+              "valid": true,
+              "reason": "",
+              "shape": [
+                40
+              ],
+              "dtype": "float32",
+              "vector": [
+                1.0,
+                1.0,
+                1.0,
+                1.0,
+                1.0,
+                1.0,
+                1.0,
+                1.0,
+                1.0,
+                1.0,
+                1.0,
+                1.0,
+                1.0,
+                1.0,
+                1.0,
+                1.0,
+                1.0,
+                1.0,
+                1.0,
+                1.0,
+                1.0,
+                1.0,
+                1.0,
+                1.0,
+                1.0,
+                1.0,
+                1.0,
+                1.0,
+                1.0,
+                1.0,
+                1.0,
+                1.0,
+                1.0,
+                1.0,
+                1.0,
+                1.0,
+                0.10000000149011612,
+                -0.5,
+                0.0,
+                0.0
+              ],
+              "sha256": "8a002df73811257b20323fc8e1d6480f7a2f1e3a3a86fcf0f4b5ce75a34a0ab9"
+            },
+            "predictor_call_delta": 1,
+            "appended_sink_count": 1,
+            "appended_sink_records": [
+              {
+                "sequence": 1,
+                "run_id": "run-A",
+                "episode_id": "episode-A",
+                "snapshot_id": "C002-s0",
+                "observation_hash": "8a002df73811257b20323fc8e1d6480f7a2f1e3a3a86fcf0f4b5ce75a34a0ab9",
+                "dummy_id": "constant-dummy-v1",
+                "action": [
+                  0.5,
+                  -0.5
+                ],
+                "linear": 0.03,
+                "angular": -0.06,
+                "monotonic_s": 10.0,
+                "decision": "ACCEPT",
+                "reason": "OK"
+              }
+            ],
+            "retained_history": [
+              {
+                "sequence": 1,
+                "run_id": "run-A",
+                "episode_id": "episode-A",
+                "snapshot_id": "C002-s0",
+                "observation_hash": "8a002df73811257b20323fc8e1d6480f7a2f1e3a3a86fcf0f4b5ce75a34a0ab9",
+                "dummy_id": "constant-dummy-v1",
+                "action": [
+                  0.5,
+                  -0.5
+                ],
+                "linear": 0.03,
+                "angular": -0.06,
+                "monotonic_s": 10.0,
+                "decision": "ACCEPT",
+                "reason": "OK"
+              }
+            ],
+            "accepted_history": {
+              "scan_stamp_ns": 1000000001,
+              "odom_stamp_ns": 1000000001,
+              "dispatch_mono_s": 10.0
+            },
+            "latch": null,
+            "reset": "not_called"
+          }
+        }
+      ]
+    },
+    {
+      "id": "C003",
+      "description": "yaw negative pi/2",
+      "steps": [
+        {
+          "operation": "convert_dispatch",
+          "fresh_harness": true,
+          "overrides": {
+            "identity.snapshot_id": "C003-s0",
+            "odom.pose.pose.orientation.z": -0.7071067811865475,
+            "odom.pose.pose.orientation.w": 0.7071067811865476
+          },
+          "delete_paths": [],
+          "expected": {
+            "attempted": true,
+            "completed": true,
+            "converter_status": true,
+            "converter_code": "ADAPTER_OK",
+            "snapshot_present": true,
+            "qualifier_status": true,
+            "qualifier_code": "OK",
+            "observation": {
+              "valid": true,
+              "reason": "",
+              "shape": [
+                40
+              ],
+              "dtype": "float32",
+              "vector": [
+                1.0,
+                1.0,
+                1.0,
+                1.0,
+                1.0,
+                1.0,
+                1.0,
+                1.0,
+                1.0,
+                1.0,
+                1.0,
+                1.0,
+                1.0,
+                1.0,
+                1.0,
+                1.0,
+                1.0,
+                1.0,
+                1.0,
+                1.0,
+                1.0,
+                1.0,
+                1.0,
+                1.0,
+                1.0,
+                1.0,
+                1.0,
+                1.0,
+                1.0,
+                1.0,
+                1.0,
+                1.0,
+                1.0,
+                1.0,
+                1.0,
+                1.0,
+                0.10000000149011612,
+                0.5,
+                0.0,
+                0.0
+              ],
+              "sha256": "225110d92fafdae36e6c1f14375ed0c07ec88aa31f71fe3f1d2d8756af8e2258"
+            },
+            "predictor_call_delta": 1,
+            "appended_sink_count": 1,
+            "appended_sink_records": [
+              {
+                "sequence": 1,
+                "run_id": "run-A",
+                "episode_id": "episode-A",
+                "snapshot_id": "C003-s0",
+                "observation_hash": "225110d92fafdae36e6c1f14375ed0c07ec88aa31f71fe3f1d2d8756af8e2258",
+                "dummy_id": "constant-dummy-v1",
+                "action": [
+                  0.5,
+                  -0.5
+                ],
+                "linear": 0.03,
+                "angular": -0.06,
+                "monotonic_s": 10.0,
+                "decision": "ACCEPT",
+                "reason": "OK"
+              }
+            ],
+            "retained_history": [
+              {
+                "sequence": 1,
+                "run_id": "run-A",
+                "episode_id": "episode-A",
+                "snapshot_id": "C003-s0",
+                "observation_hash": "225110d92fafdae36e6c1f14375ed0c07ec88aa31f71fe3f1d2d8756af8e2258",
+                "dummy_id": "constant-dummy-v1",
+                "action": [
+                  0.5,
+                  -0.5
+                ],
+                "linear": 0.03,
+                "angular": -0.06,
+                "monotonic_s": 10.0,
+                "decision": "ACCEPT",
+                "reason": "OK"
+              }
+            ],
+            "accepted_history": {
+              "scan_stamp_ns": 1000000001,
+              "odom_stamp_ns": 1000000001,
+              "dispatch_mono_s": 10.0
+            },
+            "latch": null,
+            "reset": "not_called"
+          }
+        }
+      ]
+    },
+    {
+      "id": "C004",
+      "description": "translated 3-4-5 goal",
+      "steps": [
+        {
+          "operation": "convert_dispatch",
+          "fresh_harness": true,
+          "overrides": {
+            "identity.snapshot_id": "C004-s0",
+            "odom.pose.pose.position.x": 1.0,
+            "odom.pose.pose.position.y": 2.0,
+            "goal.x": 4.0,
+            "goal.y": 6.0
+          },
+          "delete_paths": [],
+          "expected": {
+            "attempted": true,
+            "completed": true,
+            "converter_status": true,
+            "converter_code": "ADAPTER_OK",
+            "snapshot_present": true,
+            "qualifier_status": true,
+            "qualifier_code": "OK",
+            "observation": {
+              "valid": true,
+              "reason": "",
+              "shape": [
+                40
+              ],
+              "dtype": "float32",
+              "vector": [
+                1.0,
+                1.0,
+                1.0,
+                1.0,
+                1.0,
+                1.0,
+                1.0,
+                1.0,
+                1.0,
+                1.0,
+                1.0,
+                1.0,
+                1.0,
+                1.0,
+                1.0,
+                1.0,
+                1.0,
+                1.0,
+                1.0,
+                1.0,
+                1.0,
+                1.0,
+                1.0,
+                1.0,
+                1.0,
+                1.0,
+                1.0,
+                1.0,
+                1.0,
+                1.0,
+                1.0,
+                1.0,
+                1.0,
+                1.0,
+                1.0,
+                1.0,
+                0.25,
+                0.2951672375202179,
+                0.0,
+                0.0
+              ],
+              "sha256": "ea6b75d080688f3819aa772d5aee0cbb0b3c1bd9ead6a45f3b388ad060eba931"
+            },
+            "predictor_call_delta": 1,
+            "appended_sink_count": 1,
+            "appended_sink_records": [
+              {
+                "sequence": 1,
+                "run_id": "run-A",
+                "episode_id": "episode-A",
+                "snapshot_id": "C004-s0",
+                "observation_hash": "ea6b75d080688f3819aa772d5aee0cbb0b3c1bd9ead6a45f3b388ad060eba931",
+                "dummy_id": "constant-dummy-v1",
+                "action": [
+                  0.5,
+                  -0.5
+                ],
+                "linear": 0.03,
+                "angular": -0.06,
+                "monotonic_s": 10.0,
+                "decision": "ACCEPT",
+                "reason": "OK"
+              }
+            ],
+            "retained_history": [
+              {
+                "sequence": 1,
+                "run_id": "run-A",
+                "episode_id": "episode-A",
+                "snapshot_id": "C004-s0",
+                "observation_hash": "ea6b75d080688f3819aa772d5aee0cbb0b3c1bd9ead6a45f3b388ad060eba931",
+                "dummy_id": "constant-dummy-v1",
+                "action": [
+                  0.5,
+                  -0.5
+                ],
+                "linear": 0.03,
+                "angular": -0.06,
+                "monotonic_s": 10.0,
+                "decision": "ACCEPT",
+                "reason": "OK"
+              }
+            ],
+            "accepted_history": {
+              "scan_stamp_ns": 1000000001,
+              "odom_stamp_ns": 1000000001,
+              "dispatch_mono_s": 10.0
+            },
+            "latch": null,
+            "reset": "not_called"
+          }
+        }
+      ]
+    },
+    {
+      "id": "C005",
+      "description": "measured velocities distinct from command",
+      "steps": [
+        {
+          "operation": "convert_dispatch",
+          "fresh_harness": true,
+          "overrides": {
+            "identity.snapshot_id": "C005-s0",
+            "odom.twist.twist.linear.x": 0.15,
+            "odom.twist.twist.angular.z": -0.3
+          },
+          "delete_paths": [],
+          "expected": {
+            "attempted": true,
+            "completed": true,
+            "converter_status": true,
+            "converter_code": "ADAPTER_OK",
+            "snapshot_present": true,
+            "qualifier_status": true,
+            "qualifier_code": "OK",
+            "observation": {
+              "valid": true,
+              "reason": "",
+              "shape": [
+                40
+              ],
+              "dtype": "float32",
+              "vector": [
+                1.0,
+                1.0,
+                1.0,
+                1.0,
+                1.0,
+                1.0,
+                1.0,
+                1.0,
+                1.0,
+                1.0,
+                1.0,
+                1.0,
+                1.0,
+                1.0,
+                1.0,
+                1.0,
+                1.0,
+                1.0,
+                1.0,
+                1.0,
+                1.0,
+                1.0,
+                1.0,
+                1.0,
+                1.0,
+                1.0,
+                1.0,
+                1.0,
+                1.0,
+                1.0,
+                1.0,
+                1.0,
+                1.0,
+                1.0,
+                1.0,
+                1.0,
+                0.10000000149011612,
+                0.0,
+                0.5,
+                -0.5
+              ],
+              "sha256": "87b0efc8ee8a4555668b6d98380ec9b2b2110e6a46ddbf9de8f2b138bb59424c"
+            },
+            "predictor_call_delta": 1,
+            "appended_sink_count": 1,
+            "appended_sink_records": [
+              {
+                "sequence": 1,
+                "run_id": "run-A",
+                "episode_id": "episode-A",
+                "snapshot_id": "C005-s0",
+                "observation_hash": "87b0efc8ee8a4555668b6d98380ec9b2b2110e6a46ddbf9de8f2b138bb59424c",
+                "dummy_id": "constant-dummy-v1",
+                "action": [
+                  0.5,
+                  -0.5
+                ],
+                "linear": 0.03,
+                "angular": -0.06,
+                "monotonic_s": 10.0,
+                "decision": "ACCEPT",
+                "reason": "OK"
+              }
+            ],
+            "retained_history": [
+              {
+                "sequence": 1,
+                "run_id": "run-A",
+                "episode_id": "episode-A",
+                "snapshot_id": "C005-s0",
+                "observation_hash": "87b0efc8ee8a4555668b6d98380ec9b2b2110e6a46ddbf9de8f2b138bb59424c",
+                "dummy_id": "constant-dummy-v1",
+                "action": [
+                  0.5,
+                  -0.5
+                ],
+                "linear": 0.03,
+                "angular": -0.06,
+                "monotonic_s": 10.0,
+                "decision": "ACCEPT",
+                "reason": "OK"
+              }
+            ],
+            "accepted_history": {
+              "scan_stamp_ns": 1000000001,
+              "odom_stamp_ns": 1000000001,
+              "dispatch_mono_s": 10.0
+            },
+            "latch": null,
+            "reset": "not_called"
+          }
+        }
+      ]
+    },
+    {
+      "id": "C006",
+      "description": "detached scan metadata",
+      "steps": [
+        {
+          "operation": "convert_dispatch",
+          "fresh_harness": true,
+          "overrides": {
+            "identity.snapshot_id": "C006-s0",
+            "scan.ranges": [
+              6.0,
+              12.0,
+              12.0,
+              12.0,
+              12.0,
+              12.0,
+              12.0,
+              12.0,
+              12.0,
+              12.0,
+              12.0,
+              12.0,
+              12.0,
+              12.0,
+              12.0,
+              12.0,
+              12.0,
+              12.0,
+              12.0,
+              12.0,
+              12.0,
+              12.0,
+              12.0,
+              12.0,
+              12.0,
+              12.0,
+              12.0,
+              12.0,
+              12.0,
+              12.0,
+              12.0,
+              12.0,
+              12.0,
+              12.0,
+              12.0,
+              12.0
+            ]
+          },
+          "delete_paths": [],
+          "expected": {
+            "attempted": true,
+            "completed": true,
+            "converter_status": true,
+            "converter_code": "ADAPTER_OK",
+            "snapshot_present": true,
+            "qualifier_status": true,
+            "qualifier_code": "OK",
+            "observation": {
+              "valid": true,
+              "reason": "",
+              "shape": [
+                40
+              ],
+              "dtype": "float32",
+              "vector": [
+                0.5,
+                1.0,
+                1.0,
+                1.0,
+                1.0,
+                1.0,
+                1.0,
+                1.0,
+                1.0,
+                1.0,
+                1.0,
+                1.0,
+                1.0,
+                1.0,
+                1.0,
+                1.0,
+                1.0,
+                1.0,
+                1.0,
+                1.0,
+                1.0,
+                1.0,
+                1.0,
+                1.0,
+                1.0,
+                1.0,
+                1.0,
+                1.0,
+                1.0,
+                1.0,
+                1.0,
+                1.0,
+                1.0,
+                1.0,
+                1.0,
+                1.0,
+                0.10000000149011612,
+                0.0,
+                0.0,
+                0.0
+              ],
+              "sha256": "611916499bc799f4b05f561293366440105afda5612540ac16d2ac4679b5cacf"
+            },
+            "predictor_call_delta": 1,
+            "appended_sink_count": 1,
+            "appended_sink_records": [
+              {
+                "sequence": 1,
+                "run_id": "run-A",
+                "episode_id": "episode-A",
+                "snapshot_id": "C006-s0",
+                "observation_hash": "611916499bc799f4b05f561293366440105afda5612540ac16d2ac4679b5cacf",
+                "dummy_id": "constant-dummy-v1",
+                "action": [
+                  0.5,
+                  -0.5
+                ],
+                "linear": 0.03,
+                "angular": -0.06,
+                "monotonic_s": 10.0,
+                "decision": "ACCEPT",
+                "reason": "OK"
+              }
+            ],
+            "retained_history": [
+              {
+                "sequence": 1,
+                "run_id": "run-A",
+                "episode_id": "episode-A",
+                "snapshot_id": "C006-s0",
+                "observation_hash": "611916499bc799f4b05f561293366440105afda5612540ac16d2ac4679b5cacf",
+                "dummy_id": "constant-dummy-v1",
+                "action": [
+                  0.5,
+                  -0.5
+                ],
+                "linear": 0.03,
+                "angular": -0.06,
+                "monotonic_s": 10.0,
+                "decision": "ACCEPT",
+                "reason": "OK"
+              }
+            ],
+            "accepted_history": {
+              "scan_stamp_ns": 1000000001,
+              "odom_stamp_ns": 1000000001,
+              "dispatch_mono_s": 10.0
+            },
+            "latch": null,
+            "reset": "not_called"
+          }
+        }
+      ]
+    },
+    {
+      "id": "C007",
+      "description": "positive infinity retained and builder no-return treatment",
+      "steps": [
+        {
+          "operation": "convert_dispatch",
+          "fresh_harness": true,
+          "overrides": {
+            "identity.snapshot_id": "C007-s0",
+            "scan.ranges": [
+              "+Inf",
+              12.0,
+              12.0,
+              12.0,
+              12.0,
+              12.0,
+              12.0,
+              12.0,
+              12.0,
+              12.0,
+              12.0,
+              12.0,
+              12.0,
+              12.0,
+              12.0,
+              12.0,
+              12.0,
+              12.0,
+              12.0,
+              12.0,
+              12.0,
+              12.0,
+              12.0,
+              12.0,
+              12.0,
+              12.0,
+              12.0,
+              12.0,
+              12.0,
+              12.0,
+              12.0,
+              12.0,
+              12.0,
+              12.0,
+              12.0,
+              12.0
+            ]
+          },
+          "delete_paths": [],
+          "expected": {
+            "attempted": true,
+            "completed": true,
+            "converter_status": true,
+            "converter_code": "ADAPTER_OK",
+            "snapshot_present": true,
+            "qualifier_status": true,
+            "qualifier_code": "OK",
+            "observation": {
+              "valid": true,
+              "reason": "",
+              "shape": [
+                40
+              ],
+              "dtype": "float32",
+              "vector": [
+                1.0,
+                1.0,
+                1.0,
+                1.0,
+                1.0,
+                1.0,
+                1.0,
+                1.0,
+                1.0,
+                1.0,
+                1.0,
+                1.0,
+                1.0,
+                1.0,
+                1.0,
+                1.0,
+                1.0,
+                1.0,
+                1.0,
+                1.0,
+                1.0,
+                1.0,
+                1.0,
+                1.0,
+                1.0,
+                1.0,
+                1.0,
+                1.0,
+                1.0,
+                1.0,
+                1.0,
+                1.0,
+                1.0,
+                1.0,
+                1.0,
+                1.0,
+                0.10000000149011612,
+                0.0,
+                0.0,
+                0.0
+              ],
+              "sha256": "7167efd3309991bbc6b4ea784ecee4044cebcce4d290010227e50884ff793839"
+            },
+            "predictor_call_delta": 1,
+            "appended_sink_count": 1,
+            "appended_sink_records": [
+              {
+                "sequence": 1,
+                "run_id": "run-A",
+                "episode_id": "episode-A",
+                "snapshot_id": "C007-s0",
+                "observation_hash": "7167efd3309991bbc6b4ea784ecee4044cebcce4d290010227e50884ff793839",
+                "dummy_id": "constant-dummy-v1",
+                "action": [
+                  0.5,
+                  -0.5
+                ],
+                "linear": 0.03,
+                "angular": -0.06,
+                "monotonic_s": 10.0,
+                "decision": "ACCEPT",
+                "reason": "OK"
+              }
+            ],
+            "retained_history": [
+              {
+                "sequence": 1,
+                "run_id": "run-A",
+                "episode_id": "episode-A",
+                "snapshot_id": "C007-s0",
+                "observation_hash": "7167efd3309991bbc6b4ea784ecee4044cebcce4d290010227e50884ff793839",
+                "dummy_id": "constant-dummy-v1",
+                "action": [
+                  0.5,
+                  -0.5
+                ],
+                "linear": 0.03,
+                "angular": -0.06,
+                "monotonic_s": 10.0,
+                "decision": "ACCEPT",
+                "reason": "OK"
+              }
+            ],
+            "accepted_history": {
+              "scan_stamp_ns": 1000000001,
+              "odom_stamp_ns": 1000000001,
+              "dispatch_mono_s": 10.0
+            },
+            "latch": null,
+            "reset": "not_called"
+          }
+        }
+      ]
+    },
+    {
+      "id": "C008",
+      "description": "quaternion sign equivalence and detached odometry",
+      "steps": [
+        {
+          "operation": "convert_dispatch",
+          "fresh_harness": true,
+          "overrides": {
+            "identity.snapshot_id": "C008-s0"
+          },
+          "delete_paths": [],
+          "expected": {
+            "attempted": true,
+            "completed": true,
+            "converter_status": true,
+            "converter_code": "ADAPTER_OK",
+            "snapshot_present": true,
+            "qualifier_status": true,
+            "qualifier_code": "OK",
+            "observation": {
+              "valid": true,
+              "reason": "",
+              "shape": [
+                40
+              ],
+              "dtype": "float32",
+              "vector": [
+                1.0,
+                1.0,
+                1.0,
+                1.0,
+                1.0,
+                1.0,
+                1.0,
+                1.0,
+                1.0,
+                1.0,
+                1.0,
+                1.0,
+                1.0,
+                1.0,
+                1.0,
+                1.0,
+                1.0,
+                1.0,
+                1.0,
+                1.0,
+                1.0,
+                1.0,
+                1.0,
+                1.0,
+                1.0,
+                1.0,
+                1.0,
+                1.0,
+                1.0,
+                1.0,
+                1.0,
+                1.0,
+                1.0,
+                1.0,
+                1.0,
+                1.0,
+                0.10000000149011612,
+                0.0,
+                0.0,
+                0.0
+              ],
+              "sha256": "7167efd3309991bbc6b4ea784ecee4044cebcce4d290010227e50884ff793839"
+            },
+            "predictor_call_delta": 1,
+            "appended_sink_count": 1,
+            "appended_sink_records": [
+              {
+                "sequence": 1,
+                "run_id": "run-A",
+                "episode_id": "episode-A",
+                "snapshot_id": "C008-s0",
+                "observation_hash": "7167efd3309991bbc6b4ea784ecee4044cebcce4d290010227e50884ff793839",
+                "dummy_id": "constant-dummy-v1",
+                "action": [
+                  0.5,
+                  -0.5
+                ],
+                "linear": 0.03,
+                "angular": -0.06,
+                "monotonic_s": 10.0,
+                "decision": "ACCEPT",
+                "reason": "OK"
+              }
+            ],
+            "retained_history": [
+              {
+                "sequence": 1,
+                "run_id": "run-A",
+                "episode_id": "episode-A",
+                "snapshot_id": "C008-s0",
+                "observation_hash": "7167efd3309991bbc6b4ea784ecee4044cebcce4d290010227e50884ff793839",
+                "dummy_id": "constant-dummy-v1",
+                "action": [
+                  0.5,
+                  -0.5
+                ],
+                "linear": 0.03,
+                "angular": -0.06,
+                "monotonic_s": 10.0,
+                "decision": "ACCEPT",
+                "reason": "OK"
+              }
+            ],
+            "accepted_history": {
+              "scan_stamp_ns": 1000000001,
+              "odom_stamp_ns": 1000000001,
+              "dispatch_mono_s": 10.0
+            },
+            "latch": null,
+            "reset": "not_called"
+          }
+        },
+        {
+          "operation": "convert_dispatch",
+          "fresh_harness": true,
+          "overrides": {
+            "identity.snapshot_id": "C008-s1",
+            "odom.pose.pose.orientation.w": -1.0
+          },
+          "delete_paths": [],
+          "expected": {
+            "attempted": true,
+            "completed": true,
+            "converter_status": true,
+            "converter_code": "ADAPTER_OK",
+            "snapshot_present": true,
+            "qualifier_status": true,
+            "qualifier_code": "OK",
+            "observation": {
+              "valid": true,
+              "reason": "",
+              "shape": [
+                40
+              ],
+              "dtype": "float32",
+              "vector": [
+                1.0,
+                1.0,
+                1.0,
+                1.0,
+                1.0,
+                1.0,
+                1.0,
+                1.0,
+                1.0,
+                1.0,
+                1.0,
+                1.0,
+                1.0,
+                1.0,
+                1.0,
+                1.0,
+                1.0,
+                1.0,
+                1.0,
+                1.0,
+                1.0,
+                1.0,
+                1.0,
+                1.0,
+                1.0,
+                1.0,
+                1.0,
+                1.0,
+                1.0,
+                1.0,
+                1.0,
+                1.0,
+                1.0,
+                1.0,
+                1.0,
+                1.0,
+                0.10000000149011612,
+                0.0,
+                0.0,
+                0.0
+              ],
+              "sha256": "7167efd3309991bbc6b4ea784ecee4044cebcce4d290010227e50884ff793839"
+            },
+            "predictor_call_delta": 1,
+            "appended_sink_count": 1,
+            "appended_sink_records": [
+              {
+                "sequence": 1,
+                "run_id": "run-A",
+                "episode_id": "episode-A",
+                "snapshot_id": "C008-s1",
+                "observation_hash": "7167efd3309991bbc6b4ea784ecee4044cebcce4d290010227e50884ff793839",
+                "dummy_id": "constant-dummy-v1",
+                "action": [
+                  0.5,
+                  -0.5
+                ],
+                "linear": 0.03,
+                "angular": -0.06,
+                "monotonic_s": 10.0,
+                "decision": "ACCEPT",
+                "reason": "OK"
+              }
+            ],
+            "retained_history": [
+              {
+                "sequence": 1,
+                "run_id": "run-A",
+                "episode_id": "episode-A",
+                "snapshot_id": "C008-s1",
+                "observation_hash": "7167efd3309991bbc6b4ea784ecee4044cebcce4d290010227e50884ff793839",
+                "dummy_id": "constant-dummy-v1",
+                "action": [
+                  0.5,
+                  -0.5
+                ],
+                "linear": 0.03,
+                "angular": -0.06,
+                "monotonic_s": 10.0,
+                "decision": "ACCEPT",
+                "reason": "OK"
+              }
+            ],
+            "accepted_history": {
+              "scan_stamp_ns": 1000000001,
+              "odom_stamp_ns": 1000000001,
+              "dispatch_mono_s": 10.0
+            },
+            "latch": null,
+            "reset": "not_called"
+          }
+        }
+      ]
+    },
+    {
+      "id": "C009",
+      "description": "missing stream stamps",
+      "steps": [
+        {
+          "operation": "convert_dispatch",
+          "fresh_harness": true,
+          "overrides": {
+            "identity.snapshot_id": "C009-s0"
+          },
+          "delete_paths": [
+            "scan.header.stamp"
+          ],
+          "expected": {
+            "attempted": true,
+            "completed": true,
+            "converter_status": false,
+            "converter_code": "ADAPTER_MISSING_FIELD",
+            "snapshot_present": false,
+            "qualifier_status": "not_called",
+            "qualifier_code": "not_called",
+            "observation": "not_produced",
+            "predictor_call_delta": 0,
+            "appended_sink_count": 0,
+            "appended_sink_records": [],
+            "retained_history": [],
+            "accepted_history": null,
+            "latch": null,
+            "reset": "not_called"
+          }
+        },
+        {
+          "operation": "convert_dispatch",
+          "fresh_harness": true,
+          "overrides": {
+            "identity.snapshot_id": "C009-s1"
+          },
+          "delete_paths": [
+            "odom.header.stamp"
+          ],
+          "expected": {
+            "attempted": true,
+            "completed": true,
+            "converter_status": false,
+            "converter_code": "ADAPTER_MISSING_FIELD",
+            "snapshot_present": false,
+            "qualifier_status": "not_called",
+            "qualifier_code": "not_called",
+            "observation": "not_produced",
+            "predictor_call_delta": 0,
+            "appended_sink_count": 0,
+            "appended_sink_records": [],
+            "retained_history": [],
+            "accepted_history": null,
+            "latch": null,
+            "reset": "not_called"
+          }
+        }
+      ]
+    },
+    {
+      "id": "C010",
+      "description": "zero stream stamps",
+      "steps": [
+        {
+          "operation": "convert_dispatch",
+          "fresh_harness": true,
+          "overrides": {
+            "identity.snapshot_id": "C010-s0",
+            "scan.header.stamp": {
+              "sec": 0,
+              "nanosec": 0
+            }
+          },
+          "delete_paths": [],
+          "expected": {
+            "attempted": true,
+            "completed": true,
+            "converter_status": false,
+            "converter_code": "ADAPTER_INVALID_STAMP",
+            "snapshot_present": false,
+            "qualifier_status": "not_called",
+            "qualifier_code": "not_called",
+            "observation": "not_produced",
+            "predictor_call_delta": 0,
+            "appended_sink_count": 0,
+            "appended_sink_records": [],
+            "retained_history": [],
+            "accepted_history": null,
+            "latch": null,
+            "reset": "not_called"
+          }
+        },
+        {
+          "operation": "convert_dispatch",
+          "fresh_harness": true,
+          "overrides": {
+            "identity.snapshot_id": "C010-s1",
+            "odom.header.stamp": {
+              "sec": 0,
+              "nanosec": 0
+            }
+          },
+          "delete_paths": [],
+          "expected": {
+            "attempted": true,
+            "completed": true,
+            "converter_status": false,
+            "converter_code": "ADAPTER_INVALID_STAMP",
+            "snapshot_present": false,
+            "qualifier_status": "not_called",
+            "qualifier_code": "not_called",
+            "observation": "not_produced",
+            "predictor_call_delta": 0,
+            "appended_sink_count": 0,
+            "appended_sink_records": [],
+            "retained_history": [],
+            "accepted_history": null,
+            "latch": null,
+            "reset": "not_called"
+          }
+        }
+      ]
+    },
+    {
+      "id": "C011",
+      "description": "boolean stamp components",
+      "steps": [
+        {
+          "operation": "convert_dispatch",
+          "fresh_harness": true,
+          "overrides": {
+            "identity.snapshot_id": "C011-s0",
+            "scan.header.stamp.sec": true
+          },
+          "delete_paths": [],
+          "expected": {
+            "attempted": true,
+            "completed": true,
+            "converter_status": false,
+            "converter_code": "ADAPTER_INVALID_STAMP",
+            "snapshot_present": false,
+            "qualifier_status": "not_called",
+            "qualifier_code": "not_called",
+            "observation": "not_produced",
+            "predictor_call_delta": 0,
+            "appended_sink_count": 0,
+            "appended_sink_records": [],
+            "retained_history": [],
+            "accepted_history": null,
+            "latch": null,
+            "reset": "not_called"
+          }
+        },
+        {
+          "operation": "convert_dispatch",
+          "fresh_harness": true,
+          "overrides": {
+            "identity.snapshot_id": "C011-s1",
+            "scan.header.stamp.nanosec": true
+          },
+          "delete_paths": [],
+          "expected": {
+            "attempted": true,
+            "completed": true,
+            "converter_status": false,
+            "converter_code": "ADAPTER_INVALID_STAMP",
+            "snapshot_present": false,
+            "qualifier_status": "not_called",
+            "qualifier_code": "not_called",
+            "observation": "not_produced",
+            "predictor_call_delta": 0,
+            "appended_sink_count": 0,
+            "appended_sink_records": [],
+            "retained_history": [],
+            "accepted_history": null,
+            "latch": null,
+            "reset": "not_called"
+          }
+        },
+        {
+          "operation": "convert_dispatch",
+          "fresh_harness": true,
+          "overrides": {
+            "identity.snapshot_id": "C011-s2",
+            "odom.header.stamp.sec": true
+          },
+          "delete_paths": [],
+          "expected": {
+            "attempted": true,
+            "completed": true,
+            "converter_status": false,
+            "converter_code": "ADAPTER_INVALID_STAMP",
+            "snapshot_present": false,
+            "qualifier_status": "not_called",
+            "qualifier_code": "not_called",
+            "observation": "not_produced",
+            "predictor_call_delta": 0,
+            "appended_sink_count": 0,
+            "appended_sink_records": [],
+            "retained_history": [],
+            "accepted_history": null,
+            "latch": null,
+            "reset": "not_called"
+          }
+        },
+        {
+          "operation": "convert_dispatch",
+          "fresh_harness": true,
+          "overrides": {
+            "identity.snapshot_id": "C011-s3",
+            "odom.header.stamp.nanosec": true
+          },
+          "delete_paths": [],
+          "expected": {
+            "attempted": true,
+            "completed": true,
+            "converter_status": false,
+            "converter_code": "ADAPTER_INVALID_STAMP",
+            "snapshot_present": false,
+            "qualifier_status": "not_called",
+            "qualifier_code": "not_called",
+            "observation": "not_produced",
+            "predictor_call_delta": 0,
+            "appended_sink_count": 0,
+            "appended_sink_records": [],
+            "retained_history": [],
+            "accepted_history": null,
+            "latch": null,
+            "reset": "not_called"
+          }
+        }
+      ]
+    },
+    {
+      "id": "C012",
+      "description": "integer stamp bounds and exact valid control",
+      "steps": [
+        {
+          "operation": "convert_dispatch",
+          "fresh_harness": true,
+          "overrides": {
+            "identity.snapshot_id": "C012-s0",
+            "scan.header.stamp": {
+              "sec": 1.5,
+              "nanosec": 1
+            }
+          },
+          "delete_paths": [],
+          "expected": {
+            "attempted": true,
+            "completed": true,
+            "converter_status": false,
+            "converter_code": "ADAPTER_INVALID_STAMP",
+            "snapshot_present": false,
+            "qualifier_status": "not_called",
+            "qualifier_code": "not_called",
+            "observation": "not_produced",
+            "predictor_call_delta": 0,
+            "appended_sink_count": 0,
+            "appended_sink_records": [],
+            "retained_history": [],
+            "accepted_history": null,
+            "latch": null,
+            "reset": "not_called"
+          }
+        },
+        {
+          "operation": "convert_dispatch",
+          "fresh_harness": true,
+          "overrides": {
+            "identity.snapshot_id": "C012-s1",
+            "scan.header.stamp": {
+              "sec": 1,
+              "nanosec": -1
+            }
+          },
+          "delete_paths": [],
+          "expected": {
+            "attempted": true,
+            "completed": true,
+            "converter_status": false,
+            "converter_code": "ADAPTER_INVALID_STAMP",
+            "snapshot_present": false,
+            "qualifier_status": "not_called",
+            "qualifier_code": "not_called",
+            "observation": "not_produced",
+            "predictor_call_delta": 0,
+            "appended_sink_count": 0,
+            "appended_sink_records": [],
+            "retained_history": [],
+            "accepted_history": null,
+            "latch": null,
+            "reset": "not_called"
+          }
+        },
+        {
+          "operation": "convert_dispatch",
+          "fresh_harness": true,
+          "overrides": {
+            "identity.snapshot_id": "C012-s2",
+            "scan.header.stamp": {
+              "sec": 1,
+              "nanosec": 1000000000
+            }
+          },
+          "delete_paths": [],
+          "expected": {
+            "attempted": true,
+            "completed": true,
+            "converter_status": false,
+            "converter_code": "ADAPTER_INVALID_STAMP",
+            "snapshot_present": false,
+            "qualifier_status": "not_called",
+            "qualifier_code": "not_called",
+            "observation": "not_produced",
+            "predictor_call_delta": 0,
+            "appended_sink_count": 0,
+            "appended_sink_records": [],
+            "retained_history": [],
+            "accepted_history": null,
+            "latch": null,
+            "reset": "not_called"
+          }
+        },
+        {
+          "operation": "convert_dispatch",
+          "fresh_harness": true,
+          "overrides": {
+            "identity.snapshot_id": "C012-s3",
+            "scan.header.stamp": {
+              "sec": 2147483648,
+              "nanosec": 1
+            }
+          },
+          "delete_paths": [],
+          "expected": {
+            "attempted": true,
+            "completed": true,
+            "converter_status": false,
+            "converter_code": "ADAPTER_INVALID_STAMP",
+            "snapshot_present": false,
+            "qualifier_status": "not_called",
+            "qualifier_code": "not_called",
+            "observation": "not_produced",
+            "predictor_call_delta": 0,
+            "appended_sink_count": 0,
+            "appended_sink_records": [],
+            "retained_history": [],
+            "accepted_history": null,
+            "latch": null,
+            "reset": "not_called"
+          }
+        },
+        {
+          "operation": "convert_dispatch",
+          "fresh_harness": true,
+          "overrides": {
+            "identity.snapshot_id": "C012-s4",
+            "scan.header.stamp": {
+              "sec": -2147483649,
+              "nanosec": 1
+            }
+          },
+          "delete_paths": [],
+          "expected": {
+            "attempted": true,
+            "completed": true,
+            "converter_status": false,
+            "converter_code": "ADAPTER_INVALID_STAMP",
+            "snapshot_present": false,
+            "qualifier_status": "not_called",
+            "qualifier_code": "not_called",
+            "observation": "not_produced",
+            "predictor_call_delta": 0,
+            "appended_sink_count": 0,
+            "appended_sink_records": [],
+            "retained_history": [],
+            "accepted_history": null,
+            "latch": null,
+            "reset": "not_called"
+          }
+        },
+        {
+          "operation": "convert_dispatch",
+          "fresh_harness": true,
+          "overrides": {
+            "identity.snapshot_id": "C012-s5",
+            "scan.header.stamp": {
+              "sec": -1,
+              "nanosec": 1
+            }
+          },
+          "delete_paths": [],
+          "expected": {
+            "attempted": true,
+            "completed": true,
+            "converter_status": false,
+            "converter_code": "ADAPTER_INVALID_STAMP",
+            "snapshot_present": false,
+            "qualifier_status": "not_called",
+            "qualifier_code": "not_called",
+            "observation": "not_produced",
+            "predictor_call_delta": 0,
+            "appended_sink_count": 0,
+            "appended_sink_records": [],
+            "retained_history": [],
+            "accepted_history": null,
+            "latch": null,
+            "reset": "not_called"
+          }
+        },
+        {
+          "operation": "convert_dispatch",
+          "fresh_harness": true,
+          "overrides": {
+            "identity.snapshot_id": "C012-s6",
+            "odom.header.stamp": {
+              "sec": 1.5,
+              "nanosec": 1
+            }
+          },
+          "delete_paths": [],
+          "expected": {
+            "attempted": true,
+            "completed": true,
+            "converter_status": false,
+            "converter_code": "ADAPTER_INVALID_STAMP",
+            "snapshot_present": false,
+            "qualifier_status": "not_called",
+            "qualifier_code": "not_called",
+            "observation": "not_produced",
+            "predictor_call_delta": 0,
+            "appended_sink_count": 0,
+            "appended_sink_records": [],
+            "retained_history": [],
+            "accepted_history": null,
+            "latch": null,
+            "reset": "not_called"
+          }
+        },
+        {
+          "operation": "convert_dispatch",
+          "fresh_harness": true,
+          "overrides": {
+            "identity.snapshot_id": "C012-s7",
+            "odom.header.stamp": {
+              "sec": 1,
+              "nanosec": -1
+            }
+          },
+          "delete_paths": [],
+          "expected": {
+            "attempted": true,
+            "completed": true,
+            "converter_status": false,
+            "converter_code": "ADAPTER_INVALID_STAMP",
+            "snapshot_present": false,
+            "qualifier_status": "not_called",
+            "qualifier_code": "not_called",
+            "observation": "not_produced",
+            "predictor_call_delta": 0,
+            "appended_sink_count": 0,
+            "appended_sink_records": [],
+            "retained_history": [],
+            "accepted_history": null,
+            "latch": null,
+            "reset": "not_called"
+          }
+        },
+        {
+          "operation": "convert_dispatch",
+          "fresh_harness": true,
+          "overrides": {
+            "identity.snapshot_id": "C012-s8",
+            "odom.header.stamp": {
+              "sec": 1,
+              "nanosec": 1000000000
+            }
+          },
+          "delete_paths": [],
+          "expected": {
+            "attempted": true,
+            "completed": true,
+            "converter_status": false,
+            "converter_code": "ADAPTER_INVALID_STAMP",
+            "snapshot_present": false,
+            "qualifier_status": "not_called",
+            "qualifier_code": "not_called",
+            "observation": "not_produced",
+            "predictor_call_delta": 0,
+            "appended_sink_count": 0,
+            "appended_sink_records": [],
+            "retained_history": [],
+            "accepted_history": null,
+            "latch": null,
+            "reset": "not_called"
+          }
+        },
+        {
+          "operation": "convert_dispatch",
+          "fresh_harness": true,
+          "overrides": {
+            "identity.snapshot_id": "C012-s9",
+            "odom.header.stamp": {
+              "sec": 2147483648,
+              "nanosec": 1
+            }
+          },
+          "delete_paths": [],
+          "expected": {
+            "attempted": true,
+            "completed": true,
+            "converter_status": false,
+            "converter_code": "ADAPTER_INVALID_STAMP",
+            "snapshot_present": false,
+            "qualifier_status": "not_called",
+            "qualifier_code": "not_called",
+            "observation": "not_produced",
+            "predictor_call_delta": 0,
+            "appended_sink_count": 0,
+            "appended_sink_records": [],
+            "retained_history": [],
+            "accepted_history": null,
+            "latch": null,
+            "reset": "not_called"
+          }
+        },
+        {
+          "operation": "convert_dispatch",
+          "fresh_harness": true,
+          "overrides": {
+            "identity.snapshot_id": "C012-s10",
+            "odom.header.stamp": {
+              "sec": -2147483649,
+              "nanosec": 1
+            }
+          },
+          "delete_paths": [],
+          "expected": {
+            "attempted": true,
+            "completed": true,
+            "converter_status": false,
+            "converter_code": "ADAPTER_INVALID_STAMP",
+            "snapshot_present": false,
+            "qualifier_status": "not_called",
+            "qualifier_code": "not_called",
+            "observation": "not_produced",
+            "predictor_call_delta": 0,
+            "appended_sink_count": 0,
+            "appended_sink_records": [],
+            "retained_history": [],
+            "accepted_history": null,
+            "latch": null,
+            "reset": "not_called"
+          }
+        },
+        {
+          "operation": "convert_dispatch",
+          "fresh_harness": true,
+          "overrides": {
+            "identity.snapshot_id": "C012-s11",
+            "odom.header.stamp": {
+              "sec": -1,
+              "nanosec": 1
+            }
+          },
+          "delete_paths": [],
+          "expected": {
+            "attempted": true,
+            "completed": true,
+            "converter_status": false,
+            "converter_code": "ADAPTER_INVALID_STAMP",
+            "snapshot_present": false,
+            "qualifier_status": "not_called",
+            "qualifier_code": "not_called",
+            "observation": "not_produced",
+            "predictor_call_delta": 0,
+            "appended_sink_count": 0,
+            "appended_sink_records": [],
+            "retained_history": [],
+            "accepted_history": null,
+            "latch": null,
+            "reset": "not_called"
+          }
+        },
+        {
+          "operation": "convert_dispatch",
+          "fresh_harness": true,
+          "overrides": {
+            "identity.snapshot_id": "C012-s12",
+            "scan.header.stamp.nanosec": 999999999,
+            "odom.header.stamp.nanosec": 999999999
+          },
+          "delete_paths": [],
+          "expected": {
+            "attempted": true,
+            "completed": true,
+            "converter_status": true,
+            "converter_code": "ADAPTER_OK",
+            "snapshot_present": true,
+            "qualifier_status": true,
+            "qualifier_code": "OK",
+            "observation": {
+              "valid": true,
+              "reason": "",
+              "shape": [
+                40
+              ],
+              "dtype": "float32",
+              "vector": [
+                1.0,
+                1.0,
+                1.0,
+                1.0,
+                1.0,
+                1.0,
+                1.0,
+                1.0,
+                1.0,
+                1.0,
+                1.0,
+                1.0,
+                1.0,
+                1.0,
+                1.0,
+                1.0,
+                1.0,
+                1.0,
+                1.0,
+                1.0,
+                1.0,
+                1.0,
+                1.0,
+                1.0,
+                1.0,
+                1.0,
+                1.0,
+                1.0,
+                1.0,
+                1.0,
+                1.0,
+                1.0,
+                1.0,
+                1.0,
+                1.0,
+                1.0,
+                0.10000000149011612,
+                0.0,
+                0.0,
+                0.0
+              ],
+              "sha256": "7167efd3309991bbc6b4ea784ecee4044cebcce4d290010227e50884ff793839"
+            },
+            "predictor_call_delta": 1,
+            "appended_sink_count": 1,
+            "appended_sink_records": [
+              {
+                "sequence": 1,
+                "run_id": "run-A",
+                "episode_id": "episode-A",
+                "snapshot_id": "C012-s12",
+                "observation_hash": "7167efd3309991bbc6b4ea784ecee4044cebcce4d290010227e50884ff793839",
+                "dummy_id": "constant-dummy-v1",
+                "action": [
+                  0.5,
+                  -0.5
+                ],
+                "linear": 0.03,
+                "angular": -0.06,
+                "monotonic_s": 10.0,
+                "decision": "ACCEPT",
+                "reason": "OK"
+              }
+            ],
+            "retained_history": [
+              {
+                "sequence": 1,
+                "run_id": "run-A",
+                "episode_id": "episode-A",
+                "snapshot_id": "C012-s12",
+                "observation_hash": "7167efd3309991bbc6b4ea784ecee4044cebcce4d290010227e50884ff793839",
+                "dummy_id": "constant-dummy-v1",
+                "action": [
+                  0.5,
+                  -0.5
+                ],
+                "linear": 0.03,
+                "angular": -0.06,
+                "monotonic_s": 10.0,
+                "decision": "ACCEPT",
+                "reason": "OK"
+              }
+            ],
+            "accepted_history": {
+              "scan_stamp_ns": 1999999999,
+              "odom_stamp_ns": 1999999999,
+              "dispatch_mono_s": 10.0
+            },
+            "latch": null,
+            "reset": "not_called"
+          }
+        }
+      ]
+    },
+    {
+      "id": "C013",
+      "description": "duplicate scan retains accepted history",
+      "steps": [
+        {
+          "operation": "convert_dispatch",
+          "fresh_harness": true,
+          "overrides": {
+            "identity.snapshot_id": "C013-s0"
+          },
+          "delete_paths": [],
+          "expected": {
+            "attempted": true,
+            "completed": true,
+            "converter_status": true,
+            "converter_code": "ADAPTER_OK",
+            "snapshot_present": true,
+            "qualifier_status": true,
+            "qualifier_code": "OK",
+            "observation": {
+              "valid": true,
+              "reason": "",
+              "shape": [
+                40
+              ],
+              "dtype": "float32",
+              "vector": [
+                1.0,
+                1.0,
+                1.0,
+                1.0,
+                1.0,
+                1.0,
+                1.0,
+                1.0,
+                1.0,
+                1.0,
+                1.0,
+                1.0,
+                1.0,
+                1.0,
+                1.0,
+                1.0,
+                1.0,
+                1.0,
+                1.0,
+                1.0,
+                1.0,
+                1.0,
+                1.0,
+                1.0,
+                1.0,
+                1.0,
+                1.0,
+                1.0,
+                1.0,
+                1.0,
+                1.0,
+                1.0,
+                1.0,
+                1.0,
+                1.0,
+                1.0,
+                0.10000000149011612,
+                0.0,
+                0.0,
+                0.0
+              ],
+              "sha256": "7167efd3309991bbc6b4ea784ecee4044cebcce4d290010227e50884ff793839"
+            },
+            "predictor_call_delta": 1,
+            "appended_sink_count": 1,
+            "appended_sink_records": [
+              {
+                "sequence": 1,
+                "run_id": "run-A",
+                "episode_id": "episode-A",
+                "snapshot_id": "C013-s0",
+                "observation_hash": "7167efd3309991bbc6b4ea784ecee4044cebcce4d290010227e50884ff793839",
+                "dummy_id": "constant-dummy-v1",
+                "action": [
+                  0.5,
+                  -0.5
+                ],
+                "linear": 0.03,
+                "angular": -0.06,
+                "monotonic_s": 10.0,
+                "decision": "ACCEPT",
+                "reason": "OK"
+              }
+            ],
+            "retained_history": [
+              {
+                "sequence": 1,
+                "run_id": "run-A",
+                "episode_id": "episode-A",
+                "snapshot_id": "C013-s0",
+                "observation_hash": "7167efd3309991bbc6b4ea784ecee4044cebcce4d290010227e50884ff793839",
+                "dummy_id": "constant-dummy-v1",
+                "action": [
+                  0.5,
+                  -0.5
+                ],
+                "linear": 0.03,
+                "angular": -0.06,
+                "monotonic_s": 10.0,
+                "decision": "ACCEPT",
+                "reason": "OK"
+              }
+            ],
+            "accepted_history": {
+              "scan_stamp_ns": 1000000001,
+              "odom_stamp_ns": 1000000001,
+              "dispatch_mono_s": 10.0
+            },
+            "latch": null,
+            "reset": "not_called"
+          }
+        },
+        {
+          "operation": "convert_dispatch",
+          "fresh_harness": false,
+          "overrides": {
+            "identity.snapshot_id": "C013-s1",
+            "odom.header.stamp.nanosec": 2,
+            "clock.capture_mono_s": 10.1,
+            "clock.dispatch_mono_s": 10.1
+          },
+          "delete_paths": [],
+          "expected": {
+            "attempted": true,
+            "completed": true,
+            "converter_status": true,
+            "converter_code": "ADAPTER_OK",
+            "snapshot_present": true,
+            "qualifier_status": false,
+            "qualifier_code": "NONADVANCING_STAMP",
+            "observation": "not_produced",
+            "predictor_call_delta": 0,
+            "appended_sink_count": 1,
+            "appended_sink_records": [
+              {
+                "sequence": 2,
+                "run_id": "run-A",
+                "episode_id": "episode-A",
+                "snapshot_id": "C013-s1",
+                "observation_hash": "",
+                "dummy_id": "",
+                "action": [],
+                "linear": 0.0,
+                "angular": 0.0,
+                "monotonic_s": 10.1,
+                "decision": "REJECT",
+                "reason": "NONADVANCING_STAMP"
+              }
+            ],
+            "retained_history": [
+              {
+                "sequence": 1,
+                "run_id": "run-A",
+                "episode_id": "episode-A",
+                "snapshot_id": "C013-s0",
+                "observation_hash": "7167efd3309991bbc6b4ea784ecee4044cebcce4d290010227e50884ff793839",
+                "dummy_id": "constant-dummy-v1",
+                "action": [
+                  0.5,
+                  -0.5
+                ],
+                "linear": 0.03,
+                "angular": -0.06,
+                "monotonic_s": 10.0,
+                "decision": "ACCEPT",
+                "reason": "OK"
+              },
+              {
+                "sequence": 2,
+                "run_id": "run-A",
+                "episode_id": "episode-A",
+                "snapshot_id": "C013-s1",
+                "observation_hash": "",
+                "dummy_id": "",
+                "action": [],
+                "linear": 0.0,
+                "angular": 0.0,
+                "monotonic_s": 10.1,
+                "decision": "REJECT",
+                "reason": "NONADVANCING_STAMP"
+              }
+            ],
+            "accepted_history": {
+              "scan_stamp_ns": 1000000001,
+              "odom_stamp_ns": 1000000001,
+              "dispatch_mono_s": 10.0
+            },
+            "latch": "NONADVANCING_STAMP",
+            "reset": "not_called"
+          }
+        }
+      ]
+    },
+    {
+      "id": "C014",
+      "description": "rewound odom and duplicate dispatch",
+      "steps": [
+        {
+          "operation": "convert_dispatch",
+          "fresh_harness": true,
+          "overrides": {
+            "identity.snapshot_id": "C014-s0"
+          },
+          "delete_paths": [],
+          "expected": {
+            "attempted": true,
+            "completed": true,
+            "converter_status": true,
+            "converter_code": "ADAPTER_OK",
+            "snapshot_present": true,
+            "qualifier_status": true,
+            "qualifier_code": "OK",
+            "observation": {
+              "valid": true,
+              "reason": "",
+              "shape": [
+                40
+              ],
+              "dtype": "float32",
+              "vector": [
+                1.0,
+                1.0,
+                1.0,
+                1.0,
+                1.0,
+                1.0,
+                1.0,
+                1.0,
+                1.0,
+                1.0,
+                1.0,
+                1.0,
+                1.0,
+                1.0,
+                1.0,
+                1.0,
+                1.0,
+                1.0,
+                1.0,
+                1.0,
+                1.0,
+                1.0,
+                1.0,
+                1.0,
+                1.0,
+                1.0,
+                1.0,
+                1.0,
+                1.0,
+                1.0,
+                1.0,
+                1.0,
+                1.0,
+                1.0,
+                1.0,
+                1.0,
+                0.10000000149011612,
+                0.0,
+                0.0,
+                0.0
+              ],
+              "sha256": "7167efd3309991bbc6b4ea784ecee4044cebcce4d290010227e50884ff793839"
+            },
+            "predictor_call_delta": 1,
+            "appended_sink_count": 1,
+            "appended_sink_records": [
+              {
+                "sequence": 1,
+                "run_id": "run-A",
+                "episode_id": "episode-A",
+                "snapshot_id": "C014-s0",
+                "observation_hash": "7167efd3309991bbc6b4ea784ecee4044cebcce4d290010227e50884ff793839",
+                "dummy_id": "constant-dummy-v1",
+                "action": [
+                  0.5,
+                  -0.5
+                ],
+                "linear": 0.03,
+                "angular": -0.06,
+                "monotonic_s": 10.0,
+                "decision": "ACCEPT",
+                "reason": "OK"
+              }
+            ],
+            "retained_history": [
+              {
+                "sequence": 1,
+                "run_id": "run-A",
+                "episode_id": "episode-A",
+                "snapshot_id": "C014-s0",
+                "observation_hash": "7167efd3309991bbc6b4ea784ecee4044cebcce4d290010227e50884ff793839",
+                "dummy_id": "constant-dummy-v1",
+                "action": [
+                  0.5,
+                  -0.5
+                ],
+                "linear": 0.03,
+                "angular": -0.06,
+                "monotonic_s": 10.0,
+                "decision": "ACCEPT",
+                "reason": "OK"
+              }
+            ],
+            "accepted_history": {
+              "scan_stamp_ns": 1000000001,
+              "odom_stamp_ns": 1000000001,
+              "dispatch_mono_s": 10.0
+            },
+            "latch": null,
+            "reset": "not_called"
+          }
+        },
+        {
+          "operation": "convert_dispatch",
+          "fresh_harness": false,
+          "overrides": {
+            "identity.snapshot_id": "C014-s1",
+            "scan.header.stamp.nanosec": 2,
+            "odom.header.stamp.nanosec": 0,
+            "clock.capture_mono_s": 10.1,
+            "clock.dispatch_mono_s": 10.1
+          },
+          "delete_paths": [],
+          "expected": {
+            "attempted": true,
+            "completed": true,
+            "converter_status": true,
+            "converter_code": "ADAPTER_OK",
+            "snapshot_present": true,
+            "qualifier_status": false,
+            "qualifier_code": "NONADVANCING_STAMP",
+            "observation": "not_produced",
+            "predictor_call_delta": 0,
+            "appended_sink_count": 1,
+            "appended_sink_records": [
+              {
+                "sequence": 2,
+                "run_id": "run-A",
+                "episode_id": "episode-A",
+                "snapshot_id": "C014-s1",
+                "observation_hash": "",
+                "dummy_id": "",
+                "action": [],
+                "linear": 0.0,
+                "angular": 0.0,
+                "monotonic_s": 10.1,
+                "decision": "REJECT",
+                "reason": "NONADVANCING_STAMP"
+              }
+            ],
+            "retained_history": [
+              {
+                "sequence": 1,
+                "run_id": "run-A",
+                "episode_id": "episode-A",
+                "snapshot_id": "C014-s0",
+                "observation_hash": "7167efd3309991bbc6b4ea784ecee4044cebcce4d290010227e50884ff793839",
+                "dummy_id": "constant-dummy-v1",
+                "action": [
+                  0.5,
+                  -0.5
+                ],
+                "linear": 0.03,
+                "angular": -0.06,
+                "monotonic_s": 10.0,
+                "decision": "ACCEPT",
+                "reason": "OK"
+              },
+              {
+                "sequence": 2,
+                "run_id": "run-A",
+                "episode_id": "episode-A",
+                "snapshot_id": "C014-s1",
+                "observation_hash": "",
+                "dummy_id": "",
+                "action": [],
+                "linear": 0.0,
+                "angular": 0.0,
+                "monotonic_s": 10.1,
+                "decision": "REJECT",
+                "reason": "NONADVANCING_STAMP"
+              }
+            ],
+            "accepted_history": {
+              "scan_stamp_ns": 1000000001,
+              "odom_stamp_ns": 1000000001,
+              "dispatch_mono_s": 10.0
+            },
+            "latch": "NONADVANCING_STAMP",
+            "reset": "not_called"
+          }
+        },
+        {
+          "operation": "convert_dispatch",
+          "fresh_harness": true,
+          "overrides": {
+            "identity.snapshot_id": "C014-s2"
+          },
+          "delete_paths": [],
+          "expected": {
+            "attempted": true,
+            "completed": true,
+            "converter_status": true,
+            "converter_code": "ADAPTER_OK",
+            "snapshot_present": true,
+            "qualifier_status": true,
+            "qualifier_code": "OK",
+            "observation": {
+              "valid": true,
+              "reason": "",
+              "shape": [
+                40
+              ],
+              "dtype": "float32",
+              "vector": [
+                1.0,
+                1.0,
+                1.0,
+                1.0,
+                1.0,
+                1.0,
+                1.0,
+                1.0,
+                1.0,
+                1.0,
+                1.0,
+                1.0,
+                1.0,
+                1.0,
+                1.0,
+                1.0,
+                1.0,
+                1.0,
+                1.0,
+                1.0,
+                1.0,
+                1.0,
+                1.0,
+                1.0,
+                1.0,
+                1.0,
+                1.0,
+                1.0,
+                1.0,
+                1.0,
+                1.0,
+                1.0,
+                1.0,
+                1.0,
+                1.0,
+                1.0,
+                0.10000000149011612,
+                0.0,
+                0.0,
+                0.0
+              ],
+              "sha256": "7167efd3309991bbc6b4ea784ecee4044cebcce4d290010227e50884ff793839"
+            },
+            "predictor_call_delta": 1,
+            "appended_sink_count": 1,
+            "appended_sink_records": [
+              {
+                "sequence": 1,
+                "run_id": "run-A",
+                "episode_id": "episode-A",
+                "snapshot_id": "C014-s2",
+                "observation_hash": "7167efd3309991bbc6b4ea784ecee4044cebcce4d290010227e50884ff793839",
+                "dummy_id": "constant-dummy-v1",
+                "action": [
+                  0.5,
+                  -0.5
+                ],
+                "linear": 0.03,
+                "angular": -0.06,
+                "monotonic_s": 10.0,
+                "decision": "ACCEPT",
+                "reason": "OK"
+              }
+            ],
+            "retained_history": [
+              {
+                "sequence": 1,
+                "run_id": "run-A",
+                "episode_id": "episode-A",
+                "snapshot_id": "C014-s2",
+                "observation_hash": "7167efd3309991bbc6b4ea784ecee4044cebcce4d290010227e50884ff793839",
+                "dummy_id": "constant-dummy-v1",
+                "action": [
+                  0.5,
+                  -0.5
+                ],
+                "linear": 0.03,
+                "angular": -0.06,
+                "monotonic_s": 10.0,
+                "decision": "ACCEPT",
+                "reason": "OK"
+              }
+            ],
+            "accepted_history": {
+              "scan_stamp_ns": 1000000001,
+              "odom_stamp_ns": 1000000001,
+              "dispatch_mono_s": 10.0
+            },
+            "latch": null,
+            "reset": "not_called"
+          }
+        },
+        {
+          "operation": "convert_dispatch",
+          "fresh_harness": false,
+          "overrides": {
+            "identity.snapshot_id": "C014-s3",
+            "scan.header.stamp.nanosec": 2,
+            "odom.header.stamp.nanosec": 2
+          },
+          "delete_paths": [],
+          "expected": {
+            "attempted": true,
+            "completed": true,
+            "converter_status": true,
+            "converter_code": "ADAPTER_OK",
+            "snapshot_present": true,
+            "qualifier_status": false,
+            "qualifier_code": "CLOCK_ORDER",
+            "observation": "not_produced",
+            "predictor_call_delta": 0,
+            "appended_sink_count": 1,
+            "appended_sink_records": [
+              {
+                "sequence": 2,
+                "run_id": "run-A",
+                "episode_id": "episode-A",
+                "snapshot_id": "C014-s3",
+                "observation_hash": "",
+                "dummy_id": "",
+                "action": [],
+                "linear": 0.0,
+                "angular": 0.0,
+                "monotonic_s": 10.0,
+                "decision": "REJECT",
+                "reason": "CLOCK_ORDER"
+              }
+            ],
+            "retained_history": [
+              {
+                "sequence": 1,
+                "run_id": "run-A",
+                "episode_id": "episode-A",
+                "snapshot_id": "C014-s2",
+                "observation_hash": "7167efd3309991bbc6b4ea784ecee4044cebcce4d290010227e50884ff793839",
+                "dummy_id": "constant-dummy-v1",
+                "action": [
+                  0.5,
+                  -0.5
+                ],
+                "linear": 0.03,
+                "angular": -0.06,
+                "monotonic_s": 10.0,
+                "decision": "ACCEPT",
+                "reason": "OK"
+              },
+              {
+                "sequence": 2,
+                "run_id": "run-A",
+                "episode_id": "episode-A",
+                "snapshot_id": "C014-s3",
+                "observation_hash": "",
+                "dummy_id": "",
+                "action": [],
+                "linear": 0.0,
+                "angular": 0.0,
+                "monotonic_s": 10.0,
+                "decision": "REJECT",
+                "reason": "CLOCK_ORDER"
+              }
+            ],
+            "accepted_history": {
+              "scan_stamp_ns": 1000000001,
+              "odom_stamp_ns": 1000000001,
+              "dispatch_mono_s": 10.0
+            },
+            "latch": "CLOCK_ORDER",
+            "reset": "not_called"
+          }
+        }
+      ]
+    },
+    {
+      "id": "C015",
+      "description": "freshness inclusive boundary and capture/dispatch stale",
+      "steps": [
+        {
+          "operation": "convert_dispatch",
+          "fresh_harness": true,
+          "overrides": {
+            "identity.snapshot_id": "C015-s0",
+            "clock.scan_received_mono_s": 9.5,
+            "clock.odom_received_mono_s": 9.5
+          },
+          "delete_paths": [],
+          "expected": {
+            "attempted": true,
+            "completed": true,
+            "converter_status": true,
+            "converter_code": "ADAPTER_OK",
+            "snapshot_present": true,
+            "qualifier_status": true,
+            "qualifier_code": "OK",
+            "observation": {
+              "valid": true,
+              "reason": "",
+              "shape": [
+                40
+              ],
+              "dtype": "float32",
+              "vector": [
+                1.0,
+                1.0,
+                1.0,
+                1.0,
+                1.0,
+                1.0,
+                1.0,
+                1.0,
+                1.0,
+                1.0,
+                1.0,
+                1.0,
+                1.0,
+                1.0,
+                1.0,
+                1.0,
+                1.0,
+                1.0,
+                1.0,
+                1.0,
+                1.0,
+                1.0,
+                1.0,
+                1.0,
+                1.0,
+                1.0,
+                1.0,
+                1.0,
+                1.0,
+                1.0,
+                1.0,
+                1.0,
+                1.0,
+                1.0,
+                1.0,
+                1.0,
+                0.10000000149011612,
+                0.0,
+                0.0,
+                0.0
+              ],
+              "sha256": "7167efd3309991bbc6b4ea784ecee4044cebcce4d290010227e50884ff793839"
+            },
+            "predictor_call_delta": 1,
+            "appended_sink_count": 1,
+            "appended_sink_records": [
+              {
+                "sequence": 1,
+                "run_id": "run-A",
+                "episode_id": "episode-A",
+                "snapshot_id": "C015-s0",
+                "observation_hash": "7167efd3309991bbc6b4ea784ecee4044cebcce4d290010227e50884ff793839",
+                "dummy_id": "constant-dummy-v1",
+                "action": [
+                  0.5,
+                  -0.5
+                ],
+                "linear": 0.03,
+                "angular": -0.06,
+                "monotonic_s": 10.0,
+                "decision": "ACCEPT",
+                "reason": "OK"
+              }
+            ],
+            "retained_history": [
+              {
+                "sequence": 1,
+                "run_id": "run-A",
+                "episode_id": "episode-A",
+                "snapshot_id": "C015-s0",
+                "observation_hash": "7167efd3309991bbc6b4ea784ecee4044cebcce4d290010227e50884ff793839",
+                "dummy_id": "constant-dummy-v1",
+                "action": [
+                  0.5,
+                  -0.5
+                ],
+                "linear": 0.03,
+                "angular": -0.06,
+                "monotonic_s": 10.0,
+                "decision": "ACCEPT",
+                "reason": "OK"
+              }
+            ],
+            "accepted_history": {
+              "scan_stamp_ns": 1000000001,
+              "odom_stamp_ns": 1000000001,
+              "dispatch_mono_s": 10.0
+            },
+            "latch": null,
+            "reset": "not_called"
+          }
+        },
+        {
+          "operation": "convert_dispatch",
+          "fresh_harness": true,
+          "overrides": {
+            "identity.snapshot_id": "C015-s1",
+            "clock.scan_received_mono_s": 9.5,
+            "clock.odom_received_mono_s": 9.5,
+            "clock.capture_mono_s": 10.000001,
+            "clock.dispatch_mono_s": 10.000001
+          },
+          "delete_paths": [],
+          "expected": {
+            "attempted": true,
+            "completed": true,
+            "converter_status": true,
+            "converter_code": "ADAPTER_OK",
+            "snapshot_present": true,
+            "qualifier_status": false,
+            "qualifier_code": "STALE_INPUT",
+            "observation": "not_produced",
+            "predictor_call_delta": 0,
+            "appended_sink_count": 1,
+            "appended_sink_records": [
+              {
+                "sequence": 1,
+                "run_id": "run-A",
+                "episode_id": "episode-A",
+                "snapshot_id": "C015-s1",
+                "observation_hash": "",
+                "dummy_id": "",
+                "action": [],
+                "linear": 0.0,
+                "angular": 0.0,
+                "monotonic_s": 10.000001,
+                "decision": "REJECT",
+                "reason": "STALE_INPUT"
+              }
+            ],
+            "retained_history": [
+              {
+                "sequence": 1,
+                "run_id": "run-A",
+                "episode_id": "episode-A",
+                "snapshot_id": "C015-s1",
+                "observation_hash": "",
+                "dummy_id": "",
+                "action": [],
+                "linear": 0.0,
+                "angular": 0.0,
+                "monotonic_s": 10.000001,
+                "decision": "REJECT",
+                "reason": "STALE_INPUT"
+              }
+            ],
+            "accepted_history": null,
+            "latch": "STALE_INPUT",
+            "reset": "not_called"
+          }
+        },
+        {
+          "operation": "convert_dispatch",
+          "fresh_harness": true,
+          "overrides": {
+            "identity.snapshot_id": "C015-s2",
+            "clock.scan_received_mono_s": 9.5,
+            "clock.odom_received_mono_s": 9.5,
+            "clock.dispatch_mono_s": 10.000001
+          },
+          "delete_paths": [],
+          "expected": {
+            "attempted": true,
+            "completed": true,
+            "converter_status": true,
+            "converter_code": "ADAPTER_OK",
+            "snapshot_present": true,
+            "qualifier_status": false,
+            "qualifier_code": "STALE_INPUT",
+            "observation": {
+              "valid": true,
+              "reason": "",
+              "shape": [
+                40
+              ],
+              "dtype": "float32",
+              "vector": [
+                1.0,
+                1.0,
+                1.0,
+                1.0,
+                1.0,
+                1.0,
+                1.0,
+                1.0,
+                1.0,
+                1.0,
+                1.0,
+                1.0,
+                1.0,
+                1.0,
+                1.0,
+                1.0,
+                1.0,
+                1.0,
+                1.0,
+                1.0,
+                1.0,
+                1.0,
+                1.0,
+                1.0,
+                1.0,
+                1.0,
+                1.0,
+                1.0,
+                1.0,
+                1.0,
+                1.0,
+                1.0,
+                1.0,
+                1.0,
+                1.0,
+                1.0,
+                0.10000000149011612,
+                0.0,
+                0.0,
+                0.0
+              ],
+              "sha256": "7167efd3309991bbc6b4ea784ecee4044cebcce4d290010227e50884ff793839"
+            },
+            "predictor_call_delta": 1,
+            "appended_sink_count": 1,
+            "appended_sink_records": [
+              {
+                "sequence": 1,
+                "run_id": "run-A",
+                "episode_id": "episode-A",
+                "snapshot_id": "C015-s2",
+                "observation_hash": "7167efd3309991bbc6b4ea784ecee4044cebcce4d290010227e50884ff793839",
+                "dummy_id": "",
+                "action": [],
+                "linear": 0.0,
+                "angular": 0.0,
+                "monotonic_s": 10.000001,
+                "decision": "REJECT",
+                "reason": "STALE_INPUT"
+              }
+            ],
+            "retained_history": [
+              {
+                "sequence": 1,
+                "run_id": "run-A",
+                "episode_id": "episode-A",
+                "snapshot_id": "C015-s2",
+                "observation_hash": "7167efd3309991bbc6b4ea784ecee4044cebcce4d290010227e50884ff793839",
+                "dummy_id": "",
+                "action": [],
+                "linear": 0.0,
+                "angular": 0.0,
+                "monotonic_s": 10.000001,
+                "decision": "REJECT",
+                "reason": "STALE_INPUT"
+              }
+            ],
+            "accepted_history": null,
+            "latch": "STALE_INPUT",
+            "reset": "not_called"
+          }
+        }
+      ]
+    },
+    {
+      "id": "C016",
+      "description": "clock chronology domain epoch and original age",
+      "steps": [
+        {
+          "operation": "convert_dispatch",
+          "fresh_harness": true,
+          "overrides": {
+            "identity.snapshot_id": "C016-s0",
+            "clock.scan_received_mono_s": 10.1
+          },
+          "delete_paths": [],
+          "expected": {
+            "attempted": true,
+            "completed": true,
+            "converter_status": false,
+            "converter_code": "ADAPTER_INVALID_CLOCK",
+            "snapshot_present": false,
+            "qualifier_status": "not_called",
+            "qualifier_code": "not_called",
+            "observation": "not_produced",
+            "predictor_call_delta": 0,
+            "appended_sink_count": 0,
+            "appended_sink_records": [],
+            "retained_history": [],
+            "accepted_history": null,
+            "latch": null,
+            "reset": "not_called"
+          }
+        },
+        {
+          "operation": "convert_dispatch",
+          "fresh_harness": true,
+          "overrides": {
+            "identity.snapshot_id": "C016-s1",
+            "clock.dispatch_mono_s": 9.99
+          },
+          "delete_paths": [],
+          "expected": {
+            "attempted": true,
+            "completed": true,
+            "converter_status": false,
+            "converter_code": "ADAPTER_INVALID_CLOCK",
+            "snapshot_present": false,
+            "qualifier_status": "not_called",
+            "qualifier_code": "not_called",
+            "observation": "not_produced",
+            "predictor_call_delta": 0,
+            "appended_sink_count": 0,
+            "appended_sink_records": [],
+            "retained_history": [],
+            "accepted_history": null,
+            "latch": null,
+            "reset": "not_called"
+          }
+        },
+        {
+          "operation": "convert_dispatch",
+          "fresh_harness": true,
+          "overrides": {
+            "identity.snapshot_id": "C016-s2",
+            "clock.domain": "other"
+          },
+          "delete_paths": [],
+          "expected": {
+            "attempted": true,
+            "completed": true,
+            "converter_status": false,
+            "converter_code": "ADAPTER_CLOCK_EPOCH",
+            "snapshot_present": false,
+            "qualifier_status": "not_called",
+            "qualifier_code": "not_called",
+            "observation": "not_produced",
+            "predictor_call_delta": 0,
+            "appended_sink_count": 0,
+            "appended_sink_records": [],
+            "retained_history": [],
+            "accepted_history": null,
+            "latch": null,
+            "reset": "not_called"
+          }
+        },
+        {
+          "operation": "convert_dispatch",
+          "fresh_harness": true,
+          "overrides": {
+            "identity.snapshot_id": "C016-s3",
+            "clock.epoch": "epoch-B"
+          },
+          "delete_paths": [],
+          "expected": {
+            "attempted": true,
+            "completed": true,
+            "converter_status": false,
+            "converter_code": "ADAPTER_CLOCK_EPOCH",
+            "snapshot_present": false,
+            "qualifier_status": "not_called",
+            "qualifier_code": "not_called",
+            "observation": "not_produced",
+            "predictor_call_delta": 0,
+            "appended_sink_count": 0,
+            "appended_sink_records": [],
+            "retained_history": [],
+            "accepted_history": null,
+            "latch": null,
+            "reset": "not_called"
+          }
+        },
+        {
+          "operation": "convert_dispatch",
+          "fresh_harness": true,
+          "overrides": {
+            "identity.snapshot_id": "C016-s4",
+            "clock.scan_received_mono_s": 9.499999
+          },
+          "delete_paths": [],
+          "expected": {
+            "attempted": true,
+            "completed": true,
+            "converter_status": true,
+            "converter_code": "ADAPTER_OK",
+            "snapshot_present": true,
+            "qualifier_status": false,
+            "qualifier_code": "STALE_INPUT",
+            "observation": "not_produced",
+            "predictor_call_delta": 0,
+            "appended_sink_count": 1,
+            "appended_sink_records": [
+              {
+                "sequence": 1,
+                "run_id": "run-A",
+                "episode_id": "episode-A",
+                "snapshot_id": "C016-s4",
+                "observation_hash": "",
+                "dummy_id": "",
+                "action": [],
+                "linear": 0.0,
+                "angular": 0.0,
+                "monotonic_s": 10.0,
+                "decision": "REJECT",
+                "reason": "STALE_INPUT"
+              }
+            ],
+            "retained_history": [
+              {
+                "sequence": 1,
+                "run_id": "run-A",
+                "episode_id": "episode-A",
+                "snapshot_id": "C016-s4",
+                "observation_hash": "",
+                "dummy_id": "",
+                "action": [],
+                "linear": 0.0,
+                "angular": 0.0,
+                "monotonic_s": 10.0,
+                "decision": "REJECT",
+                "reason": "STALE_INPUT"
+              }
+            ],
+            "accepted_history": null,
+            "latch": "STALE_INPUT",
+            "reset": "not_called"
+          }
+        }
+      ]
+    },
+    {
+      "id": "C017",
+      "description": "frame labels preserved",
+      "steps": [
+        {
+          "operation": "convert_dispatch",
+          "fresh_harness": true,
+          "overrides": {
+            "identity.snapshot_id": "C017-s0",
+            "scan.header.frame_id": "other-frame"
+          },
+          "delete_paths": [],
+          "expected": {
+            "attempted": true,
+            "completed": true,
+            "converter_status": true,
+            "converter_code": "ADAPTER_OK",
+            "snapshot_present": true,
+            "qualifier_status": false,
+            "qualifier_code": "FRAME_MISMATCH",
+            "observation": "not_produced",
+            "predictor_call_delta": 0,
+            "appended_sink_count": 1,
+            "appended_sink_records": [
+              {
+                "sequence": 1,
+                "run_id": "run-A",
+                "episode_id": "episode-A",
+                "snapshot_id": "C017-s0",
+                "observation_hash": "",
+                "dummy_id": "",
+                "action": [],
+                "linear": 0.0,
+                "angular": 0.0,
+                "monotonic_s": 10.0,
+                "decision": "REJECT",
+                "reason": "FRAME_MISMATCH"
+              }
+            ],
+            "retained_history": [
+              {
+                "sequence": 1,
+                "run_id": "run-A",
+                "episode_id": "episode-A",
+                "snapshot_id": "C017-s0",
+                "observation_hash": "",
+                "dummy_id": "",
+                "action": [],
+                "linear": 0.0,
+                "angular": 0.0,
+                "monotonic_s": 10.0,
+                "decision": "REJECT",
+                "reason": "FRAME_MISMATCH"
+              }
+            ],
+            "accepted_history": null,
+            "latch": "FRAME_MISMATCH",
+            "reset": "not_called"
+          }
+        },
+        {
+          "operation": "convert_dispatch",
+          "fresh_harness": true,
+          "overrides": {
+            "identity.snapshot_id": "C017-s1",
+            "odom.child_frame_id": "other-frame"
+          },
+          "delete_paths": [],
+          "expected": {
+            "attempted": true,
+            "completed": true,
+            "converter_status": true,
+            "converter_code": "ADAPTER_OK",
+            "snapshot_present": true,
+            "qualifier_status": false,
+            "qualifier_code": "FRAME_MISMATCH",
+            "observation": "not_produced",
+            "predictor_call_delta": 0,
+            "appended_sink_count": 1,
+            "appended_sink_records": [
+              {
+                "sequence": 1,
+                "run_id": "run-A",
+                "episode_id": "episode-A",
+                "snapshot_id": "C017-s1",
+                "observation_hash": "",
+                "dummy_id": "",
+                "action": [],
+                "linear": 0.0,
+                "angular": 0.0,
+                "monotonic_s": 10.0,
+                "decision": "REJECT",
+                "reason": "FRAME_MISMATCH"
+              }
+            ],
+            "retained_history": [
+              {
+                "sequence": 1,
+                "run_id": "run-A",
+                "episode_id": "episode-A",
+                "snapshot_id": "C017-s1",
+                "observation_hash": "",
+                "dummy_id": "",
+                "action": [],
+                "linear": 0.0,
+                "angular": 0.0,
+                "monotonic_s": 10.0,
+                "decision": "REJECT",
+                "reason": "FRAME_MISMATCH"
+              }
+            ],
+            "accepted_history": null,
+            "latch": "FRAME_MISMATCH",
+            "reset": "not_called"
+          }
+        }
+      ]
+    },
+    {
+      "id": "C018",
+      "description": "source identifiers preserved",
+      "steps": [
+        {
+          "operation": "convert_dispatch",
+          "fresh_harness": true,
+          "overrides": {
+            "identity.snapshot_id": "C018-s0",
+            "scan_source.source_id": "other-source"
+          },
+          "delete_paths": [],
+          "expected": {
+            "attempted": true,
+            "completed": true,
+            "converter_status": true,
+            "converter_code": "ADAPTER_OK",
+            "snapshot_present": true,
+            "qualifier_status": false,
+            "qualifier_code": "SOURCE_MISMATCH",
+            "observation": "not_produced",
+            "predictor_call_delta": 0,
+            "appended_sink_count": 1,
+            "appended_sink_records": [
+              {
+                "sequence": 1,
+                "run_id": "run-A",
+                "episode_id": "episode-A",
+                "snapshot_id": "C018-s0",
+                "observation_hash": "",
+                "dummy_id": "",
+                "action": [],
+                "linear": 0.0,
+                "angular": 0.0,
+                "monotonic_s": 10.0,
+                "decision": "REJECT",
+                "reason": "SOURCE_MISMATCH"
+              }
+            ],
+            "retained_history": [
+              {
+                "sequence": 1,
+                "run_id": "run-A",
+                "episode_id": "episode-A",
+                "snapshot_id": "C018-s0",
+                "observation_hash": "",
+                "dummy_id": "",
+                "action": [],
+                "linear": 0.0,
+                "angular": 0.0,
+                "monotonic_s": 10.0,
+                "decision": "REJECT",
+                "reason": "SOURCE_MISMATCH"
+              }
+            ],
+            "accepted_history": null,
+            "latch": "SOURCE_MISMATCH",
+            "reset": "not_called"
+          }
+        },
+        {
+          "operation": "convert_dispatch",
+          "fresh_harness": true,
+          "overrides": {
+            "identity.snapshot_id": "C018-s1",
+            "odom_source.source_id": "other-source"
+          },
+          "delete_paths": [],
+          "expected": {
+            "attempted": true,
+            "completed": true,
+            "converter_status": true,
+            "converter_code": "ADAPTER_OK",
+            "snapshot_present": true,
+            "qualifier_status": false,
+            "qualifier_code": "SOURCE_MISMATCH",
+            "observation": "not_produced",
+            "predictor_call_delta": 0,
+            "appended_sink_count": 1,
+            "appended_sink_records": [
+              {
+                "sequence": 1,
+                "run_id": "run-A",
+                "episode_id": "episode-A",
+                "snapshot_id": "C018-s1",
+                "observation_hash": "",
+                "dummy_id": "",
+                "action": [],
+                "linear": 0.0,
+                "angular": 0.0,
+                "monotonic_s": 10.0,
+                "decision": "REJECT",
+                "reason": "SOURCE_MISMATCH"
+              }
+            ],
+            "retained_history": [
+              {
+                "sequence": 1,
+                "run_id": "run-A",
+                "episode_id": "episode-A",
+                "snapshot_id": "C018-s1",
+                "observation_hash": "",
+                "dummy_id": "",
+                "action": [],
+                "linear": 0.0,
+                "angular": 0.0,
+                "monotonic_s": 10.0,
+                "decision": "REJECT",
+                "reason": "SOURCE_MISMATCH"
+              }
+            ],
+            "accepted_history": null,
+            "latch": "SOURCE_MISMATCH",
+            "reset": "not_called"
+          }
+        }
+      ]
+    },
+    {
+      "id": "C019",
+      "description": "finite geometry mismatch preserved",
+      "steps": [
+        {
+          "operation": "convert_dispatch",
+          "fresh_harness": true,
+          "overrides": {
+            "identity.snapshot_id": "C019-s0",
+            "scan.angle_min": -3.1315926535897933
+          },
+          "delete_paths": [],
+          "expected": {
+            "attempted": true,
+            "completed": true,
+            "converter_status": true,
+            "converter_code": "ADAPTER_OK",
+            "snapshot_present": true,
+            "qualifier_status": false,
+            "qualifier_code": "GEOMETRY_MISMATCH",
+            "observation": "not_produced",
+            "predictor_call_delta": 0,
+            "appended_sink_count": 1,
+            "appended_sink_records": [
+              {
+                "sequence": 1,
+                "run_id": "run-A",
+                "episode_id": "episode-A",
+                "snapshot_id": "C019-s0",
+                "observation_hash": "",
+                "dummy_id": "",
+                "action": [],
+                "linear": 0.0,
+                "angular": 0.0,
+                "monotonic_s": 10.0,
+                "decision": "REJECT",
+                "reason": "GEOMETRY_MISMATCH"
+              }
+            ],
+            "retained_history": [
+              {
+                "sequence": 1,
+                "run_id": "run-A",
+                "episode_id": "episode-A",
+                "snapshot_id": "C019-s0",
+                "observation_hash": "",
+                "dummy_id": "",
+                "action": [],
+                "linear": 0.0,
+                "angular": 0.0,
+                "monotonic_s": 10.0,
+                "decision": "REJECT",
+                "reason": "GEOMETRY_MISMATCH"
+              }
+            ],
+            "accepted_history": null,
+            "latch": "GEOMETRY_MISMATCH",
+            "reset": "not_called"
+          }
+        },
+        {
+          "operation": "convert_dispatch",
+          "fresh_harness": true,
+          "overrides": {
+            "identity.snapshot_id": "C019-s1",
+            "scan.angle_increment": 0.17627825445142728
+          },
+          "delete_paths": [],
+          "expected": {
+            "attempted": true,
+            "completed": true,
+            "converter_status": true,
+            "converter_code": "ADAPTER_OK",
+            "snapshot_present": true,
+            "qualifier_status": false,
+            "qualifier_code": "GEOMETRY_MISMATCH",
+            "observation": "not_produced",
+            "predictor_call_delta": 0,
+            "appended_sink_count": 1,
+            "appended_sink_records": [
+              {
+                "sequence": 1,
+                "run_id": "run-A",
+                "episode_id": "episode-A",
+                "snapshot_id": "C019-s1",
+                "observation_hash": "",
+                "dummy_id": "",
+                "action": [],
+                "linear": 0.0,
+                "angular": 0.0,
+                "monotonic_s": 10.0,
+                "decision": "REJECT",
+                "reason": "GEOMETRY_MISMATCH"
+              }
+            ],
+            "retained_history": [
+              {
+                "sequence": 1,
+                "run_id": "run-A",
+                "episode_id": "episode-A",
+                "snapshot_id": "C019-s1",
+                "observation_hash": "",
+                "dummy_id": "",
+                "action": [],
+                "linear": 0.0,
+                "angular": 0.0,
+                "monotonic_s": 10.0,
+                "decision": "REJECT",
+                "reason": "GEOMETRY_MISMATCH"
+              }
+            ],
+            "accepted_history": null,
+            "latch": "GEOMETRY_MISMATCH",
+            "reset": "not_called"
+          }
+        }
+      ]
+    },
+    {
+      "id": "C020",
+      "description": "other-frame goal unavailable including alleged alignment",
+      "steps": [
+        {
+          "operation": "convert_dispatch",
+          "fresh_harness": true,
+          "overrides": {
+            "identity.snapshot_id": "C020-s0",
+            "goal.frame_id": "map",
+            "goal.alignment_reference": "none"
+          },
+          "delete_paths": [],
+          "expected": {
+            "attempted": true,
+            "completed": true,
+            "converter_status": false,
+            "converter_code": "ADAPTER_TRANSFORM_UNAVAILABLE",
+            "snapshot_present": false,
+            "qualifier_status": "not_called",
+            "qualifier_code": "not_called",
+            "observation": "not_produced",
+            "predictor_call_delta": 0,
+            "appended_sink_count": 0,
+            "appended_sink_records": [],
+            "retained_history": [],
+            "accepted_history": null,
+            "latch": null,
+            "reset": "not_called"
+          }
+        },
+        {
+          "operation": "convert_dispatch",
+          "fresh_harness": true,
+          "overrides": {
+            "identity.snapshot_id": "C020-s1",
+            "goal.frame_id": "world",
+            "goal.alignment_reference": "none"
+          },
+          "delete_paths": [],
+          "expected": {
+            "attempted": true,
+            "completed": true,
+            "converter_status": false,
+            "converter_code": "ADAPTER_TRANSFORM_UNAVAILABLE",
+            "snapshot_present": false,
+            "qualifier_status": "not_called",
+            "qualifier_code": "not_called",
+            "observation": "not_produced",
+            "predictor_call_delta": 0,
+            "appended_sink_count": 0,
+            "appended_sink_records": [],
+            "retained_history": [],
+            "accepted_history": null,
+            "latch": null,
+            "reset": "not_called"
+          }
+        },
+        {
+          "operation": "convert_dispatch",
+          "fresh_harness": true,
+          "overrides": {
+            "identity.snapshot_id": "C020-s2",
+            "goal.frame_id": "map",
+            "goal.alignment_reference": "alleged-transform-identity"
+          },
+          "delete_paths": [],
+          "expected": {
+            "attempted": true,
+            "completed": true,
+            "converter_status": false,
+            "converter_code": "ADAPTER_TRANSFORM_UNAVAILABLE",
+            "snapshot_present": false,
+            "qualifier_status": "not_called",
+            "qualifier_code": "not_called",
+            "observation": "not_produced",
+            "predictor_call_delta": 0,
+            "appended_sink_count": 0,
+            "appended_sink_records": [],
+            "retained_history": [],
+            "accepted_history": null,
+            "latch": null,
+            "reset": "not_called"
+          }
+        }
+      ]
+    },
+    {
+      "id": "C021",
+      "description": "invalid lidar preserved for existing builder",
+      "steps": [
+        {
+          "operation": "convert_dispatch",
+          "fresh_harness": true,
+          "overrides": {
+            "identity.snapshot_id": "C021-s0",
+            "scan.ranges": [
+              "NaN",
+              "NaN",
+              "NaN",
+              "NaN",
+              "NaN",
+              "NaN",
+              "NaN",
+              "NaN",
+              "NaN",
+              "NaN",
+              "NaN",
+              "NaN",
+              "NaN",
+              "NaN",
+              "NaN",
+              "NaN",
+              "NaN",
+              "NaN",
+              "NaN",
+              "NaN",
+              "NaN",
+              "NaN",
+              "NaN",
+              "NaN",
+              "NaN",
+              "NaN",
+              "NaN",
+              "NaN",
+              "NaN",
+              "NaN",
+              "NaN",
+              "NaN",
+              "NaN",
+              "NaN",
+              "NaN",
+              "NaN"
+            ]
+          },
+          "delete_paths": [],
+          "expected": {
+            "attempted": true,
+            "completed": true,
+            "converter_status": true,
+            "converter_code": "ADAPTER_OK",
+            "snapshot_present": true,
+            "qualifier_status": false,
+            "qualifier_code": "INVALID_OBSERVATION",
+            "observation": {
+              "valid": false,
+              "reason": "Invalid LiDAR data",
+              "shape": [
+                40
+              ],
+              "dtype": "float32",
+              "vector": [
+                0.0,
+                0.0,
+                0.0,
+                0.0,
+                0.0,
+                0.0,
+                0.0,
+                0.0,
+                0.0,
+                0.0,
+                0.0,
+                0.0,
+                0.0,
+                0.0,
+                0.0,
+                0.0,
+                0.0,
+                0.0,
+                0.0,
+                0.0,
+                0.0,
+                0.0,
+                0.0,
+                0.0,
+                0.0,
+                0.0,
+                0.0,
+                0.0,
+                0.0,
+                0.0,
+                0.0,
+                0.0,
+                0.0,
+                0.0,
+                0.0,
+                0.0,
+                0.0,
+                0.0,
+                0.0,
+                0.0
+              ],
+              "sha256": "b393978842a0fa3d3e1470196f098f473f9678e72463cb65ec4ab5581856c2e4"
+            },
+            "predictor_call_delta": 0,
+            "appended_sink_count": 1,
+            "appended_sink_records": [
+              {
+                "sequence": 1,
+                "run_id": "run-A",
+                "episode_id": "episode-A",
+                "snapshot_id": "C021-s0",
+                "observation_hash": "b393978842a0fa3d3e1470196f098f473f9678e72463cb65ec4ab5581856c2e4",
+                "dummy_id": "",
+                "action": [],
+                "linear": 0.0,
+                "angular": 0.0,
+                "monotonic_s": 10.0,
+                "decision": "REJECT",
+                "reason": "INVALID_OBSERVATION"
+              }
+            ],
+            "retained_history": [
+              {
+                "sequence": 1,
+                "run_id": "run-A",
+                "episode_id": "episode-A",
+                "snapshot_id": "C021-s0",
+                "observation_hash": "b393978842a0fa3d3e1470196f098f473f9678e72463cb65ec4ab5581856c2e4",
+                "dummy_id": "",
+                "action": [],
+                "linear": 0.0,
+                "angular": 0.0,
+                "monotonic_s": 10.0,
+                "decision": "REJECT",
+                "reason": "INVALID_OBSERVATION"
+              }
+            ],
+            "accepted_history": null,
+            "latch": "INVALID_OBSERVATION",
+            "reset": "not_called"
+          }
+        },
+        {
+          "operation": "convert_dispatch",
+          "fresh_harness": true,
+          "overrides": {
+            "identity.snapshot_id": "C021-s1",
+            "scan.ranges": [
+              0.0,
+              12.0,
+              12.0,
+              12.0,
+              12.0,
+              12.0,
+              12.0,
+              12.0,
+              12.0,
+              12.0,
+              12.0,
+              12.0,
+              12.0,
+              12.0,
+              12.0,
+              12.0,
+              12.0,
+              12.0,
+              12.0,
+              12.0,
+              12.0,
+              12.0,
+              12.0,
+              12.0,
+              12.0,
+              12.0,
+              12.0,
+              12.0,
+              12.0,
+              12.0,
+              12.0,
+              12.0,
+              12.0,
+              12.0,
+              12.0,
+              12.0
+            ]
+          },
+          "delete_paths": [],
+          "expected": {
+            "attempted": true,
+            "completed": true,
+            "converter_status": true,
+            "converter_code": "ADAPTER_OK",
+            "snapshot_present": true,
+            "qualifier_status": false,
+            "qualifier_code": "INVALID_OBSERVATION",
+            "observation": {
+              "valid": false,
+              "reason": "Invalid LiDAR data",
+              "shape": [
+                40
+              ],
+              "dtype": "float32",
+              "vector": [
+                0.0,
+                0.0,
+                0.0,
+                0.0,
+                0.0,
+                0.0,
+                0.0,
+                0.0,
+                0.0,
+                0.0,
+                0.0,
+                0.0,
+                0.0,
+                0.0,
+                0.0,
+                0.0,
+                0.0,
+                0.0,
+                0.0,
+                0.0,
+                0.0,
+                0.0,
+                0.0,
+                0.0,
+                0.0,
+                0.0,
+                0.0,
+                0.0,
+                0.0,
+                0.0,
+                0.0,
+                0.0,
+                0.0,
+                0.0,
+                0.0,
+                0.0,
+                0.0,
+                0.0,
+                0.0,
+                0.0
+              ],
+              "sha256": "b393978842a0fa3d3e1470196f098f473f9678e72463cb65ec4ab5581856c2e4"
+            },
+            "predictor_call_delta": 0,
+            "appended_sink_count": 1,
+            "appended_sink_records": [
+              {
+                "sequence": 1,
+                "run_id": "run-A",
+                "episode_id": "episode-A",
+                "snapshot_id": "C021-s1",
+                "observation_hash": "b393978842a0fa3d3e1470196f098f473f9678e72463cb65ec4ab5581856c2e4",
+                "dummy_id": "",
+                "action": [],
+                "linear": 0.0,
+                "angular": 0.0,
+                "monotonic_s": 10.0,
+                "decision": "REJECT",
+                "reason": "INVALID_OBSERVATION"
+              }
+            ],
+            "retained_history": [
+              {
+                "sequence": 1,
+                "run_id": "run-A",
+                "episode_id": "episode-A",
+                "snapshot_id": "C021-s1",
+                "observation_hash": "b393978842a0fa3d3e1470196f098f473f9678e72463cb65ec4ab5581856c2e4",
+                "dummy_id": "",
+                "action": [],
+                "linear": 0.0,
+                "angular": 0.0,
+                "monotonic_s": 10.0,
+                "decision": "REJECT",
+                "reason": "INVALID_OBSERVATION"
+              }
+            ],
+            "accepted_history": null,
+            "latch": "INVALID_OBSERVATION",
+            "reset": "not_called"
+          }
+        },
+        {
+          "operation": "convert_dispatch",
+          "fresh_harness": true,
+          "overrides": {
+            "identity.snapshot_id": "C021-s2",
+            "scan.ranges": [
+              "-Inf",
+              12.0,
+              12.0,
+              12.0,
+              12.0,
+              12.0,
+              12.0,
+              12.0,
+              12.0,
+              12.0,
+              12.0,
+              12.0,
+              12.0,
+              12.0,
+              12.0,
+              12.0,
+              12.0,
+              12.0,
+              12.0,
+              12.0,
+              12.0,
+              12.0,
+              12.0,
+              12.0,
+              12.0,
+              12.0,
+              12.0,
+              12.0,
+              12.0,
+              12.0,
+              12.0,
+              12.0,
+              12.0,
+              12.0,
+              12.0,
+              12.0
+            ]
+          },
+          "delete_paths": [],
+          "expected": {
+            "attempted": true,
+            "completed": true,
+            "converter_status": true,
+            "converter_code": "ADAPTER_OK",
+            "snapshot_present": true,
+            "qualifier_status": false,
+            "qualifier_code": "INVALID_OBSERVATION",
+            "observation": {
+              "valid": false,
+              "reason": "Invalid LiDAR data",
+              "shape": [
+                40
+              ],
+              "dtype": "float32",
+              "vector": [
+                0.0,
+                0.0,
+                0.0,
+                0.0,
+                0.0,
+                0.0,
+                0.0,
+                0.0,
+                0.0,
+                0.0,
+                0.0,
+                0.0,
+                0.0,
+                0.0,
+                0.0,
+                0.0,
+                0.0,
+                0.0,
+                0.0,
+                0.0,
+                0.0,
+                0.0,
+                0.0,
+                0.0,
+                0.0,
+                0.0,
+                0.0,
+                0.0,
+                0.0,
+                0.0,
+                0.0,
+                0.0,
+                0.0,
+                0.0,
+                0.0,
+                0.0,
+                0.0,
+                0.0,
+                0.0,
+                0.0
+              ],
+              "sha256": "b393978842a0fa3d3e1470196f098f473f9678e72463cb65ec4ab5581856c2e4"
+            },
+            "predictor_call_delta": 0,
+            "appended_sink_count": 1,
+            "appended_sink_records": [
+              {
+                "sequence": 1,
+                "run_id": "run-A",
+                "episode_id": "episode-A",
+                "snapshot_id": "C021-s2",
+                "observation_hash": "b393978842a0fa3d3e1470196f098f473f9678e72463cb65ec4ab5581856c2e4",
+                "dummy_id": "",
+                "action": [],
+                "linear": 0.0,
+                "angular": 0.0,
+                "monotonic_s": 10.0,
+                "decision": "REJECT",
+                "reason": "INVALID_OBSERVATION"
+              }
+            ],
+            "retained_history": [
+              {
+                "sequence": 1,
+                "run_id": "run-A",
+                "episode_id": "episode-A",
+                "snapshot_id": "C021-s2",
+                "observation_hash": "b393978842a0fa3d3e1470196f098f473f9678e72463cb65ec4ab5581856c2e4",
+                "dummy_id": "",
+                "action": [],
+                "linear": 0.0,
+                "angular": 0.0,
+                "monotonic_s": 10.0,
+                "decision": "REJECT",
+                "reason": "INVALID_OBSERVATION"
+              }
+            ],
+            "accepted_history": null,
+            "latch": "INVALID_OBSERVATION",
+            "reset": "not_called"
+          }
+        },
+        {
+          "operation": "convert_dispatch",
+          "fresh_harness": true,
+          "overrides": {
+            "identity.snapshot_id": "C021-s3",
+            "scan.ranges": [
+              12.0,
+              12.0,
+              12.0,
+              12.0,
+              12.0,
+              12.0,
+              12.0,
+              12.0,
+              12.0,
+              12.0,
+              12.0,
+              12.0,
+              12.0,
+              12.0,
+              12.0,
+              12.0,
+              12.0,
+              12.0
+            ],
+            "scan.angle_increment": 0.3490658503988659
+          },
+          "delete_paths": [],
+          "expected": {
+            "attempted": true,
+            "completed": true,
+            "converter_status": true,
+            "converter_code": "ADAPTER_OK",
+            "snapshot_present": true,
+            "qualifier_status": false,
+            "qualifier_code": "INVALID_OBSERVATION",
+            "observation": {
+              "valid": false,
+              "reason": "Invalid LiDAR data",
+              "shape": [
+                40
+              ],
+              "dtype": "float32",
+              "vector": [
+                0.0,
+                0.0,
+                0.0,
+                0.0,
+                0.0,
+                0.0,
+                0.0,
+                0.0,
+                0.0,
+                0.0,
+                0.0,
+                0.0,
+                0.0,
+                0.0,
+                0.0,
+                0.0,
+                0.0,
+                0.0,
+                0.0,
+                0.0,
+                0.0,
+                0.0,
+                0.0,
+                0.0,
+                0.0,
+                0.0,
+                0.0,
+                0.0,
+                0.0,
+                0.0,
+                0.0,
+                0.0,
+                0.0,
+                0.0,
+                0.0,
+                0.0,
+                0.0,
+                0.0,
+                0.0,
+                0.0
+              ],
+              "sha256": "b393978842a0fa3d3e1470196f098f473f9678e72463cb65ec4ab5581856c2e4"
+            },
+            "predictor_call_delta": 0,
+            "appended_sink_count": 1,
+            "appended_sink_records": [
+              {
+                "sequence": 1,
+                "run_id": "run-A",
+                "episode_id": "episode-A",
+                "snapshot_id": "C021-s3",
+                "observation_hash": "b393978842a0fa3d3e1470196f098f473f9678e72463cb65ec4ab5581856c2e4",
+                "dummy_id": "",
+                "action": [],
+                "linear": 0.0,
+                "angular": 0.0,
+                "monotonic_s": 10.0,
+                "decision": "REJECT",
+                "reason": "INVALID_OBSERVATION"
+              }
+            ],
+            "retained_history": [
+              {
+                "sequence": 1,
+                "run_id": "run-A",
+                "episode_id": "episode-A",
+                "snapshot_id": "C021-s3",
+                "observation_hash": "b393978842a0fa3d3e1470196f098f473f9678e72463cb65ec4ab5581856c2e4",
+                "dummy_id": "",
+                "action": [],
+                "linear": 0.0,
+                "angular": 0.0,
+                "monotonic_s": 10.0,
+                "decision": "REJECT",
+                "reason": "INVALID_OBSERVATION"
+              }
+            ],
+            "accepted_history": null,
+            "latch": "INVALID_OBSERVATION",
+            "reset": "not_called"
+          }
+        },
+        {
+          "operation": "convert_dispatch",
+          "fresh_harness": true,
+          "overrides": {
+            "identity.snapshot_id": "C021-s4",
+            "scan.ranges": [
+              [
+                12.0
+              ],
+              [
+                12.0
+              ],
+              [
+                12.0
+              ],
+              [
+                12.0
+              ],
+              [
+                12.0
+              ],
+              [
+                12.0
+              ],
+              [
+                12.0
+              ],
+              [
+                12.0
+              ],
+              [
+                12.0
+              ],
+              [
+                12.0
+              ],
+              [
+                12.0
+              ],
+              [
+                12.0
+              ],
+              [
+                12.0
+              ],
+              [
+                12.0
+              ],
+              [
+                12.0
+              ],
+              [
+                12.0
+              ],
+              [
+                12.0
+              ],
+              [
+                12.0
+              ],
+              [
+                12.0
+              ],
+              [
+                12.0
+              ],
+              [
+                12.0
+              ],
+              [
+                12.0
+              ],
+              [
+                12.0
+              ],
+              [
+                12.0
+              ],
+              [
+                12.0
+              ],
+              [
+                12.0
+              ],
+              [
+                12.0
+              ],
+              [
+                12.0
+              ],
+              [
+                12.0
+              ],
+              [
+                12.0
+              ],
+              [
+                12.0
+              ],
+              [
+                12.0
+              ],
+              [
+                12.0
+              ],
+              [
+                12.0
+              ],
+              [
+                12.0
+              ],
+              [
+                12.0
+              ]
+            ]
+          },
+          "delete_paths": [],
+          "expected": {
+            "attempted": true,
+            "completed": true,
+            "converter_status": false,
+            "converter_code": "ADAPTER_SCHEMA",
+            "snapshot_present": false,
+            "qualifier_status": "not_called",
+            "qualifier_code": "not_called",
+            "observation": "not_produced",
+            "predictor_call_delta": 0,
+            "appended_sink_count": 0,
+            "appended_sink_records": [],
+            "retained_history": [],
+            "accepted_history": null,
+            "latch": null,
+            "reset": "not_called"
+          }
+        }
+      ]
+    },
+    {
+      "id": "C022",
+      "description": "quaternion and planar validation",
+      "steps": [
+        {
+          "operation": "convert_dispatch",
+          "fresh_harness": true,
+          "overrides": {
+            "identity.snapshot_id": "C022-s0",
+            "odom.pose.pose.orientation": {
+              "x": 0,
+              "y": 0,
+              "z": 0,
+              "w": 0
+            }
+          },
+          "delete_paths": [],
+          "expected": {
+            "attempted": true,
+            "completed": true,
+            "converter_status": false,
+            "converter_code": "ADAPTER_INVALID_QUATERNION",
+            "snapshot_present": false,
+            "qualifier_status": "not_called",
+            "qualifier_code": "not_called",
+            "observation": "not_produced",
+            "predictor_call_delta": 0,
+            "appended_sink_count": 0,
+            "appended_sink_records": [],
+            "retained_history": [],
+            "accepted_history": null,
+            "latch": null,
+            "reset": "not_called"
+          }
+        },
+        {
+          "operation": "convert_dispatch",
+          "fresh_harness": true,
+          "overrides": {
+            "identity.snapshot_id": "C022-s1",
+            "odom.pose.pose.orientation": {
+              "x": 0,
+              "y": 0,
+              "z": 0,
+              "w": 2
+            }
+          },
+          "delete_paths": [],
+          "expected": {
+            "attempted": true,
+            "completed": true,
+            "converter_status": false,
+            "converter_code": "ADAPTER_INVALID_QUATERNION",
+            "snapshot_present": false,
+            "qualifier_status": "not_called",
+            "qualifier_code": "not_called",
+            "observation": "not_produced",
+            "predictor_call_delta": 0,
+            "appended_sink_count": 0,
+            "appended_sink_records": [],
+            "retained_history": [],
+            "accepted_history": null,
+            "latch": null,
+            "reset": "not_called"
+          }
+        },
+        {
+          "operation": "convert_dispatch",
+          "fresh_harness": true,
+          "overrides": {
+            "identity.snapshot_id": "C022-s2",
+            "odom.pose.pose.orientation": {
+              "x": 0,
+              "y": 0,
+              "z": "NaN",
+              "w": 1
+            }
+          },
+          "delete_paths": [],
+          "expected": {
+            "attempted": true,
+            "completed": true,
+            "converter_status": false,
+            "converter_code": "ADAPTER_INVALID_QUATERNION",
+            "snapshot_present": false,
+            "qualifier_status": "not_called",
+            "qualifier_code": "not_called",
+            "observation": "not_produced",
+            "predictor_call_delta": 0,
+            "appended_sink_count": 0,
+            "appended_sink_records": [],
+            "retained_history": [],
+            "accepted_history": null,
+            "latch": null,
+            "reset": "not_called"
+          }
+        },
+        {
+          "operation": "convert_dispatch",
+          "fresh_harness": true,
+          "overrides": {
+            "identity.snapshot_id": "C022-s3",
+            "odom.pose.pose.orientation": {
+              "x": 1,
+              "y": 0,
+              "z": 0,
+              "w": 0
+            }
+          },
+          "delete_paths": [],
+          "expected": {
+            "attempted": true,
+            "completed": true,
+            "converter_status": false,
+            "converter_code": "ADAPTER_NONPLANAR",
+            "snapshot_present": false,
+            "qualifier_status": "not_called",
+            "qualifier_code": "not_called",
+            "observation": "not_produced",
+            "predictor_call_delta": 0,
+            "appended_sink_count": 0,
+            "appended_sink_records": [],
+            "retained_history": [],
+            "accepted_history": null,
+            "latch": null,
+            "reset": "not_called"
+          }
+        },
+        {
+          "operation": "convert_dispatch",
+          "fresh_harness": true,
+          "overrides": {
+            "identity.snapshot_id": "C022-s4",
+            "odom.pose.pose.orientation": {
+              "x": 0,
+              "y": 1,
+              "z": 0,
+              "w": 0
+            }
+          },
+          "delete_paths": [],
+          "expected": {
+            "attempted": true,
+            "completed": true,
+            "converter_status": false,
+            "converter_code": "ADAPTER_NONPLANAR",
+            "snapshot_present": false,
+            "qualifier_status": "not_called",
+            "qualifier_code": "not_called",
+            "observation": "not_produced",
+            "predictor_call_delta": 0,
+            "appended_sink_count": 0,
+            "appended_sink_records": [],
+            "retained_history": [],
+            "accepted_history": null,
+            "latch": null,
+            "reset": "not_called"
+          }
+        },
+        {
+          "operation": "convert_dispatch",
+          "fresh_harness": true,
+          "overrides": {
+            "identity.snapshot_id": "C022-s5",
+            "odom.pose.pose.position.z": 1
+          },
+          "delete_paths": [],
+          "expected": {
+            "attempted": true,
+            "completed": true,
+            "converter_status": false,
+            "converter_code": "ADAPTER_NONPLANAR",
+            "snapshot_present": false,
+            "qualifier_status": "not_called",
+            "qualifier_code": "not_called",
+            "observation": "not_produced",
+            "predictor_call_delta": 0,
+            "appended_sink_count": 0,
+            "appended_sink_records": [],
+            "retained_history": [],
+            "accepted_history": null,
+            "latch": null,
+            "reset": "not_called"
+          }
+        }
+      ]
+    },
+    {
+      "id": "C023",
+      "description": "scalar and reduced schema validation",
+      "steps": [
+        {
+          "operation": "convert_dispatch",
+          "fresh_harness": true,
+          "overrides": {
+            "identity.snapshot_id": "C023-s0",
+            "goal.x": true
+          },
+          "delete_paths": [],
+          "expected": {
+            "attempted": true,
+            "completed": true,
+            "converter_status": false,
+            "converter_code": "ADAPTER_INVALID_SCALAR",
+            "snapshot_present": false,
+            "qualifier_status": "not_called",
+            "qualifier_code": "not_called",
+            "observation": "not_produced",
+            "predictor_call_delta": 0,
+            "appended_sink_count": 0,
+            "appended_sink_records": [],
+            "retained_history": [],
+            "accepted_history": null,
+            "latch": null,
+            "reset": "not_called"
+          }
+        },
+        {
+          "operation": "convert_dispatch",
+          "fresh_harness": true,
+          "overrides": {
+            "identity.snapshot_id": "C023-s1",
+            "goal.x": "2"
+          },
+          "delete_paths": [],
+          "expected": {
+            "attempted": true,
+            "completed": true,
+            "converter_status": false,
+            "converter_code": "ADAPTER_INVALID_SCALAR",
+            "snapshot_present": false,
+            "qualifier_status": "not_called",
+            "qualifier_code": "not_called",
+            "observation": "not_produced",
+            "predictor_call_delta": 0,
+            "appended_sink_count": 0,
+            "appended_sink_records": [],
+            "retained_history": [],
+            "accepted_history": null,
+            "latch": null,
+            "reset": "not_called"
+          }
+        },
+        {
+          "operation": "convert_dispatch",
+          "fresh_harness": true,
+          "overrides": {
+            "identity.snapshot_id": "C023-s2",
+            "goal.x": "NaN"
+          },
+          "delete_paths": [],
+          "expected": {
+            "attempted": true,
+            "completed": true,
+            "converter_status": false,
+            "converter_code": "ADAPTER_INVALID_SCALAR",
+            "snapshot_present": false,
+            "qualifier_status": "not_called",
+            "qualifier_code": "not_called",
+            "observation": "not_produced",
+            "predictor_call_delta": 0,
+            "appended_sink_count": 0,
+            "appended_sink_records": [],
+            "retained_history": [],
+            "accepted_history": null,
+            "latch": null,
+            "reset": "not_called"
+          }
+        },
+        {
+          "operation": "convert_dispatch",
+          "fresh_harness": true,
+          "overrides": {
+            "identity.snapshot_id": "C023-s3",
+            "odom.twist.twist.linear.x": true
+          },
+          "delete_paths": [],
+          "expected": {
+            "attempted": true,
+            "completed": true,
+            "converter_status": false,
+            "converter_code": "ADAPTER_INVALID_SCALAR",
+            "snapshot_present": false,
+            "qualifier_status": "not_called",
+            "qualifier_code": "not_called",
+            "observation": "not_produced",
+            "predictor_call_delta": 0,
+            "appended_sink_count": 0,
+            "appended_sink_records": [],
+            "retained_history": [],
+            "accepted_history": null,
+            "latch": null,
+            "reset": "not_called"
+          }
+        },
+        {
+          "operation": "convert_dispatch",
+          "fresh_harness": true,
+          "overrides": {
+            "identity.snapshot_id": "C023-s4",
+            "odom.twist.twist.linear.x": "0"
+          },
+          "delete_paths": [],
+          "expected": {
+            "attempted": true,
+            "completed": true,
+            "converter_status": false,
+            "converter_code": "ADAPTER_INVALID_SCALAR",
+            "snapshot_present": false,
+            "qualifier_status": "not_called",
+            "qualifier_code": "not_called",
+            "observation": "not_produced",
+            "predictor_call_delta": 0,
+            "appended_sink_count": 0,
+            "appended_sink_records": [],
+            "retained_history": [],
+            "accepted_history": null,
+            "latch": null,
+            "reset": "not_called"
+          }
+        },
+        {
+          "operation": "convert_dispatch",
+          "fresh_harness": true,
+          "overrides": {
+            "identity.snapshot_id": "C023-s5",
+            "odom.twist.twist.linear.x": "+Inf"
+          },
+          "delete_paths": [],
+          "expected": {
+            "attempted": true,
+            "completed": true,
+            "converter_status": false,
+            "converter_code": "ADAPTER_INVALID_SCALAR",
+            "snapshot_present": false,
+            "qualifier_status": "not_called",
+            "qualifier_code": "not_called",
+            "observation": "not_produced",
+            "predictor_call_delta": 0,
+            "appended_sink_count": 0,
+            "appended_sink_records": [],
+            "retained_history": [],
+            "accepted_history": null,
+            "latch": null,
+            "reset": "not_called"
+          }
+        },
+        {
+          "operation": "convert_dispatch",
+          "fresh_harness": true,
+          "overrides": {
+            "identity.snapshot_id": "C023-s6",
+            "scan.angle_min": "NaN"
+          },
+          "delete_paths": [],
+          "expected": {
+            "attempted": true,
+            "completed": true,
+            "converter_status": false,
+            "converter_code": "ADAPTER_INVALID_SCALAR",
+            "snapshot_present": false,
+            "qualifier_status": "not_called",
+            "qualifier_code": "not_called",
+            "observation": "not_produced",
+            "predictor_call_delta": 0,
+            "appended_sink_count": 0,
+            "appended_sink_records": [],
+            "retained_history": [],
+            "accepted_history": null,
+            "latch": null,
+            "reset": "not_called"
+          }
+        },
+        {
+          "operation": "convert_dispatch",
+          "fresh_harness": true,
+          "overrides": {
+            "identity.snapshot_id": "C023-s7",
+            "scan_source.message_type": "wrong"
+          },
+          "delete_paths": [],
+          "expected": {
+            "attempted": true,
+            "completed": true,
+            "converter_status": false,
+            "converter_code": "ADAPTER_SCHEMA",
+            "snapshot_present": false,
+            "qualifier_status": "not_called",
+            "qualifier_code": "not_called",
+            "observation": "not_produced",
+            "predictor_call_delta": 0,
+            "appended_sink_count": 0,
+            "appended_sink_records": [],
+            "retained_history": [],
+            "accepted_history": null,
+            "latch": null,
+            "reset": "not_called"
+          }
+        },
+        {
+          "operation": "convert_dispatch",
+          "fresh_harness": true,
+          "overrides": {
+            "identity.snapshot_id": "C023-s8",
+            "scan_source.topic": "relative"
+          },
+          "delete_paths": [],
+          "expected": {
+            "attempted": true,
+            "completed": true,
+            "converter_status": false,
+            "converter_code": "ADAPTER_SCHEMA",
+            "snapshot_present": false,
+            "qualifier_status": "not_called",
+            "qualifier_code": "not_called",
+            "observation": "not_produced",
+            "predictor_call_delta": 0,
+            "appended_sink_count": 0,
+            "appended_sink_records": [],
+            "retained_history": [],
+            "accepted_history": null,
+            "latch": null,
+            "reset": "not_called"
+          }
+        },
+        {
+          "operation": "convert_dispatch",
+          "fresh_harness": true,
+          "overrides": {
+            "identity.snapshot_id": "C023-s9",
+            "scan.extra": 0
+          },
+          "delete_paths": [],
+          "expected": {
+            "attempted": true,
+            "completed": true,
+            "converter_status": false,
+            "converter_code": "ADAPTER_SCHEMA",
+            "snapshot_present": false,
+            "qualifier_status": "not_called",
+            "qualifier_code": "not_called",
+            "observation": "not_produced",
+            "predictor_call_delta": 0,
+            "appended_sink_count": 0,
+            "appended_sink_records": [],
+            "retained_history": [],
+            "accepted_history": null,
+            "latch": null,
+            "reset": "not_called"
+          }
+        },
+        {
+          "operation": "convert_dispatch",
+          "fresh_harness": true,
+          "overrides": {
+            "identity.snapshot_id": "C023-s10",
+            "scan_source.topic": "/declared_alternate_scan"
+          },
+          "delete_paths": [],
+          "expected": {
+            "attempted": true,
+            "completed": true,
+            "converter_status": true,
+            "converter_code": "ADAPTER_OK",
+            "snapshot_present": true,
+            "qualifier_status": true,
+            "qualifier_code": "OK",
+            "observation": {
+              "valid": true,
+              "reason": "",
+              "shape": [
+                40
+              ],
+              "dtype": "float32",
+              "vector": [
+                1.0,
+                1.0,
+                1.0,
+                1.0,
+                1.0,
+                1.0,
+                1.0,
+                1.0,
+                1.0,
+                1.0,
+                1.0,
+                1.0,
+                1.0,
+                1.0,
+                1.0,
+                1.0,
+                1.0,
+                1.0,
+                1.0,
+                1.0,
+                1.0,
+                1.0,
+                1.0,
+                1.0,
+                1.0,
+                1.0,
+                1.0,
+                1.0,
+                1.0,
+                1.0,
+                1.0,
+                1.0,
+                1.0,
+                1.0,
+                1.0,
+                1.0,
+                0.10000000149011612,
+                0.0,
+                0.0,
+                0.0
+              ],
+              "sha256": "7167efd3309991bbc6b4ea784ecee4044cebcce4d290010227e50884ff793839"
+            },
+            "predictor_call_delta": 1,
+            "appended_sink_count": 1,
+            "appended_sink_records": [
+              {
+                "sequence": 1,
+                "run_id": "run-A",
+                "episode_id": "episode-A",
+                "snapshot_id": "C023-s10",
+                "observation_hash": "7167efd3309991bbc6b4ea784ecee4044cebcce4d290010227e50884ff793839",
+                "dummy_id": "constant-dummy-v1",
+                "action": [
+                  0.5,
+                  -0.5
+                ],
+                "linear": 0.03,
+                "angular": -0.06,
+                "monotonic_s": 10.0,
+                "decision": "ACCEPT",
+                "reason": "OK"
+              }
+            ],
+            "retained_history": [
+              {
+                "sequence": 1,
+                "run_id": "run-A",
+                "episode_id": "episode-A",
+                "snapshot_id": "C023-s10",
+                "observation_hash": "7167efd3309991bbc6b4ea784ecee4044cebcce4d290010227e50884ff793839",
+                "dummy_id": "constant-dummy-v1",
+                "action": [
+                  0.5,
+                  -0.5
+                ],
+                "linear": 0.03,
+                "angular": -0.06,
+                "monotonic_s": 10.0,
+                "decision": "ACCEPT",
+                "reason": "OK"
+              }
+            ],
+            "accepted_history": {
+              "scan_stamp_ns": 1000000001,
+              "odom_stamp_ns": 1000000001,
+              "dispatch_mono_s": 10.0
+            },
+            "latch": null,
+            "reset": "not_called"
+          }
+        }
+      ]
+    },
+    {
+      "id": "C024",
+      "description": "missing and invalid identities",
+      "steps": [
+        {
+          "operation": "convert_dispatch",
+          "fresh_harness": true,
+          "overrides": {
+            "identity.snapshot_id": "C024-s0"
+          },
+          "delete_paths": [
+            "identity.episode_id"
+          ],
+          "expected": {
+            "attempted": true,
+            "completed": true,
+            "converter_status": false,
+            "converter_code": "ADAPTER_MISSING_FIELD",
+            "snapshot_present": false,
+            "qualifier_status": "not_called",
+            "qualifier_code": "not_called",
+            "observation": "not_produced",
+            "predictor_call_delta": 0,
+            "appended_sink_count": 0,
+            "appended_sink_records": [],
+            "retained_history": [],
+            "accepted_history": null,
+            "latch": null,
+            "reset": "not_called"
+          }
+        },
+        {
+          "operation": "convert_dispatch",
+          "fresh_harness": true,
+          "overrides": {
+            "identity.snapshot_id": "C024-s1",
+            "identity.episode_id": ""
+          },
+          "delete_paths": [],
+          "expected": {
+            "attempted": true,
+            "completed": true,
+            "converter_status": false,
+            "converter_code": "ADAPTER_INVALID_IDENTITY",
+            "snapshot_present": false,
+            "qualifier_status": "not_called",
+            "qualifier_code": "not_called",
+            "observation": "not_produced",
+            "predictor_call_delta": 0,
+            "appended_sink_count": 0,
+            "appended_sink_records": [],
+            "retained_history": [],
+            "accepted_history": null,
+            "latch": null,
+            "reset": "not_called"
+          }
+        },
+        {
+          "operation": "convert_dispatch",
+          "fresh_harness": true,
+          "overrides": {
+            "identity.snapshot_id": "C024-s2",
+            "identity.episode_id": "   "
+          },
+          "delete_paths": [],
+          "expected": {
+            "attempted": true,
+            "completed": true,
+            "converter_status": false,
+            "converter_code": "ADAPTER_INVALID_IDENTITY",
+            "snapshot_present": false,
+            "qualifier_status": "not_called",
+            "qualifier_code": "not_called",
+            "observation": "not_produced",
+            "predictor_call_delta": 0,
+            "appended_sink_count": 0,
+            "appended_sink_records": [],
+            "retained_history": [],
+            "accepted_history": null,
+            "latch": null,
+            "reset": "not_called"
+          }
+        },
+        {
+          "operation": "convert_dispatch",
+          "fresh_harness": true,
+          "overrides": {
+            "identity.snapshot_id": "C024-s3",
+            "identity.episode_id": true
+          },
+          "delete_paths": [],
+          "expected": {
+            "attempted": true,
+            "completed": true,
+            "converter_status": false,
+            "converter_code": "ADAPTER_INVALID_IDENTITY",
+            "snapshot_present": false,
+            "qualifier_status": "not_called",
+            "qualifier_code": "not_called",
+            "observation": "not_produced",
+            "predictor_call_delta": 0,
+            "appended_sink_count": 0,
+            "appended_sink_records": [],
+            "retained_history": [],
+            "accepted_history": null,
+            "latch": null,
+            "reset": "not_called"
+          }
+        }
+      ]
+    }
+  ]
+}

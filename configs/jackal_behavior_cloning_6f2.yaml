@@ -1,0 +1,57 @@
+# Phase 6F.2 supervised behavior cloning.
+# Reuses the Phase 6F.1 policy and the frozen train-split observation
+# statistics. Validation loss selects checkpoints. The test split is not read.
+#
+# Run from the repository root:
+#   python -m navigation.jackal_bc_train --config configs/jackal_behavior_cloning_6f2.yaml
+#
+# Resume an interrupted run in the same output directory:
+#   python -m navigation.jackal_bc_train --config configs/jackal_behavior_cloning_6f2.yaml --resume
+
+phase: "6f.2"
+dataset:
+  root: artifacts/expert_dataset/v6e.2.0
+  train_split: train
+  validation_split: validation
+  test_split: test
+  read_test: false
+  success_only: false
+  action_key: actions
+model:
+  architecture: jackal_bc_v1
+  lidar_bins: 36
+  state_dim: 4
+  action_dim: 2
+  lidar_channels: [16, 32]
+  lidar_kernel_size: 5
+  lidar_embedding: 64
+  state_hidden: 32
+  state_embedding: 32
+  fusion_hidden: [128, 64]
+normalization:
+  epsilon: 1.0e-6
+  statistics: artifacts/behavior_cloning/jackal_6f1/observation_stats.json
+  fit_statistics: false
+initialization:
+  checkpoint: artifacts/behavior_cloning/jackal_6f1/initialized_policy.pt
+data:
+  batch_size: 256
+  context_length: 1
+  num_workers: 0
+  mode: episode
+training:
+  optimizer: adam
+  learning_rate: 3.0e-4
+  weight_decay: 0.0
+  epochs: 100
+  patience: 10
+  min_delta: 0.0
+  objective: masked_mse
+  selection_metric: validation_masked_mse
+  valid_step_chunk: 4096
+runtime:
+  seed: 642
+  device: auto
+  deterministic: true
+output:
+  directory: artifacts/behavior_cloning/jackal_6f2
